@@ -32,7 +32,8 @@ body {
 #root {
   max-width: 560px;
   margin: 0 auto;
-  padding: 16px 16px 48px;
+  padding: calc(16px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(48px + env(safe-area-inset-bottom))
+    calc(16px + env(safe-area-inset-left));
 }
 
 button {
