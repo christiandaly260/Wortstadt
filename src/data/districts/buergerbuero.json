@@ -1,0 +1,244 @@
+{
+  "id": "buergerbuero",
+  "name": "Bürgerbüro",
+  "subtitle": "Anmeldung, Formulare & Amtsdeutsch",
+  "line": "U1",
+  "color": "#3b7d3a",
+  "words": [
+    { "id": "vermieter", "de": "Vermieter", "article": "der", "plural": "die Vermieter", "en": "landlord", "pos": "noun", "example": "Der Vermieter muss Ihnen den Einzug schriftlich bestätigen." },
+    { "id": "wohnungsgeberbestaetigung", "de": "Wohnungsgeberbestätigung", "article": "die", "plural": "die Wohnungsgeberbestätigungen", "en": "landlord's confirmation of move-in", "pos": "noun", "example": "Ohne Wohnungsgeberbestätigung kann ich Sie leider nicht anmelden." },
+    { "id": "mietvertrag", "de": "Mietvertrag", "article": "der", "plural": "die Mietverträge", "en": "rental contract, lease", "pos": "noun", "example": "Bitte schicken Sie mir den unterschriebenen Mietvertrag zurück." },
+    { "id": "kaution", "de": "Kaution", "article": "die", "plural": "die Kautionen", "en": "(security) deposit", "pos": "noun", "example": "Die Kaution bekommen Sie nach dem Auszug zurück." },
+    { "id": "nebenkosten", "de": "Nebenkosten", "article": "die", "pluralOnly": true, "en": "utilities, additional costs (on top of rent)", "pos": "noun", "example": "In der Warmmiete sind die Nebenkosten schon enthalten." },
+    { "id": "einziehen", "de": "einziehen", "en": "to move in", "pos": "verb", "example": "Ich bin am ersten November eingezogen.", "cloze": "eingezogen" },
+    { "id": "unterschreiben", "de": "unterschreiben", "en": "to sign", "pos": "verb", "example": "Bitte unterschreiben Sie hier unten." },
+    { "id": "untermiete", "de": "Untermiete", "article": "die", "plural": "die Untermieten", "en": "subletting, sublease", "pos": "noun", "example": "Ich wohne zur Untermiete bei einer Familie in Schwabing." },
+
+    { "id": "termin", "de": "Termin", "article": "der", "plural": "die Termine", "en": "appointment", "pos": "noun", "example": "Ich hätte gern einen Termin für die Anmeldung." },
+    { "id": "vereinbaren", "de": "vereinbaren", "en": "to arrange, to agree on", "pos": "verb", "example": "Termine kann man nur online vereinbaren." },
+    { "id": "behoerde", "de": "Behörde", "article": "die", "plural": "die Behörden", "en": "(public) authority, government office", "pos": "noun", "example": "Für die Anmeldung ist die Behörde an Ihrem neuen Wohnort zuständig." },
+    { "id": "sachbearbeiter", "de": "Sachbearbeiter", "article": "der", "plural": "die Sachbearbeiter", "en": "clerk, case officer", "pos": "noun", "example": "Der Sachbearbeiter ruft gleich Ihre Nummer auf." },
+    { "id": "wartenummer", "de": "Wartenummer", "article": "die", "plural": "die Wartenummern", "en": "queue number", "pos": "noun", "example": "Ziehen Sie bitte eine Wartenummer am Automaten." },
+    { "id": "frist", "de": "Frist", "article": "die", "plural": "die Fristen", "en": "deadline, time limit", "pos": "noun", "example": "Die Frist für die Anmeldung beträgt zwei Wochen." },
+    { "id": "verschieben", "de": "verschieben", "en": "to postpone, to reschedule", "pos": "verb", "example": "Kann ich meinen Termin auf nächste Woche verschieben?" },
+    { "id": "absagen", "de": "absagen", "en": "to cancel", "pos": "verb", "example": "Wenn Sie nicht kommen können, müssen Sie den Termin rechtzeitig absagen." },
+
+    { "id": "antrag", "de": "Antrag", "article": "der", "plural": "die Anträge", "en": "application (form/request)", "pos": "noun", "example": "Den Antrag können Sie auch online stellen." },
+    { "id": "formular", "de": "Formular", "article": "das", "plural": "die Formulare", "en": "form", "pos": "noun", "example": "Füllen Sie das Formular bitte in Druckbuchstaben aus." },
+    { "id": "ausfuellen", "de": "ausfüllen", "en": "to fill in / fill out", "pos": "verb", "example": "Haben Sie das Formular schon ausgefüllt?", "cloze": "ausgefüllt" },
+    { "id": "unterlagen", "de": "Unterlagen", "article": "die", "pluralOnly": true, "en": "documents, paperwork", "pos": "noun", "example": "Bitte bringen Sie alle Unterlagen zum Termin mit." },
+    { "id": "nachweis", "de": "Nachweis", "article": "der", "plural": "die Nachweise", "en": "proof, evidence", "pos": "noun", "example": "Als Nachweis reicht eine Kopie des Mietvertrags." },
+    { "id": "beantragen", "de": "beantragen", "en": "to apply for", "pos": "verb", "example": "Ich möchte eine Meldebescheinigung beantragen." },
+    { "id": "einreichen", "de": "einreichen", "en": "to submit, to hand in (formally)", "pos": "verb", "example": "Die Unterlagen müssen Sie bis Freitag einreichen." },
+    { "id": "reisepass", "de": "Reisepass", "article": "der", "plural": "die Reisepässe", "en": "passport", "pos": "noun", "example": "Ihr Reisepass ist leider abgelaufen." },
+
+    { "id": "anmeldung", "de": "Anmeldung", "article": "die", "plural": "die Anmeldungen", "en": "registration (of address)", "pos": "noun", "example": "Die Anmeldung ist in München kostenlos." },
+    { "id": "meldebescheinigung", "de": "Meldebescheinigung", "article": "die", "plural": "die Meldebescheinigungen", "en": "certificate of registration", "pos": "noun", "example": "Die Meldebescheinigung brauchen Sie für Ihr Bankkonto." },
+    { "id": "wohnsitz", "de": "Wohnsitz", "article": "der", "plural": "die Wohnsitze", "en": "place of residence", "pos": "noun", "example": "Bitte geben Sie Ihren neuen Wohnsitz an." },
+    { "id": "staatsangehoerigkeit", "de": "Staatsangehörigkeit", "article": "die", "plural": "die Staatsangehörigkeiten", "en": "nationality, citizenship", "pos": "noun", "example": "Welche Staatsangehörigkeit haben Sie?" },
+    { "id": "familienstand", "de": "Familienstand", "article": "der", "en": "marital status", "pos": "noun", "example": "Bitte tragen Sie hier Ihren Familienstand ein." },
+    { "id": "ledig", "de": "ledig", "en": "single, unmarried", "pos": "adj", "example": "Sind Sie ledig oder verheiratet?" },
+    { "id": "gueltig", "de": "gültig", "en": "valid", "pos": "adj", "example": "Ist Ihr Ausweis noch gültig?" },
+    { "id": "ankreuzen", "de": "ankreuzen", "en": "to tick, to check (a box)", "pos": "verb", "example": "Sie müssen nur das richtige Kästchen ankreuzen." },
+
+    { "id": "steuer-id", "de": "Steuer-ID", "article": "die", "plural": "die Steuer-IDs", "en": "tax ID number", "pos": "noun", "example": "Ihre Steuer-ID bekommen Sie ein paar Wochen später per Post." },
+    { "id": "rundfunkbeitrag", "de": "Rundfunkbeitrag", "article": "der", "plural": "die Rundfunkbeiträge", "en": "broadcasting licence fee", "pos": "noun", "example": "Den Rundfunkbeitrag zahlt man pro Wohnung, nicht pro Person." },
+    { "id": "bescheid", "de": "Bescheid", "article": "der", "plural": "die Bescheide", "en": "official notice / decision", "pos": "noun", "example": "Den Bescheid erhalten Sie schriftlich." },
+    { "id": "zustaendig", "de": "zuständig", "en": "responsible, in charge (of)", "pos": "adj", "example": "Dafür bin ich leider nicht zuständig." },
+    { "id": "gebuehr", "de": "Gebühr", "article": "die", "plural": "die Gebühren", "en": "fee, charge", "pos": "noun", "example": "Für einen neuen Reisepass fällt eine Gebühr an." },
+    { "id": "bearbeitungszeit", "de": "Bearbeitungszeit", "article": "die", "plural": "die Bearbeitungszeiten", "en": "processing time", "pos": "noun", "example": "Die Bearbeitungszeit beträgt etwa vier Wochen." },
+    { "id": "einspruch", "de": "Einspruch", "article": "der", "plural": "die Einsprüche", "en": "objection, appeal", "pos": "noun", "example": "Gegen den Steuerbescheid können Sie innerhalb eines Monats Einspruch einlegen." },
+    { "id": "erhalten", "de": "erhalten", "en": "to receive (formal for 'bekommen')", "pos": "verb", "example": "Sie erhalten die Meldebescheinigung direkt am Schalter." }
+  ],
+
+  "stations": [
+    {
+      "id": "bb-1",
+      "name": "Neue Wohnung",
+      "character": { "name": "Herr Brandl", "role": "dein Vermieter", "emoji": "🧔", "patience": 4, "kickout": "Mei, so wird des nix. Probier's nochmal, gell?" },
+      "words": ["vermieter", "wohnungsgeberbestaetigung", "mietvertrag", "kaution", "nebenkosten", "einziehen", "unterschreiben", "untermiete"],
+      "scene": [
+        { "who": "npc", "text": "Servus und willkommen in der Wohnung! Hier ist der {mietvertrag|Mietvertrag} – bitte noch {unterschreiben|unterschreiben}." },
+        { "who": "you", "text": "Danke! Die {kaution|Kaution} habe ich gestern überwiesen." },
+        { "who": "npc", "text": "Passt. Die {nebenkosten|Nebenkosten} zahlen Sie monatlich mit der Miete." },
+        { "who": "you", "text": "Ich muss mich noch beim Amt anmelden. Was brauche ich dafür?" },
+        { "who": "npc", "text": "Als {vermieter|Vermieter} gebe ich Ihnen die {wohnungsgeberbestaetigung|Wohnungsgeberbestätigung}. Da steht drin, wann Sie {einziehen|eingezogen} sind." },
+        { "who": "npc", "text": "Ach ja – {untermiete|Untermiete} nur mit meiner Erlaubnis, gell?" }
+      ],
+      "encounters": [
+        { "type": "artikel", "words": ["vermieter", "mietvertrag", "kaution", "wohnungsgeberbestaetigung", "untermiete"] },
+        { "type": "lueckentext", "words": ["einziehen", "unterschreiben", "kaution", "nebenkosten", "vermieter"] },
+        { "type": "schmiede", "items": [
+          { "en": "landlord", "target": "Vermieter", "tiles": ["Ver", "miet", "er", "Ein", "ung", "be"] },
+          { "en": "rental contract", "target": "Mietvertrag", "tiles": ["Miet", "vertrag", "s", "Wohn", "ver", "ung"] },
+          { "en": "the move-in (noun)", "target": "Einzug", "tiles": ["Ein", "zug", "Aus", "Um", "ung", "s"] }
+        ] }
+      ]
+    },
+    {
+      "id": "bb-2",
+      "name": "Terminjagd",
+      "character": { "name": "Lena", "role": "deine Mitbewohnerin", "emoji": "👩‍🎤", "patience": 5, "kickout": "Okay, Pause. Kaffee, und dann nochmal von vorn!" },
+      "words": ["termin", "vereinbaren", "behoerde", "sachbearbeiter", "wartenummer", "frist", "verschieben", "absagen"],
+      "scene": [
+        { "who": "npc", "text": "Hast du schon einen {termin|Termin} beim KVR? Die sind immer total ausgebucht." },
+        { "who": "you", "text": "Noch nicht. Muss ich den online {vereinbaren|vereinbaren}?" },
+        { "who": "npc", "text": "Ja. Und pass auf die {frist|Frist} auf – du hast nur zwei Wochen nach dem Einzug." },
+        { "who": "you", "text": "Und wenn ich keinen Termin bekomme?" },
+        { "who": "npc", "text": "Dann gehst du früh hin, ziehst eine {wartenummer|Wartenummer} und wartest, bis dich ein {sachbearbeiter|Sachbearbeiter} aufruft." },
+        { "who": "npc", "text": "Ehrlich, die {behoerde|Behörde} ist schlimmer als jede Prüfung. Und falls was dazwischenkommt: rechtzeitig {absagen|absagen} oder {verschieben|verschieben}!" }
+      ],
+      "encounters": [
+        { "type": "kollokation", "items": [
+          { "phrase": "einen Termin ___", "answer": "vereinbaren", "options": ["vereinbaren", "stellen", "legen", "treffen"], "en": "to make an appointment" },
+          { "phrase": "eine Frist ___", "answer": "einhalten", "options": ["einhalten", "behalten", "festhalten", "aushalten"], "en": "to meet a deadline" },
+          { "phrase": "eine Wartenummer ___", "answer": "ziehen", "options": ["ziehen", "tragen", "greifen", "zeigen"], "en": "to take a queue number" },
+          { "phrase": "jemandem ___ geben", "answer": "Bescheid", "options": ["Bescheid", "Termin", "Antrag", "Nachweis"], "en": "to let someone know" }
+        ] },
+        { "type": "gespraech", "items": [
+          { "npc": "Grüß Gott. Haben Sie einen Termin?", "task": "You don't. Ask politely whether you can still be seen today.", "options": [
+            { "text": "Nö, aber ich bin ja jetzt da.", "ok": false, "why": "Viel zu locker – „nö“ sagt man nicht am Amt." },
+            { "text": "Leider nicht. Wäre es trotzdem möglich, heute dranzukommen?", "ok": true, "why": "Höflich mit Konjunktiv II – perfekt." },
+            { "text": "Ich will sofort einen Termin.", "ok": false, "why": "„Ich will“ klingt fordernd. Besser: „Ich hätte gern …“ oder „Wäre es möglich …“." }
+          ] },
+          { "npc": "Ohne Termin müssen Sie mit drei Stunden Wartezeit rechnen.", "task": "Say you'd rather move your appointment to next week.", "options": [
+            { "text": "Dann sage ich lieber die nächste Woche ab.", "ok": false, "why": "absagen = cancel. Du willst verschieben." },
+            { "text": "Dann würde ich lieber auf nächste Woche verschwinden.", "ok": false, "why": "verschwinden = to disappear 😄" },
+            { "text": "Dann würde ich den Termin lieber auf nächste Woche verschieben.", "ok": true, "why": "Genau: etwas auf + Akkusativ verschieben." }
+          ] }
+        ] },
+        { "type": "lueckentext", "words": ["verschieben", "absagen", "frist", "behoerde", "sachbearbeiter", "wartenummer"] }
+      ]
+    },
+    {
+      "id": "bb-3",
+      "name": "Infotheke",
+      "character": { "name": "Herr Gruber", "role": "Infotheke, KVR", "emoji": "👨‍💼", "patience": 3, "kickout": "Bitte informieren Sie sich vorab und kommen Sie wieder." },
+      "words": ["antrag", "formular", "ausfuellen", "unterlagen", "nachweis", "beantragen", "einreichen", "reisepass"],
+      "scene": [
+        { "who": "npc", "text": "Für die Anmeldung müssen Sie zuerst dieses {formular|Formular} {ausfuellen|ausfüllen}." },
+        { "who": "you", "text": "Kann ich den {antrag|Antrag} auch online stellen?" },
+        { "who": "npc", "text": "Können Sie. Aber die {unterlagen|Unterlagen} müssen Sie trotzdem persönlich {einreichen|einreichen}." },
+        { "who": "you", "text": "Welche Unterlagen genau?" },
+        { "who": "npc", "text": "Ihren {reisepass|Reisepass} und einen {nachweis|Nachweis} über die Wohnung – also die Bestätigung vom Vermieter." },
+        { "who": "npc", "text": "Eine Meldebescheinigung können Sie dann gleich am Schalter {beantragen|beantragen}." }
+      ],
+      "encounters": [
+        { "type": "artikel", "words": ["antrag", "formular", "nachweis", "reisepass"] },
+        { "type": "kollokation", "items": [
+          { "phrase": "einen Antrag ___", "answer": "stellen", "options": ["stellen", "machen", "geben", "legen"], "en": "to submit an application" },
+          { "phrase": "das Formular ___", "answer": "ausfüllen", "options": ["ausfüllen", "einfüllen", "auffüllen", "ausmachen"], "en": "to fill in the form" },
+          { "phrase": "einen Nachweis ___", "answer": "erbringen", "options": ["erbringen", "ergeben", "leisten", "tragen"], "en": "to provide proof" },
+          { "phrase": "den Ausweis ___", "answer": "vorlegen", "options": ["vorlegen", "vorstellen", "vorschlagen", "vorbereiten"], "en": "to present your ID" }
+        ] },
+        { "type": "lueckentext", "words": ["ausfuellen", "einreichen", "beantragen", "unterlagen", "nachweis"] },
+        { "type": "schmiede", "items": [
+          { "en": "to apply for", "target": "beantragen", "tiles": ["be", "antrag", "en", "ver", "ung", "ent"] },
+          { "en": "applicant", "target": "Antragsteller", "tiles": ["Antrag", "steller", "s", "be", "ung", "Ver"] }
+        ] }
+      ]
+    },
+    {
+      "id": "bb-4",
+      "name": "Am Schalter",
+      "character": { "name": "Frau Huber", "role": "Sachbearbeiterin, Platz 12", "emoji": "👩‍💼", "patience": 3, "kickout": "Ziehen Sie bitte eine neue Nummer. Der Nächste, bitte!" },
+      "words": ["anmeldung", "meldebescheinigung", "wohnsitz", "staatsangehoerigkeit", "familienstand", "ledig", "gueltig", "ankreuzen"],
+      "scene": [
+        { "who": "npc", "text": "Nummer 147, bitte zu Platz 12." },
+        { "who": "npc", "text": "So. Sie möchten eine {anmeldung|Anmeldung} machen. Ist das Ihr einziger {wohnsitz|Wohnsitz}?" },
+        { "who": "you", "text": "Ja, das ist mein Hauptwohnsitz." },
+        { "who": "npc", "text": "{staatsangehoerigkeit|Staatsangehörigkeit}? {familienstand|Familienstand}?" },
+        { "who": "you", "text": "Irisch. Und ich bin {ledig|ledig}." },
+        { "who": "npc", "text": "Dann bitte hier „ledig“ {ankreuzen|ankreuzen}. Ihr Pass ist noch {gueltig|gültig}? Gut. Die {meldebescheinigung|Meldebescheinigung} drucke ich Ihnen gleich aus." }
+      ],
+      "encounters": [
+        { "type": "artikel", "words": ["anmeldung", "meldebescheinigung", "wohnsitz", "staatsangehoerigkeit", "familienstand"] },
+        { "type": "gespraech", "items": [
+          { "npc": "Ihr Pass ist seit letzter Woche abgelaufen.", "task": "Ask (formally) whether there's another way to register anyway.", "options": [
+            { "text": "Echt jetzt? Das ist doch egal, oder?", "ok": false, "why": "Frau Huber findet das gar nicht egal." },
+            { "text": "Oh nein! Gibt es eine andere Möglichkeit, mich trotzdem anmelden?", "ok": false, "why": "Fast – nach „Möglichkeit“ brauchst du zu + Infinitiv: „mich trotzdem anzumelden“." },
+            { "text": "Oh nein! Gibt es eine andere Möglichkeit, mich trotzdem anzumelden?", "ok": true, "why": "Höflich und grammatisch sauber." }
+          ] },
+          { "npc": "Sie können auch einen Personalausweis vorlegen, falls Sie einen haben.", "task": "Say you don't have one, but your Irish passport card is still valid.", "options": [
+            { "text": "Einen Personalausweis habe ich nicht, aber meine irische Passkarte ist noch gültig.", "ok": true, "why": "Genau so." },
+            { "text": "Einen Personalausweis habe ich nicht, aber meine irische Passkarte ist noch gültlich.", "ok": false, "why": "„gültlich“ gibt es nicht – richtig ist gültig." },
+            { "text": "Einen Personalausweis habe ich nicht, aber meine irische Passkarte gilt noch nicht.", "ok": false, "why": "„gilt noch nicht“ = isn't valid yet. Gemeint war „noch gültig“." }
+          ] }
+        ] },
+        { "type": "lueckentext", "words": ["gueltig", "ledig", "ankreuzen", "meldebescheinigung", "wohnsitz", "staatsangehoerigkeit"] },
+        { "type": "schmiede", "items": [
+          { "en": "deregistration (when you move out)", "target": "Abmeldung", "tiles": ["Ab", "meld", "ung", "An", "heit", "Ver"] },
+          { "en": "invalid", "target": "ungültig", "tiles": ["un", "gült", "ig", "keit", "ver", "los"] },
+          { "en": "validity", "target": "Gültigkeit", "tiles": ["Gült", "ig", "keit", "un", "ung", "heit"] }
+        ] }
+      ]
+    },
+    {
+      "id": "bb-5",
+      "name": "Post vom Amt",
+      "character": { "name": "Lena", "role": "deine Mitbewohnerin", "emoji": "👩‍🎤", "patience": 4, "kickout": "Okay, wir lesen die Briefe morgen nochmal zusammen." },
+      "words": ["steuer-id", "rundfunkbeitrag", "bescheid", "zustaendig", "gebuehr", "bearbeitungszeit", "einspruch", "erhalten"],
+      "scene": [
+        { "who": "npc", "text": "Du hast Post! Sieht nach einem {bescheid|Bescheid} aus." },
+        { "who": "you", "text": "Vom Bundeszentralamt für Steuern? Ah – das ist meine {steuer-id|Steuer-ID}." },
+        { "who": "npc", "text": "Und der hier ist vom Beitragsservice. Den {rundfunkbeitrag|Rundfunkbeitrag} zahlen wir aber schon für die ganze WG." },
+        { "who": "you", "text": "Muss ich dann trotzdem eine {gebuehr|Gebühr} zahlen?" },
+        { "who": "npc", "text": "Nein. Schreib einfach zurück, dass die Wohnung schon angemeldet ist. Dafür ist der Beitragsservice {zustaendig|zuständig}, nicht das KVR." },
+        { "who": "npc", "text": "Die {bearbeitungszeit|Bearbeitungszeit} dauert zwar ein paar Wochen, aber du {erhalten|erhältst} sicher eine Antwort. Und falls dein Steuerbescheid mal falsch ist: {einspruch|Einspruch} einlegen!" }
+      ],
+      "encounters": [
+        { "type": "artikel", "words": ["steuer-id", "rundfunkbeitrag", "bescheid", "gebuehr", "bearbeitungszeit", "einspruch"] },
+        { "type": "kollokation", "items": [
+          { "phrase": "Einspruch ___", "answer": "einlegen", "options": ["einlegen", "stellen", "machen", "setzen"], "en": "to lodge an objection" },
+          { "phrase": "Es fällt eine Gebühr ___.", "answer": "an", "options": ["an", "ab", "aus", "um"], "en": "A fee is charged." },
+          { "phrase": "eine Entscheidung ___", "answer": "treffen", "options": ["treffen", "machen", "stellen", "legen"], "en": "to make a decision" },
+          { "phrase": "sich an die Regeln ___", "answer": "halten", "options": ["halten", "stellen", "setzen", "legen"], "en": "to stick to the rules" }
+        ] },
+        { "type": "lueckentext", "words": ["zustaendig", "erhalten", "einspruch", "gebuehr", "bearbeitungszeit", "rundfunkbeitrag"] },
+        { "type": "schmiede", "items": [
+          { "en": "responsibility, jurisdiction", "target": "Zuständigkeit", "tiles": ["Zu", "ständ", "ig", "keit", "An", "ung"] },
+          { "en": "processing", "target": "Bearbeitung", "tiles": ["Be", "arbeit", "ung", "Ver", "keit", "en"] }
+        ] }
+      ]
+    }
+  ],
+
+  "boss": {
+    "name": "Die Anmeldung",
+    "character": { "name": "Frau Huber", "role": "Sachbearbeiterin, Platz 12", "emoji": "👩‍💼", "patience": 3, "kickout": "Ziehen Sie bitte eine neue Nummer. Der Nächste, bitte!" },
+    "intro": "Nummer 147 blinkt auf. Frau Huber hat genau eine Tasse Kaffee Geduld für Sie. Antworten Sie schnell und korrekt – jede falsche oder zu langsame Antwort kostet Geduld.",
+    "seconds": 35,
+    "items": [
+      { "npc": "Grüß Gott. Was kann ich für Sie tun?", "you": "Ich möchte meinen neuen ___ anmelden.", "answers": ["Wohnsitz"], "wordId": "wohnsitz", "hint": "place of residence" },
+      { "npc": "Haben Sie die Bestätigung von Ihrem Vermieter dabei?", "you": "Ja, hier ist die ___.", "answers": ["Wohnungsgeberbestätigung"], "wordId": "wohnungsgeberbestaetigung", "hint": "landlord's confirmation of move-in" },
+      { "npc": "Und einen gültigen Ausweis, bitte.", "you": "Hier ist mein ___.", "answers": ["Reisepass", "Pass"], "wordId": "reisepass", "hint": "passport" },
+      { "npc": "Welche ___ haben Sie?", "you": "Die irische.", "answers": ["Staatsangehörigkeit"], "wordId": "staatsangehoerigkeit", "hint": "nationality" },
+      { "npc": "Familienstand?", "you": "Ich bin ___.", "answers": ["ledig"], "casual": ["single"], "wordId": "ledig", "hint": "unmarried" },
+      { "npc": "Und wann sind Sie ___?", "you": "Am ersten November.", "answers": ["eingezogen"], "wordId": "einziehen", "hint": "moved in" },
+      { "npc": "Gut, dann haben Sie die ___ ja eingehalten.", "you": "Zum Glück!", "answers": ["Frist"], "wordId": "frist", "hint": "deadline" },
+      { "npc": "Hier bitte noch ___.", "you": "Wo genau?", "answers": ["unterschreiben", "unterzeichnen"], "wordId": "unterschreiben", "hint": "to sign" },
+      { "npc": "Die Meldebescheinigung ___ Sie gleich hier am Schalter.", "you": "Wunderbar, danke!", "answers": ["erhalten"], "casual": ["bekommen", "kriegen"], "wordId": "erhalten", "hint": "receive (formal)" },
+      { "npc": "Das Bundeszentralamt für Steuern schickt sie Ihnen automatisch.", "you": "Ah, die sind also für die Steuer-ID ___.", "answers": ["zuständig"], "wordId": "zustaendig", "hint": "responsible, in charge" }
+    ]
+  },
+
+  "challenge": {
+    "name": "Amtsdeutsch-Prüfung",
+    "intro": "Frau Huber prüft, ob Sie wie ein Amt klingen können. Ersetzen Sie das Alltagswort durch das formelle Wort – in der passenden Form.",
+    "character": { "name": "Frau Huber", "role": "Prüferin für Amtsdeutsch", "emoji": "👩‍⚖️", "patience": 3, "kickout": "Das war mir zu umgangssprachlich. Nochmal, bitte." },
+    "items": [
+      { "casual": "bekommen", "answers": ["erhalten"], "sentence": "Sie ___ den Bescheid per Post.", "en": "to receive" },
+      { "casual": "brauchen", "answers": ["benötigen"], "sentence": "Für die Anmeldung ___ Sie einen gültigen Ausweis.", "en": "to need, to require" },
+      { "casual": "zeigen", "answers": ["vorlegen"], "sentence": "Sie müssen Ihren Ausweis ___.", "en": "to present" },
+      { "casual": "abgeben", "answers": ["einreichen"], "sentence": "Bitte die Unterlagen bis Freitag ___.", "en": "to submit" },
+      { "casual": "ausmachen", "answers": ["vereinbart"], "sentence": "Termine können nur online ___ werden.", "en": "to arrange (an appointment)" },
+      { "casual": "unterschreiben", "answers": ["unterzeichnet"], "sentence": "Das Formular muss von Ihnen ___ werden.", "en": "to sign (formal)" },
+      { "casual": "wegen", "answers": ["Aufgrund", "auf Grund"], "sentence": "___ hoher Nachfrage sind derzeit keine Termine verfügbar.", "en": "due to" },
+      { "casual": "sagen", "answers": ["mitteilen"], "sentence": "Sie müssen uns jede Adressänderung ___.", "en": "to inform, to notify" },
+      { "casual": "einziehen in", "answers": ["bezogen"], "sentence": "Wann haben Sie die Wohnung ___?", "en": "to move into (a flat)" },
+      { "casual": "kosten", "answers": ["beträgt"], "sentence": "Die Gebühr ___ 30 Euro.", "en": "to amount to" },
+      { "casual": "anfangen", "answers": ["beginnt"], "sentence": "Die Frist ___ mit dem Tag des Einzugs.", "en": "to begin" },
+      { "casual": "machen (einen Antrag)", "answers": ["stellen"], "sentence": "Den Antrag können Sie online ___.", "en": "to file (an application)" }
+    ]
+  }
+}
