@@ -1,0 +1,480 @@
+{
+  "id": "maxvorstadt",
+  "name": "Maxvorstadt",
+  "subtitle": "Uni, Hausarbeit & Wissenschaftssprache",
+  "line": "U2",
+  "color": "#c3022d",
+  "requires": ["buergerbuero"],
+  "words": [
+    {"id": "studiengang", "de": "Studiengang", "article": "der", "plural": "die Studiengänge", "en": "degree programme", "pos": "noun", "example": "Welchen Studiengang haben Sie gewählt?"},
+    {"id": "zulassung", "de": "Zulassung", "article": "die", "plural": "die Zulassungen", "en": "admission, acceptance", "pos": "noun", "example": "Die Zulassung kam per E-Mail."},
+    {"id": "einschreiben", "de": "einschreiben", "en": "to enrol (sich einschreiben)", "pos": "verb", "example": "Bis wann muss ich mich einschreiben?"},
+    {"id": "semesterbeitrag", "de": "Semesterbeitrag", "article": "der", "plural": "die Semesterbeiträge", "en": "semester fee", "pos": "noun", "example": "Der Semesterbeitrag muss vor der Einschreibung überwiesen werden."},
+    {"id": "leistungspunkt", "de": "Leistungspunkt", "article": "der", "plural": "die Leistungspunkte", "en": "credit (ECTS)", "pos": "noun", "example": "Für das Modul bekommen Sie sechs Leistungspunkte.", "cloze": "Leistungspunkte"},
+    {"id": "modul", "de": "Modul", "article": "das", "plural": "die Module", "en": "module", "pos": "noun", "example": "Dieses Modul ist im ersten Semester Pflicht."},
+    {"id": "pflichtfach", "de": "Pflichtfach", "article": "das", "plural": "die Pflichtfächer", "en": "compulsory subject", "pos": "noun", "example": "Strömungsmechanik ist bei uns ein Pflichtfach."},
+    {"id": "wahlfach", "de": "Wahlfach", "article": "das", "plural": "die Wahlfächer", "en": "elective subject", "pos": "noun", "example": "Als Wahlfach nehme ich einen Sprachkurs."},
+    {"id": "vorlesung", "de": "Vorlesung", "article": "die", "plural": "die Vorlesungen", "en": "lecture", "pos": "noun", "example": "Die Vorlesung fängt um Viertel nach acht an."},
+    {"id": "skript", "de": "Skript", "article": "das", "plural": "die Skripte", "en": "lecture notes (handout)", "pos": "noun", "example": "Das Skript steht schon auf Moodle."},
+    {"id": "mitschreiben", "de": "mitschreiben", "en": "to take notes", "pos": "verb", "example": "Kannst du heute für mich mitschreiben?"},
+    {"id": "hoersaal", "de": "Hörsaal", "article": "der", "plural": "die Hörsäle", "en": "lecture hall", "pos": "noun", "example": "Der Hörsaal war schon um acht Uhr voll."},
+    {"id": "kommilitone", "de": "Kommilitone", "article": "der", "plural": "die Kommilitonen", "en": "fellow student", "pos": "noun", "example": "Ein Kommilitone hat mir seine Notizen geschickt."},
+    {"id": "uebung", "de": "Übung", "article": "die", "plural": "die Übungen", "en": "tutorial, exercise class", "pos": "noun", "example": "In der Übung besprechen wir die Hausaufgaben."},
+    {"id": "klausur", "de": "Klausur", "article": "die", "plural": "die Klausuren", "en": "written exam", "pos": "noun", "example": "Die Klausur ist am Ende des Semesters."},
+    {"id": "durchfallen", "de": "durchfallen", "en": "to fail (an exam)", "pos": "verb", "example": "Ich bin zum Glück nicht durchgefallen.", "cloze": "durchgefallen"},
+    {"id": "hausarbeit", "de": "Hausarbeit", "article": "die", "plural": "die Hausarbeiten", "en": "term paper", "pos": "noun", "example": "Die Hausarbeit soll etwa fünfzehn Seiten lang sein."},
+    {"id": "gliederung", "de": "Gliederung", "article": "die", "plural": "die Gliederungen", "en": "outline, structure", "pos": "noun", "example": "Schicken Sie mir bitte zuerst eine Gliederung."},
+    {"id": "quelle", "de": "Quelle", "article": "die", "plural": "die Quellen", "en": "source", "pos": "noun", "example": "Wikipedia ist keine wissenschaftliche Quelle."},
+    {"id": "zitieren", "de": "zitieren", "en": "to cite, to quote", "pos": "verb", "example": "Sie müssen jede Quelle korrekt zitieren."},
+    {"id": "literaturverzeichnis", "de": "Literaturverzeichnis", "article": "das", "plural": "die Literaturverzeichnisse", "en": "bibliography", "pos": "noun", "example": "Das Literaturverzeichnis kommt ganz ans Ende."},
+    {"id": "abgabetermin", "de": "Abgabetermin", "article": "der", "plural": "die Abgabetermine", "en": "submission deadline", "pos": "noun", "example": "Der Abgabetermin ist der 31. März."},
+    {"id": "plagiat", "de": "Plagiat", "article": "das", "plural": "die Plagiate", "en": "plagiarism", "pos": "noun", "example": "Wer abschreibt, ohne zu zitieren, begeht ein Plagiat."},
+    {"id": "fragestellung", "de": "Fragestellung", "article": "die", "plural": "die Fragestellungen", "en": "research question", "pos": "noun", "example": "Ihre Fragestellung ist noch zu allgemein."},
+    {"id": "ausleihen", "de": "ausleihen", "en": "to borrow", "pos": "verb", "example": "Wie lange darf ich das Buch ausleihen?"},
+    {"id": "verlaengern", "de": "verlängern", "en": "to renew, to extend", "pos": "verb", "example": "Kann ich die Leihfrist online verlängern?"},
+    {"id": "fernleihe", "de": "Fernleihe", "article": "die", "plural": "die Fernleihen", "en": "interlibrary loan", "pos": "noun", "example": "Das Buch ist nur per Fernleihe erhältlich."},
+    {"id": "zeitschrift", "de": "Zeitschrift", "article": "die", "plural": "die Zeitschriften", "en": "journal, magazine", "pos": "noun", "example": "Diese Zeitschrift erscheint viermal im Jahr."},
+    {"id": "recherchieren", "de": "recherchieren", "en": "to research, to look up", "pos": "verb", "example": "Ich habe drei Stunden in der Datenbank recherchiert.", "cloze": "recherchiert"},
+    {"id": "signatur", "de": "Signatur", "article": "die", "plural": "die Signaturen", "en": "shelf mark", "pos": "noun", "example": "Die Signatur steht auf dem Buchrücken."},
+    {"id": "vormerken", "de": "vormerken", "en": "to reserve, to put on hold", "pos": "verb", "example": "Das Buch ist ausgeliehen, aber Sie können es vormerken."},
+    {"id": "mahngebuehr", "de": "Mahngebühr", "article": "die", "plural": "die Mahngebühren", "en": "late fee", "pos": "noun", "example": "Für jeden Tag Verspätung zahlen Sie eine Mahngebühr."},
+    {"id": "these", "de": "These", "article": "die", "plural": "die Thesen", "en": "thesis, claim", "pos": "noun", "example": "Meine These ist, dass Windkraft unterschätzt wird."},
+    {"id": "belegen", "de": "belegen", "en": "to prove, to back up (with evidence)", "pos": "verb", "example": "Können Sie das mit Zahlen belegen?"},
+    {"id": "ergebnis", "de": "Ergebnis", "article": "das", "plural": "die Ergebnisse", "en": "result", "pos": "noun", "example": "Das Ergebnis hat uns alle überrascht."},
+    {"id": "zusammenfassung", "de": "Zusammenfassung", "article": "die", "plural": "die Zusammenfassungen", "en": "summary", "pos": "noun", "example": "Am Ende kommt eine kurze Zusammenfassung."},
+    {"id": "ansatz", "de": "Ansatz", "article": "der", "plural": "die Ansätze", "en": "approach", "pos": "noun", "example": "Ihr Ansatz ist interessant, aber riskant."},
+    {"id": "schlussfolgerung", "de": "Schlussfolgerung", "article": "die", "plural": "die Schlussfolgerungen", "en": "conclusion", "pos": "noun", "example": "Welche Schlussfolgerung ziehen Sie daraus?"},
+    {"id": "widersprechen", "de": "widersprechen", "en": "to contradict, to disagree", "pos": "verb", "example": "Da muss ich Ihnen leider widersprechen."},
+    {"id": "erlaeutern", "de": "erläutern", "en": "to explain (in detail)", "pos": "verb", "example": "Könnten Sie Ihre Methode kurz erläutern?"}
+  ],
+  "stations": [
+    {
+      "id": "mv-1",
+      "name": "Einschreibung",
+      "character": {"name": "Herr Albrecht", "role": "Studienberatung", "emoji": "🧑‍🏫", "patience": 4, "kickout": "Kommen Sie doch zur nächsten Sprechstunde wieder."},
+      "words": ["studiengang", "zulassung", "einschreiben", "semesterbeitrag", "leistungspunkt", "modul", "pflichtfach", "wahlfach"],
+      "scene": [
+        {"who": "npc", "text": "Herzlichen Glückwunsch zur {zulassung|Zulassung}! Jetzt müssen Sie sich nur noch {einschreiben|einschreiben}."},
+        {"who": "you", "text": "Gerne. Muss ich vorher den {semesterbeitrag|Semesterbeitrag} bezahlen?"},
+        {"who": "npc", "text": "Genau. Danach wählen Sie die {modul|Module} für Ihren {studiengang|Studiengang}."},
+        {"who": "you", "text": "Wie viele {leistungspunkt|Leistungspunkte} brauche ich pro Semester?"},
+        {"who": "npc", "text": "Etwa dreißig. Einige Fächer sind {pflichtfach|Pflichtfächer}, den Rest wählen Sie frei als {wahlfach|Wahlfächer}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["studiengang", "zulassung", "semesterbeitrag", "leistungspunkt", "modul", "pflichtfach", "wahlfach"]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["einschreiben", "zulassung", "leistungspunkt", "pflichtfach", "semesterbeitrag"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "enrolment",
+              "target": "Einschreibung",
+              "tiles": ["Ein", "schreib", "ung", "Ab", "en", "Um"]
+            },
+            {
+              "en": "compulsory, obligatory",
+              "target": "verpflichtend",
+              "tiles": ["ver", "pflicht", "end", "ent", "ung", "be"]
+            },
+            {
+              "en": "admission",
+              "target": "Zulassung",
+              "tiles": ["Zu", "lass", "ung", "Ab", "keit", "ver"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mv-2",
+      "name": "Hörsaal 1",
+      "character": {"name": "Mira", "role": "deine Kommilitonin", "emoji": "👩‍🎓", "patience": 5, "kickout": "Komm, wir holen erst mal einen Kaffee in der Mensa."},
+      "words": ["vorlesung", "skript", "mitschreiben", "hoersaal", "kommilitone", "uebung", "klausur", "durchfallen"],
+      "scene": [
+        {"who": "npc", "text": "Hey! Bist du auch neu in diesem {hoersaal|Hörsaal}? Ich bin Mira, deine {kommilitone|Kommilitonin}."},
+        {"who": "you", "text": "Freut mich! Weißt du, ob es zur {vorlesung|Vorlesung} ein {skript|Skript} gibt?"},
+        {"who": "npc", "text": "Ja, aber der Prof erzählt viel mehr, als drinsteht. Also lieber {mitschreiben|mitschreiben}."},
+        {"who": "you", "text": "Und die Aufgaben?"},
+        {"who": "npc", "text": "Die besprechen wir in der {uebung|Übung}. Geh da unbedingt hin – wer sie schwänzt, fällt in der {klausur|Klausur} schnell {durchfallen|durch}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["vorlesung", "skript", "hoersaal", "kommilitone", "uebung", "klausur"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "eine Vorlesung ___",
+              "answer": "besuchen",
+              "options": ["besuchen", "sehen", "gehen", "treffen"],
+              "en": "to attend a lecture"
+            },
+            {
+              "phrase": "eine Prüfung ___",
+              "answer": "ablegen",
+              "options": ["ablegen", "aufnehmen", "absetzen", "einlegen"],
+              "en": "to sit an exam (formal)"
+            },
+            {
+              "phrase": "eine Klausur ___",
+              "answer": "bestehen",
+              "options": ["bestehen", "passen", "gewinnen", "erreichen"],
+              "en": "to pass an exam"
+            },
+            {
+              "phrase": "eine Frage ___",
+              "answer": "stellen",
+              "options": ["stellen", "fragen", "machen", "geben"],
+              "en": "to ask a question"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["mitschreiben", "durchfallen", "klausur", "skript", "kommilitone", "hoersaal"]
+        }
+      ]
+    },
+    {
+      "id": "mv-3",
+      "name": "Die Hausarbeit",
+      "character": {"name": "Dr. Sommer", "role": "deine Betreuerin", "emoji": "👩‍🔬", "patience": 3, "kickout": "Überarbeiten Sie das bitte und melden Sie sich dann wieder."},
+      "words": ["hausarbeit", "gliederung", "quelle", "zitieren", "literaturverzeichnis", "abgabetermin", "plagiat", "fragestellung"],
+      "scene": [
+        {"who": "npc", "text": "Sie möchten also bei mir eine {hausarbeit|Hausarbeit} schreiben. Worum soll es gehen?"},
+        {"who": "you", "text": "Um Windkraft in Bayern. Aber ich weiß noch nicht genau, wie ich anfangen soll."},
+        {"who": "npc", "text": "Ihre {fragestellung|Fragestellung} ist noch zu allgemein. Schicken Sie mir bis Freitag eine {gliederung|Gliederung}."},
+        {"who": "you", "text": "Wie viele {quelle|Quellen} brauche ich?"},
+        {"who": "npc", "text": "Mindestens zehn – und jede müssen Sie sauber {zitieren|zitieren}. Alles kommt ins {literaturverzeichnis|Literaturverzeichnis}."},
+        {"who": "npc", "text": "Ach ja: Ein {plagiat|Plagiat} führt sofort zum Nichtbestehen. Und der {abgabetermin|Abgabetermin} ist nicht verhandelbar."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["hausarbeit", "gliederung", "quelle", "literaturverzeichnis", "abgabetermin", "plagiat", "fragestellung"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Sie haben mir die Gliederung noch nicht geschickt.",
+              "task": "Apologise formally and ask whether you can hand it in by Monday.",
+              "options": [
+                {"text": "Sorry, hab's vergessen. Mach ich morgen.", "ok": false, "why": "Viel zu locker für eine Betreuerin."},
+                {"text": "Entschuldigen Sie bitte. Könnte ich sie Ihnen bis Montag nachreichen?", "ok": true, "why": "Konjunktiv II und „nachreichen“ – höflich und präzise."},
+                {"text": "Entschuldigen Sie bitte. Könnte ich sie Ihnen bis Montag nachgereicht?", "ok": false, "why": "Nach „könnte“ steht der Infinitiv: nachreichen."}
+              ]
+            },
+            {
+              "npc": "Haben Sie sonst noch Fragen?",
+              "task": "Ask whether you may write the paper in English.",
+              "options": [
+                {"text": "Wäre es möglich, die Arbeit auf Englisch zu verfassen?", "ok": true, "why": "„verfassen“ ist das passende Verb für wissenschaftliche Texte."},
+                {"text": "Kann ich die Arbeit auf Englisch machen?", "ok": false, "why": "Verständlich, aber zu umgangssprachlich: Eine Arbeit schreibt oder verfasst man."},
+                {"text": "Wäre es möglich, die Arbeit auf Englisch zu verfasst?", "ok": false, "why": "Nach „zu“ steht der Infinitiv: zu verfassen."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["gliederung", "zitieren", "quelle", "plagiat", "abgabetermin", "fragestellung"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "scientific, academic",
+              "target": "wissenschaftlich",
+              "tiles": ["wissen", "schaft", "lich", "ig", "heit", "s"]
+            },
+            {
+              "en": "structure, outline",
+              "target": "Gliederung",
+              "tiles": ["Glied", "er", "ung", "ver", "keit", "Ab"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mv-4",
+      "name": "Unibibliothek",
+      "character": {"name": "Herr Vogt", "role": "Bibliothekar", "emoji": "📚", "patience": 4, "kickout": "Psst! Bitte lesen Sie erst die Benutzungsordnung."},
+      "words": ["ausleihen", "verlaengern", "fernleihe", "zeitschrift", "recherchieren", "signatur", "vormerken", "mahngebuehr"],
+      "scene": [
+        {"who": "you", "text": "Grüß Gott, ich suche ein Buch über Strömungsmechanik."},
+        {"who": "npc", "text": "Haben Sie schon im Katalog {recherchieren|recherchiert}? Dort finden Sie auch die {signatur|Signatur}."},
+        {"who": "you", "text": "Ja, aber es ist gerade ausgeliehen."},
+        {"who": "npc", "text": "Dann können Sie es {vormerken|vormerken}. Oder Sie bestellen es per {fernleihe|Fernleihe} aus einer anderen Bibliothek."},
+        {"who": "you", "text": "Und wie lange darf ich Bücher {ausleihen|ausleihen}?"},
+        {"who": "npc", "text": "Vier Wochen. Sie können zweimal {verlaengern|verlängern}, danach kostet jeder Tag eine {mahngebuehr|Mahngebühr}. Aktuelle Artikel finden Sie übrigens in den {zeitschrift|Zeitschriften}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["fernleihe", "zeitschrift", "signatur", "mahngebuehr"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "ein Buch ___",
+              "answer": "ausleihen",
+              "options": ["ausleihen", "verleihen", "auslegen", "ausgeben"],
+              "en": "to borrow a book"
+            },
+            {
+              "phrase": "die Leihfrist ___",
+              "answer": "verlängern",
+              "options": ["verlängern", "vergrößern", "verbreitern", "verdoppeln"],
+              "en": "to extend the loan period"
+            },
+            {
+              "phrase": "ein Buch ___",
+              "answer": "vormerken",
+              "options": ["vormerken", "vorstellen", "vorlegen", "vorziehen"],
+              "en": "to reserve a book"
+            },
+            {
+              "phrase": "in der Datenbank ___",
+              "answer": "recherchieren",
+              "options": ["recherchieren", "untersuchen", "erforschen", "nachdenken"],
+              "en": "to research in the database"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["ausleihen", "verlaengern", "recherchieren", "vormerken", "fernleihe", "mahngebuehr"]
+        }
+      ]
+    },
+    {
+      "id": "mv-5",
+      "name": "Das Referat",
+      "character": {"name": "Prof. Lehmann", "role": "Seminarleiter", "emoji": "👨‍🏫", "patience": 3, "kickout": "Ich schlage vor, Sie bereiten sich noch einmal gründlich vor."},
+      "words": ["these", "belegen", "ergebnis", "zusammenfassung", "ansatz", "schlussfolgerung", "widersprechen", "erlaeutern"],
+      "scene": [
+        {"who": "npc", "text": "So, Sie halten heute das Referat. Was ist Ihre {these|These}?"},
+        {"who": "you", "text": "Ich behaupte, dass Windkraft in Bayern unterschätzt wird. Mein {ansatz|Ansatz} ist ein Vergleich mit Norddeutschland."},
+        {"who": "npc", "text": "Interessant. Aber können Sie das auch {belegen|belegen}?"},
+        {"who": "you", "text": "Ja, die {ergebnis|Ergebnisse} der Studie zeigen das deutlich. Ich {erlaeutern|erläutere} das gleich genauer."},
+        {"who": "npc", "text": "Gut. Vergessen Sie am Ende nicht die {zusammenfassung|Zusammenfassung} und Ihre {schlussfolgerung|Schlussfolgerung}."},
+        {"who": "npc", "text": "Und wenn Ihnen jemand {widersprechen|widerspricht}: Bleiben Sie sachlich."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["these", "ergebnis", "zusammenfassung", "ansatz", "schlussfolgerung"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "eine Schlussfolgerung ___",
+              "answer": "ziehen",
+              "options": ["ziehen", "machen", "stellen", "legen"],
+              "en": "to draw a conclusion"
+            },
+            {
+              "phrase": "ein Referat ___",
+              "answer": "halten",
+              "options": ["halten", "geben", "führen", "tragen"],
+              "en": "to give a presentation"
+            },
+            {
+              "phrase": "eine These ___",
+              "answer": "aufstellen",
+              "options": ["aufstellen", "anstellen", "einstellen", "abstellen"],
+              "en": "to put forward a thesis"
+            },
+            {
+              "phrase": "zu einem Ergebnis ___",
+              "answer": "kommen",
+              "options": ["kommen", "gehen", "fahren", "fallen"],
+              "en": "to reach a result"
+            }
+          ]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Ich halte Ihre These für übertrieben.",
+              "task": "Disagree politely but firmly, and give a reason.",
+              "options": [
+                {"text": "Das ist doch Quatsch.", "ok": false, "why": "Viel zu respektlos im Seminar."},
+                {"text": "Da muss ich Ihnen widersprechen – die Daten zeigen etwas anderes.", "ok": true, "why": "Höflich, bestimmt und mit Begründung."},
+                {"text": "Da muss ich Ihnen widersprechen – die Daten zeigen etwas andere.", "ok": false, "why": "Nach „etwas“ steht das Adjektiv mit -es: etwas anderes."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["belegen", "erlaeutern", "widersprechen", "these", "ansatz"]
+        }
+      ]
+    }
+  ],
+  "boss": {
+    "name": "Mündliche Prüfung",
+    "character": {"name": "Prof. Lehmann", "role": "Prüfer", "emoji": "👨‍🏫", "patience": 3, "kickout": "Das reicht leider nicht. Wir sehen uns im Wiederholungstermin."},
+    "intro": "Raum 2.017, zwanzig Minuten, ein Prüfer, ein Beisitzer. Prof. Lehmann fragt schnell und erwartet präzise Fachbegriffe – jede Lücke oder lange Pause kostet Geduld.",
+    "seconds": 35,
+    "winTitle": "Bestanden!",
+    "winText": "Prof. Lehmann nickt: „Sehr gut. Eins Komma null.“ Die Maxvorstadt gehört Ihnen.",
+    "items": [
+      {
+        "npc": "Beginnen wir. In welchem ___ sind Sie eingeschrieben?",
+        "you": "Im Master Luft- und Raumfahrt.",
+        "answers": ["Studiengang"],
+        "wordId": "studiengang",
+        "hint": "degree programme"
+      },
+      {
+        "npc": "Wie viele ___ bringt Ihnen dieses Modul?",
+        "you": "Sechs ECTS.",
+        "answers": ["Leistungspunkte"],
+        "wordId": "leistungspunkt",
+        "hint": "credits"
+      },
+      {
+        "npc": "Was war die zentrale ___ Ihrer Hausarbeit?",
+        "you": "Ob Windkraft in Bayern unterschätzt wird.",
+        "answers": ["Fragestellung"],
+        "wordId": "fragestellung",
+        "hint": "research question"
+      },
+      {
+        "npc": "Und wie haben Sie Ihre These ___?",
+        "you": "Mit Daten aus drei Studien.",
+        "answers": ["belegt"],
+        "wordId": "belegen",
+        "hint": "backed up, proved"
+      },
+      {
+        "npc": "Haben Sie alle Quellen korrekt ___?",
+        "you": "Ja, alles steht im Literaturverzeichnis.",
+        "answers": ["zitiert"],
+        "wordId": "zitieren",
+        "hint": "cited"
+      },
+      {
+        "npc": "Welche ___ ziehen Sie aus Ihren Ergebnissen?",
+        "you": "Dass Bayern mehr Flächen freigeben sollte.",
+        "answers": ["Schlussfolgerung"],
+        "wordId": "schlussfolgerung",
+        "hint": "conclusion"
+      },
+      {
+        "npc": "Könnten Sie Ihren methodischen Ansatz kurz ___?",
+        "you": "Gerne. Ich habe zwei Regionen verglichen.",
+        "answers": ["erläutern"],
+        "casual": ["erklären"],
+        "wordId": "erlaeutern",
+        "hint": "explain in detail"
+      },
+      {
+        "npc": "Einige Kollegen würden Ihnen hier ___.",
+        "you": "Das stimmt, aber die Zahlen sind eindeutig.",
+        "answers": ["widersprechen"],
+        "wordId": "widersprechen",
+        "hint": "contradict"
+      },
+      {
+        "npc": "Woher hatten Sie die Studie aus Hamburg?",
+        "you": "Die habe ich per ___ bestellt.",
+        "answers": ["Fernleihe"],
+        "wordId": "fernleihe",
+        "hint": "interlibrary loan"
+      },
+      {
+        "npc": "Und wenn Sie heute nicht bestehen, sind Sie leider ___.",
+        "you": "Daran will ich gar nicht denken!",
+        "answers": ["durchgefallen"],
+        "wordId": "durchfallen",
+        "hint": "failed"
+      }
+    ]
+  },
+  "challenge": {
+    "name": "Wissenschaftssprache",
+    "intro": "Prof. Lehmann liest Ihre Hausarbeit Korrektur. Ersetzen Sie die Alltagswörter durch Wissenschaftssprache – in der passenden Form.",
+    "character": {"name": "Prof. Lehmann", "role": "Gutachter", "emoji": "🧐", "patience": 3, "kickout": "Das klingt noch nach WhatsApp, nicht nach Wissenschaft."},
+    "winTitle": "Wissenschaftlich!",
+    "winText": "Ihre Hausarbeit liest sich jetzt wie ein Fachartikel.",
+    "nearMissNote": "Verständlich, aber nicht wissenschaftlich genug.",
+    "items": [
+      {
+        "casual": "zeigen",
+        "answers": ["belegen", "verdeutlichen"],
+        "sentence": "Die Ergebnisse ___, dass Windkraft unterschätzt wird.",
+        "en": "to demonstrate, to prove"
+      },
+      {
+        "casual": "sagen",
+        "answers": ["behaupten"],
+        "sentence": "Viele Autoren ___, dass die Kosten zu hoch sind.",
+        "en": "to claim"
+      },
+      {
+        "casual": "erklären",
+        "answers": ["erläutere"],
+        "sentence": "Im nächsten Kapitel ___ ich die Methode.",
+        "en": "to explain in detail"
+      },
+      {
+        "casual": "anschauen",
+        "answers": ["untersucht"],
+        "sentence": "Die Studie ___ den Einfluss des Wetters.",
+        "en": "to examine"
+      },
+      {
+        "casual": "meinen",
+        "answers": ["annehmen"],
+        "sentence": "Man kann ___, dass die Zahlen weiter steigen.",
+        "en": "to assume"
+      },
+      {
+        "casual": "wichtiger",
+        "answers": ["wesentlicher", "entscheidender", "zentraler"],
+        "sentence": "Ein ___ Faktor ist der Strompreis.",
+        "en": "essential, key"
+      },
+      {
+        "casual": "benutzt",
+        "answers": ["verwendet", "herangezogen"],
+        "sentence": "In der Studie wurden Daten aus dem Jahr 2024 ___.",
+        "en": "to use (data)"
+      },
+      {
+        "casual": "am Ende",
+        "answers": ["Abschließend", "Zusammenfassend"],
+        "sentence": "___ lässt sich festhalten, dass mehr Forschung nötig ist.",
+        "en": "in conclusion"
+      },
+      {
+        "casual": "viele",
+        "answers": ["Zahlreiche"],
+        "sentence": "___ Studien kommen zu einem ähnlichen Ergebnis.",
+        "en": "numerous"
+      },
+      {
+        "casual": "klar",
+        "answers": ["eindeutig"],
+        "sentence": "Die Datenlage ist ___.",
+        "en": "unambiguous"
+      }
+    ]
+  }
+}

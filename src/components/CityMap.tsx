@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Board, Hud } from './Fx'
-import { districts, mapNodes } from '../data'
+import { districtName, districts, isUnlocked, mapNodes } from '../data'
 import { fog, learnedCount, resetProgress, toggleMute, useProgress } from '../game/progress'
 
 // Fixed pseudo-random star field for the night sky.
@@ -16,13 +16,20 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
   const [confirmReset, setConfirmReset] = useState(false)
   const totalStars = Object.values(s.stars).reduce((a, b) => a + b, 0)
 
+  const say = (msg: string) => {
+    setToast(msg)
+    setTimeout(() => setToast(null), 2600)
+  }
+
   const tap = (id: string) => {
     const node = mapNodes.find((n) => n.id === id)!
-    if (node.districtId) onOpen(node.districtId)
-    else {
-      setToast(`🚧 ${node.name} (${node.theme}) ist noch eine Baustelle.`)
-      setTimeout(() => setToast(null), 2200)
+    const d = districts.find((x) => x.id === node.districtId)
+    if (!d) return say(`🚧 ${node.name} (${node.theme}) ist noch eine Baustelle.`)
+    if (!isUnlocked(d, s.stars)) {
+      const missing = (d.requires ?? []).filter((r) => !s.stars[r]).map(districtName)
+      return say(`🔒 ${node.name} öffnet, wenn du ${missing.join(' und ')} geschafft hast.`)
     }
+    onOpen(d.id)
   }
 
   return (
@@ -51,31 +58,36 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
           Isar
         </text>
         {/* Rails from the centre to every district */}
-        {mapNodes.map((n) => (
-          <line
-            key={`r-${n.id}`}
-            x1={200}
-            y1={235}
-            x2={n.x}
-            y2={n.y}
-            className={n.districtId ? 'rail live' : 'rail'}
-            style={n.districtId ? { stroke: districts.find((d) => d.id === n.districtId)?.color } : undefined}
-          />
-        ))}
+        {mapNodes.map((n) => {
+          const d = districts.find((x) => x.id === n.districtId)
+          const open = d && isUnlocked(d, s.stars)
+          return (
+            <line
+              key={`r-${n.id}`}
+              x1={200}
+              y1={235}
+              x2={n.x}
+              y2={n.y}
+              className={open ? 'rail live' : 'rail'}
+              style={open ? { stroke: d.color, color: d.color } : undefined}
+            />
+          )
+        })}
         <circle cx={200} cy={235} r={7} className="centre" />
         <text x={200} y={222} className="centre-label">
           Marienplatz
         </text>
         {mapNodes.map((n) => {
-          const d = n.districtId ? districts.find((x) => x.id === n.districtId) : undefined
+          const found = n.districtId ? districts.find((x) => x.id === n.districtId) : undefined
+          const d = found && isUnlocked(found, s.stars) ? found : undefined
           const st = d ? (s.stars[d.id] ?? 0) : 0
           const f = d ? fog(d, s) : 0
           return (
             <g key={n.id} className={`node ${d ? 'live' : 'locked'}`} onClick={() => tap(n.id)} style={{ cursor: 'pointer' }}>
               {d && <circle cx={n.x} cy={n.y} r={26} className="node-glow" style={{ fill: d.color }} />}
-              <circle cx={n.x} cy={n.y} r={d ? 18 : 9} className="node-dot" style={d ? { fill: d.color } : undefined} />
+              <circle cx={n.x} cy={n.y} r={d ? 18 : found ? 13 : 9} className="node-dot" style={d ? { fill: d.color } : undefined} />
               <text x={n.x} y={n.y + 5} className="node-icon">
-                {d ? d.line : ''}
+                {d ? d.line : found ? '🔒' : ''}
               </text>
               {f > 0.2 && (
                 <>
@@ -87,6 +99,7 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
               )}
               <text x={n.x} y={n.y + (d ? 34 : 28)} className="node-label">
                 {n.name}
+                {n.bonus ? ' ✦' : ''}
               </text>
               {d && (
                 <text x={n.x} y={n.y + 47} className="node-stars">
@@ -109,7 +122,7 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
         </div>
         <div>
           <strong>
-            {districts.filter((d) => (s.stars[d.id] ?? 0) > 0).length}/{mapNodes.length}
+            {districts.filter((d) => (s.stars[d.id] ?? 0) > 0).length}/{mapNodes.filter((n) => !n.bonus).length}
           </strong>
           <span>Viertel</span>
         </div>

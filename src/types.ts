@@ -86,6 +86,10 @@ export interface District {
   subtitle: string
   line: string
   color: string
+  /** Districts that need at least one star before this one opens. */
+  requires?: string[]
+  /** Bonus lines are optional extras outside the main progression. */
+  bonus?: boolean
   words: Word[]
   stations: Station[]
   boss: {
@@ -93,12 +97,18 @@ export interface District {
     character: Character
     intro: string
     seconds: number
+    winTitle: string
+    winText: string
     items: BossItem[]
   }
   challenge: {
     name: string
     intro: string
     character: Character
+    winTitle: string
+    winText: string
+    /** Shown when the player types the everyday word instead of the target. */
+    nearMissNote: string
     items: RegisterItem[]
   }
 }

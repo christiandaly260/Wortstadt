@@ -35,7 +35,7 @@ interface Props {
   onExit: () => void
 }
 
-/** A run of typed questions — used for the boss, the Amtsdeutsch challenge and fog reviews. */
+/** A run of typed questions — used for the boss, the register challenge and fog reviews. */
 function Gauntlet({ district, title, character, intro, questions, seconds, winTitle, winText, onWin, onExit }: Props) {
   const [phase, setPhase] = useState<'intro' | 'play' | 'won' | 'lost'>('intro')
   const [i, setI] = useState(0)
@@ -258,12 +258,12 @@ export function Boss({ district, onExit }: { district: District; onExit: () => v
       }
       questions={questions}
       seconds={district.boss.seconds}
-      winTitle="Angemeldet!"
+      winTitle={district.boss.winTitle}
       winText={(m) => (
         <>
-          <p>Frau Huber stempelt Ihre Meldebescheinigung. Willkommen in München!</p>
+          <p>{district.boss.winText}</p>
           <Stars n={m === 0 ? 2 : 1} />
-          <p className="muted">{m === 0 ? 'Fehlerfrei – zwei Sterne!' : 'Für den zweiten Stern: fehlerfrei durchkommen.'} Der dritte Stern wartet in der Amtsdeutsch-Prüfung.</p>
+          <p className="muted">{m === 0 ? 'Fehlerfrei – zwei Sterne!' : 'Für den zweiten Stern: fehlerfrei durchkommen.'} Der dritte Stern wartet im Bonus: {district.challenge.name}.</p>
         </>
       )}
       onWin={(m) => {
@@ -289,7 +289,7 @@ export function Challenge({ district, onExit }: { district: District; onExit: ()
           options: {
             nearMiss: {
               answers: [it.casual.replace(/\s*\(.*\)$/, '').replace(/ in$/, '')],
-              note: 'Das ist die Alltagsversion – gesucht ist Amtsdeutsch.',
+              note: district.challenge.nearMissNote,
             },
           },
           render: (fill, state) => (
@@ -316,10 +316,10 @@ export function Challenge({ district, onExit }: { district: District; onExit: ()
       character={district.challenge.character}
       intro={<p>{district.challenge.intro}</p>}
       questions={questions}
-      winTitle="Amtsdeutsch bestanden!"
+      winTitle={district.challenge.winTitle}
       winText={() => (
         <>
-          <p>Sie klingen jetzt offiziell wie ein Formular. Glückwunsch.</p>
+          <p>{district.challenge.winText}</p>
           <Stars n={3} />
         </>
       )}
