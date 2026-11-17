@@ -1,0 +1,471 @@
+{
+  "id": "theresienwiese",
+  "name": "Theresienwiese",
+  "subtitle": "Wiesn, Bairisch & Redewendungen",
+  "line": "U4",
+  "color": "#00a984",
+  "requires": ["englischer-garten"],
+  "words": [
+    {"id": "semmel", "de": "Semmel", "article": "die", "plural": "die Semmeln", "en": "bread roll (Bavarian)", "pos": "noun", "example": "Zum Frühstück gibt's eine Semmel mit Butter."},
+    {"id": "brezn", "de": "Brezn", "article": "die", "plural": "die Brezn", "en": "pretzel (Bavarian)", "pos": "noun", "example": "Eine frische Brezn passt zu jedem Bier."},
+    {"id": "gaudi", "de": "Gaudi", "article": "die", "en": "fun, a laugh (Bavarian)", "pos": "noun", "example": "Das war eine echte Gaudi!"},
+    {"id": "brotzeit", "de": "Brotzeit", "article": "die", "plural": "die Brotzeiten", "en": "snack, cold meal (Bavarian)", "pos": "noun", "example": "Um zehn machen wir Brotzeit."},
+    {"id": "freilich", "de": "freilich", "en": "of course (Bavarian)", "pos": "adv", "example": "Da komm ich freilich mit!"},
+    {"id": "abissl", "de": "a bissl", "en": "a little bit (Bavarian)", "pos": "phrase", "example": "Ich spreche schon a bissl Bairisch."},
+    {"id": "servus", "de": "Servus", "en": "hi / bye (Bavarian, informal)", "pos": "phrase", "example": "Servus, wie geht's dir?"},
+    {"id": "obacht", "de": "Obacht", "article": "die", "en": "caution! watch out! (Bavarian)", "pos": "noun", "example": "Obacht, der Boden ist rutschig!"},
+    {"id": "mass", "de": "Maß", "article": "die", "plural": "die Maß", "en": "one-litre mug of beer", "pos": "noun", "example": "Eine Maß kostet dieses Jahr über fünfzehn Euro."},
+    {"id": "dirndl", "de": "Dirndl", "article": "das", "plural": "die Dirndl", "en": "dirndl (traditional dress)", "pos": "noun", "example": "Sie trägt ein dunkelblaues Dirndl."},
+    {"id": "tracht", "de": "Tracht", "article": "die", "plural": "die Trachten", "en": "traditional costume", "pos": "noun", "example": "Auf der Wiesn tragen viele Leute Tracht."},
+    {"id": "lederhose", "de": "Lederhose", "article": "die", "plural": "die Lederhosen", "en": "lederhosen", "pos": "noun", "example": "Die Lederhose hat schon mein Opa getragen."},
+    {"id": "festzelt", "de": "Festzelt", "article": "das", "plural": "die Festzelte", "en": "beer tent", "pos": "noun", "example": "Ohne Reservierung kommt man abends kaum ins Festzelt."},
+    {"id": "schunkeln", "de": "schunkeln", "en": "to sway arm in arm", "pos": "verb", "example": "Bei dem Lied fangen alle an zu schunkeln."},
+    {"id": "anstossen", "de": "anstoßen", "en": "to clink glasses, to toast", "pos": "verb", "example": "Lasst uns anstoßen – Prost!"},
+    {"id": "bedienung", "de": "Bedienung", "article": "die", "plural": "die Bedienungen", "en": "waiter/waitress, service", "pos": "noun", "example": "Die Bedienung trägt zehn Maß auf einmal."},
+    {"id": "daumen", "de": "die Daumen drücken", "en": "to keep your fingers crossed (for someone)", "pos": "phrase", "example": "Ich drücke dir für die Prüfung die Daumen!", "cloze": "Daumen"},
+    {"id": "schwein", "de": "Schwein haben", "en": "to be lucky", "pos": "phrase", "example": "Da hast du aber Schwein gehabt!", "cloze": "Schwein"},
+    {"id": "schlauch", "de": "auf dem Schlauch stehen", "en": "to be slow on the uptake, to not get it", "pos": "phrase", "example": "Sorry, ich stehe gerade total auf dem Schlauch.", "cloze": "Schlauch"},
+    {"id": "nase", "de": "die Nase voll haben", "en": "to be fed up", "pos": "phrase", "example": "Ich habe die Nase voll von dem Regen.", "cloze": "Nase"},
+    {"id": "keks", "de": "auf den Keks gehen", "en": "to get on someone's nerves", "pos": "phrase", "example": "Der Baulärm geht mir echt auf den Keks.", "cloze": "Keks"},
+    {"id": "bahnhof", "de": "nur Bahnhof verstehen", "en": "to not understand a thing", "pos": "phrase", "example": "Bei Quantenphysik verstehe ich nur Bahnhof.", "cloze": "Bahnhof"},
+    {"id": "fettnaepfchen", "de": "ins Fettnäpfchen treten", "en": "to put your foot in it", "pos": "phrase", "example": "Mit der Frage bist du voll ins Fettnäpfchen getreten.", "cloze": "Fettnäpfchen"},
+    {"id": "tomaten", "de": "Tomaten auf den Augen haben", "en": "to not see what's right in front of you", "pos": "phrase", "example": "Hast du Tomaten auf den Augen? Der Schlüssel liegt doch da!", "cloze": "Tomaten"},
+    {"id": "nagel", "de": "den Nagel auf den Kopf treffen", "en": "to hit the nail on the head", "pos": "phrase", "example": "Mit deiner Analyse hast du den Nagel auf den Kopf getroffen.", "cloze": "Nagel"},
+    {"id": "brei", "de": "um den heißen Brei herumreden", "en": "to beat about the bush", "pos": "phrase", "example": "Red nicht um den heißen Brei herum!", "cloze": "Brei"},
+    {"id": "bank", "de": "auf die lange Bank schieben", "en": "to put something off", "pos": "phrase", "example": "Die Steuererklärung schiebe ich schon ewig auf die lange Bank.", "cloze": "Bank"},
+    {"id": "zeug", "de": "sich ins Zeug legen", "en": "to put in a real effort", "pos": "phrase", "example": "Für das Projekt hat sich das ganze Team ins Zeug gelegt.", "cloze": "Zeug"},
+    {"id": "augen", "de": "unter vier Augen", "en": "in private, one-to-one", "pos": "phrase", "example": "Können wir das unter vier Augen besprechen?", "cloze": "Augen"},
+    {"id": "kirche", "de": "die Kirche im Dorf lassen", "en": "to keep things in perspective", "pos": "phrase", "example": "Jetzt lass mal die Kirche im Dorf!", "cloze": "Kirche"},
+    {"id": "strang", "de": "an einem Strang ziehen", "en": "to pull together", "pos": "phrase", "example": "Wenn wir alle an einem Strang ziehen, schaffen wir das.", "cloze": "Strang"},
+    {"id": "faden", "de": "an einem seidenen Faden hängen", "en": "to hang by a thread", "pos": "phrase", "example": "Das Projekt hängt an einem seidenen Faden.", "cloze": "Faden"},
+    {"id": "passtscho", "de": "passt scho", "en": "it's fine, no worries (Bavarian)", "pos": "phrase", "example": "Kein Problem, das passt scho."},
+    {"id": "pfiatdi", "de": "Pfiat di", "en": "bye (Bavarian, informal)", "pos": "phrase", "example": "Pfiat di, bis morgen!"},
+    {"id": "griassdi", "de": "Griaß di", "en": "hello (Bavarian, informal)", "pos": "phrase", "example": "Griaß di, Resi!"},
+    {"id": "madl", "de": "Madl", "article": "das", "plural": "die Madl", "en": "girl (Bavarian)", "pos": "noun", "example": "Das Madl am Nachbartisch winkt dir."},
+    {"id": "bua", "de": "Bua", "article": "der", "plural": "die Buam", "en": "boy (Bavarian)", "pos": "noun", "example": "Der Bua hat schon wieder Hunger."},
+    {"id": "fei", "de": "fei", "en": "really, you know (Bavarian particle)", "pos": "adv", "example": "Das ist fei richtig gut!"},
+    {"id": "wiesn", "de": "Wiesn", "article": "die", "en": "the Oktoberfest (Bavarian)", "pos": "noun", "example": "Auf der Wiesn ist immer was los."},
+    {"id": "fahrgeschaeft", "de": "Fahrgeschäft", "article": "das", "plural": "die Fahrgeschäfte", "en": "fairground ride", "pos": "noun", "example": "Das neue Fahrgeschäft ist nichts für schwache Nerven."}
+  ],
+  "stations": [
+    {
+      "id": "tw-1",
+      "name": "Bei Oma Resi",
+      "character": {"name": "Oma Resi", "role": "Lenas Oma", "emoji": "👵", "patience": 5, "kickout": "Ja mei, iss erst amal was. Dann probierst es nochmal."},
+      "words": ["semmel", "brezn", "gaudi", "brotzeit", "freilich", "abissl", "servus", "obacht"],
+      "scene": [
+        {"who": "npc", "text": "{servus|Servus}, mei Bua! Komm rein, es gibt grad {brotzeit|Brotzeit}."},
+        {"who": "you", "text": "Danke, Resi! Was gibt's denn?"},
+        {"who": "npc", "text": "{semmel|Semmeln}, eine frische {brezn|Brezn} und Obazda. Iss nur, du bist eh {abissl|a bissl} dünn."},
+        {"who": "you", "text": "Und kommst du morgen mit auf die Wiesn?"},
+        {"who": "npc", "text": "{freilich|Freilich}! Das wird eine {gaudi|Gaudi}. Aber {obacht|Obacht}: Die Maß ist schwerer, als du denkst!"}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["semmel", "brezn", "gaudi", "brotzeit", "obacht"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Magst noch a Brezn?",
+              "task": "Say: of course – but just a little bit (in Bavarian).",
+              "options": [
+                {"text": "Freilich nicht, aber nur a bissl!", "ok": false, "why": "„Freilich nicht“ heißt „natürlich nicht“ – das widerspricht sich."},
+                {"text": "Freilich, aber nur a bissl!", "ok": true, "why": "Perfektes Bairisch: natürlich, aber nur ein bisschen."},
+                {"text": "Obacht, aber nur a bissl!", "ok": false, "why": "„Obacht“ heißt „Vorsicht!“ – passt hier nicht."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["freilich", "abissl", "servus", "gaudi", "semmel", "brotzeit"]
+        }
+      ]
+    },
+    {
+      "id": "tw-2",
+      "name": "Im Festzelt",
+      "character": {"name": "Vroni", "role": "Wiesn-Bedienung", "emoji": "🍺", "patience": 4, "kickout": "Sorry, i hab grad koa Zeit. Probier's später nochmal!"},
+      "words": ["mass", "dirndl", "tracht", "lederhose", "festzelt", "schunkeln", "anstossen", "bedienung"],
+      "scene": [
+        {"who": "npc", "text": "Servus! Herzlich willkommen im {festzelt|Festzelt}. I bin die Vroni, eure {bedienung|Bedienung}."},
+        {"who": "you", "text": "Zwei {mass|Maß}, bitte! Schönes {dirndl|Dirndl} übrigens."},
+        {"who": "npc", "text": "Dankschön! Und du in der {lederhose|Lederhose} – ganz in {tracht|Tracht}, sauber!"},
+        {"who": "you", "text": "Was machen denn jetzt alle auf den Bänken?"},
+        {"who": "npc", "text": "Die {schunkeln|schunkeln}! Und gleich {anstossen|stoßt} ihr alle {anstossen|an}: Ein Prosit der Gemütlichkeit!"}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["mass", "dirndl", "tracht", "lederhose", "festzelt", "bedienung"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "einen Tisch ___",
+              "answer": "reservieren",
+              "options": ["reservieren", "besetzen", "abholen", "aufstellen"],
+              "en": "to reserve a table"
+            },
+            {
+              "phrase": "auf jemanden ___",
+              "answer": "anstoßen",
+              "options": ["anstoßen", "ansprechen", "anstellen", "angeben"],
+              "en": "to raise a glass to someone"
+            },
+            {
+              "phrase": "eine Runde ___",
+              "answer": "ausgeben",
+              "options": ["ausgeben", "abgeben", "aufgeben", "eingeben"],
+              "en": "to buy a round"
+            },
+            {
+              "phrase": "gute Laune ___",
+              "answer": "verbreiten",
+              "options": ["verbreiten", "vergrößern", "verbringen", "verlängern"],
+              "en": "to spread good cheer"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["schunkeln", "anstossen", "tracht", "mass", "festzelt", "bedienung"]
+        }
+      ]
+    },
+    {
+      "id": "tw-3",
+      "name": "Glück & Pech",
+      "character": {"name": "Lena", "role": "deine Mitbewohnerin", "emoji": "👩‍🎤", "patience": 5, "kickout": "Ich versteh nur Bahnhof! Lass uns das nochmal machen."},
+      "words": ["daumen", "schwein", "schlauch", "nase", "keks", "bahnhof", "fettnaepfchen", "tomaten"],
+      "scene": [
+        {"who": "npc", "text": "Und, wie war die Prüfung? Ich hab dir die ganze Zeit die {daumen|Daumen gedrückt}!"},
+        {"who": "you", "text": "Bestanden! Aber bei der zweiten Frage habe ich nur {bahnhof|Bahnhof verstanden}."},
+        {"who": "npc", "text": "Dann hast du echt {schwein|Schwein gehabt}! Bei Physik stehe ich auch immer {schlauch|auf dem Schlauch}."},
+        {"who": "you", "text": "Und dann hab ich den Prof gefragt, ob er bald in Rente geht …"},
+        {"who": "npc", "text": "Oh nein, voll ins {fettnaepfchen|Fettnäpfchen} getreten! Hattest du {tomaten|Tomaten auf den Augen}? Der ist doch höchstens vierzig!"},
+        {"who": "you", "text": "Ich hab einfach die {nase|Nase voll} von Prüfungen. Die gehen mir total {keks|auf den Keks}."}
+      ],
+      "encounters": [
+        {
+          "type": "lueckentext",
+          "words": ["daumen", "schwein", "schlauch", "nase", "keks", "bahnhof", "fettnaepfchen", "tomaten"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "die Nase ___ haben",
+              "answer": "voll",
+              "options": ["voll", "leer", "rot", "hoch"],
+              "en": "to be fed up"
+            },
+            {
+              "phrase": "ins Fettnäpfchen ___",
+              "answer": "treten",
+              "options": ["treten", "fallen", "springen", "laufen"],
+              "en": "to put your foot in it"
+            },
+            {
+              "phrase": "jemandem die Daumen ___",
+              "answer": "drücken",
+              "options": ["drücken", "halten", "zeigen", "geben"],
+              "en": "to keep your fingers crossed for someone"
+            },
+            {
+              "phrase": "auf dem Schlauch ___",
+              "answer": "stehen",
+              "options": ["stehen", "sitzen", "liegen", "laufen"],
+              "en": "to be slow on the uptake"
+            }
+          ]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Morgen ist meine Präsentation, ich bin so nervös.",
+              "task": "Wish her luck with the right German idiom.",
+              "options": [
+                {"text": "Ich halte dir die Daumen!", "ok": false, "why": "Fast – aber auf Deutsch werden die Daumen gedrückt, nicht gehalten."},
+                {"text": "Ich drücke dir die Finger!", "ok": false, "why": "Finger kreuzt man auf Englisch. Auf Deutsch: die Daumen drücken."},
+                {"text": "Ich drücke dir die Daumen!", "ok": true, "why": "Genau so."}
+              ]
+            },
+            {
+              "npc": "Fast hätte ich Mamas Geburtstag vergessen!",
+              "task": "Tell her she was lucky you reminded her – with an idiom.",
+              "options": [
+                {"text": "Da hast du Schwein gehabt, dass ich dich erinnert habe!", "ok": true, "why": "Schwein haben = Glück haben."},
+                {"text": "Da hast du Schwein gemacht, dass ich dich erinnert habe!", "ok": false, "why": "Glück hat man: Schwein haben, nicht machen."},
+                {"text": "Da hast du Kuh gehabt, dass ich dich erinnert habe!", "ok": false, "why": "Leider nein – Glück bringt im Deutschen nur das Schwein."}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tw-4",
+      "name": "Bürogeflüster",
+      "character": {"name": "Hubert", "role": "Kollege", "emoji": "🧔‍♂️", "patience": 4, "kickout": "Weißt was, wir reden morgen in Ruhe weiter."},
+      "words": ["nagel", "brei", "bank", "zeug", "augen", "kirche", "strang", "faden"],
+      "scene": [
+        {"who": "npc", "text": "Na, die Chefin wollte dich {augen|unter vier Augen} sprechen? Was war los?"},
+        {"who": "you", "text": "Sie sagt, das Projekt hängt {faden|an einem seidenen Faden}."},
+        {"who": "npc", "text": "Ach, jetzt lass mal die {kirche|Kirche im Dorf}. Wenn wir alle {strang|an einem Strang ziehen}, schaffen wir das."},
+        {"who": "you", "text": "Ehrlich gesagt habe ich die Doku lange {bank|auf die lange Bank geschoben}."},
+        {"who": "npc", "text": "Dann red nicht {brei|um den heißen Brei herum} und {zeug|leg dich jetzt ins Zeug}! Die Chefin hat übrigens {nagel|den Nagel auf den Kopf getroffen}: Wir brauchen eine bessere Planung."}
+      ],
+      "encounters": [
+        {
+          "type": "lueckentext",
+          "words": ["nagel", "brei", "bank", "zeug", "augen", "kirche", "strang", "faden"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "sich ins Zeug ___",
+              "answer": "legen",
+              "options": ["legen", "stellen", "setzen", "werfen"],
+              "en": "to put in a real effort"
+            },
+            {
+              "phrase": "etwas auf die lange Bank ___",
+              "answer": "schieben",
+              "options": ["schieben", "legen", "stellen", "setzen"],
+              "en": "to put something off"
+            },
+            {
+              "phrase": "an einem Strang ___",
+              "answer": "ziehen",
+              "options": ["ziehen", "hängen", "halten", "reißen"],
+              "en": "to pull together"
+            },
+            {
+              "phrase": "um den heißen Brei ___",
+              "answer": "herumreden",
+              "options": ["herumreden", "herumlaufen", "herumspringen", "herumkochen"],
+              "en": "to beat about the bush"
+            }
+          ]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Der Kunde will alles bis morgen – und zwar gratis! Das ist das Ende!",
+              "task": "Tell him to keep things in perspective (idiom).",
+              "options": [
+                {"text": "Jetzt lass mal das Dorf in der Kirche.", "ok": false, "why": "Umgedreht! Die Kirche bleibt im Dorf."},
+                {"text": "Jetzt lass mal die Kirche im Dorf.", "ok": true, "why": "Genau: nicht übertreiben."},
+                {"text": "Jetzt lass mal die Kirche im Wald.", "ok": false, "why": "Fast – aber die Kirche gehört ins Dorf."}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tw-5",
+      "name": "Wiesn mit Opa",
+      "character": {"name": "Opa Schorsch", "role": "Lenas Opa", "emoji": "👴", "patience": 4, "kickout": "Ja mei. Jetzt trink ma erst amal a Spezi, dann geht's weiter."},
+      "words": ["passtscho", "pfiatdi", "griassdi", "madl", "bua", "fei", "wiesn", "fahrgeschaeft"],
+      "scene": [
+        {"who": "npc", "text": "{griassdi|Griaß di}! Schön, dass du mit auf die {wiesn|Wiesn} kommst."},
+        {"who": "you", "text": "Opa Schorsch! Fahren wir zuerst Riesenrad oder ein anderes {fahrgeschaeft|Fahrgeschäft}?"},
+        {"who": "npc", "text": "Riesenrad! Das ist {fei|fei} schöner als jede Achterbahn. Schau, das {madl|Madl} da drüben winkt dir."},
+        {"who": "you", "text": "Das ist Lena! Und der kleine {bua|Bua} neben ihr ist ihr Bruder."},
+        {"who": "npc", "text": "Ah so! Die Fahrt zahl ich, {passtscho|passt scho}. Und danach geh i hoam. {pfiatdi|Pfiat di}!"}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["madl", "bua", "wiesn", "fahrgeschaeft"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Danke, dass du mir beim Tragen geholfen hast!",
+              "task": "Reply in Bavarian: no worries.",
+              "options": [
+                {"text": "Pfiat di!", "ok": false, "why": "Das heißt „tschüss“, nicht „kein Problem“."},
+                {"text": "Passt scho!", "ok": true, "why": "Typisch bayerisch: alles gut, kein Problem."},
+                {"text": "Obacht!", "ok": false, "why": "Das heißt „Vorsicht!“ – passt hier nicht."}
+              ]
+            },
+            {
+              "npc": "Griaß di! Wo kommst du denn her?",
+              "task": "Answer: from Ireland, but you live in Munich now.",
+              "options": [
+                {"text": "Von Irland, aber ich wohne jetzt bei München.", "ok": false, "why": "Herkunft: „aus“ Irland. Und „bei München“ heißt in der Nähe, nicht in der Stadt."},
+                {"text": "Aus Irland, aber ich wohne jetzt nach München.", "ok": false, "why": "„nach“ zeigt eine Richtung. Wohnen tut man in München."},
+                {"text": "Aus Irland, aber ich wohne jetzt in München.", "ok": true, "why": "Genau: aus Irland, in München."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["passtscho", "pfiatdi", "griassdi", "fei", "wiesn", "fahrgeschaeft"]
+        }
+      ]
+    }
+  ],
+  "boss": {
+    "name": "Der Stammtisch",
+    "character": {"name": "Opa Schorsch", "role": "Stammtischchef", "emoji": "👴", "patience": 3, "kickout": "Ja mei, des war nix. Nächste Woch' wieder, gleiche Zeit!"},
+    "intro": "Donnerstag, 19 Uhr, Stammtisch im Wirtshaus. Opa Schorsch und seine Freunde testen, ob Sie schon wie ein echter Münchner reden – schnell, bevor das Bier warm wird.",
+    "seconds": 30,
+    "winTitle": "A echter Münchner!",
+    "winText": "Der ganze Stammtisch hebt die Krüge: „Auf di!“ Die Theresienwiese gehört Ihnen.",
+    "items": [
+      {
+        "npc": "Morgen hab i an Arzttermin. Drück ma die ___!",
+        "you": "Mach ich, Schorsch!",
+        "answers": ["Daumen"],
+        "wordId": "daumen",
+        "hint": "fingers crossed"
+      },
+      {
+        "npc": "Zwei Maß und koa Kater? Da hast du aber ___ gehabt!",
+        "you": "Ja, echt Glück!",
+        "answers": ["Schwein"],
+        "wordId": "schwein",
+        "hint": "luck"
+      },
+      {
+        "npc": "Und, verstehst den Kellner aus Sachsen?",
+        "you": "Ehrlich gesagt verstehe ich nur ___.",
+        "answers": ["Bahnhof"],
+        "wordId": "bahnhof",
+        "hint": "not a thing"
+      },
+      {
+        "npc": "Red ned um den heißen ___ herum – magst noch a Maß?",
+        "you": "Na gut, eine noch.",
+        "answers": ["Brei"],
+        "wordId": "brei",
+        "hint": "beat about the bush"
+      },
+      {
+        "npc": "Ah geh, jetzt lass amal die ___ im Dorf!",
+        "you": "Du hast recht, ich übertreibe.",
+        "answers": ["Kirche"],
+        "wordId": "kirche",
+        "hint": "keep it in perspective"
+      },
+      {
+        "npc": "Des hast du super gsagt – genau den ___ auf den Kopf getroffen!",
+        "you": "Danke, Schorsch.",
+        "answers": ["Nagel"],
+        "wordId": "nagel",
+        "hint": "hit the nail on the head"
+      },
+      {
+        "npc": "Die Steuererklärung? Die schieb i scho seit Monaten auf die lange ___.",
+        "you": "Ich auch!",
+        "answers": ["Bank"],
+        "wordId": "bank",
+        "hint": "put off"
+      },
+      {
+        "npc": "Wie sagt ma auf Bairisch „tschüss“?",
+        "you": "___ di!",
+        "answers": ["Pfiat"],
+        "wordId": "pfiatdi",
+        "hint": "bye (Bavarian)"
+      },
+      {
+        "npc": "Und wenn alles in Ordnung is?",
+        "you": "Passt ___!",
+        "answers": ["scho"],
+        "wordId": "passtscho",
+        "hint": "no worries"
+      },
+      {
+        "npc": "Und was trinkt ma auf der Wiesn?",
+        "you": "Eine ___, natürlich!",
+        "answers": ["Maß"],
+        "wordId": "mass",
+        "hint": "litre mug of beer"
+      }
+    ]
+  },
+  "challenge": {
+    "name": "Hochdeutsch-Übersetzer",
+    "intro": "Ihre Freunde aus Hamburg verstehen kein Wort. Übersetzen Sie das Bairische ins Hochdeutsche.",
+    "character": {"name": "Jens", "role": "Besuch aus Hamburg", "emoji": "🧑‍🦰", "patience": 3, "kickout": "Moin … ich versteh immer noch nix. Nochmal bitte!"},
+    "winTitle": "Zweisprachig!",
+    "winText": "Jens versteht endlich alles – und bestellt seine erste Brezn auf Bairisch.",
+    "nearMissNote": "Das ist noch Bairisch – gesucht ist Hochdeutsch.",
+    "items": [
+      {
+        "casual": "Semmel",
+        "answers": ["Brötchen"],
+        "sentence": "Zum Frühstück gibt es ein ___.",
+        "en": "bread roll"
+      },
+      {
+        "casual": "a bissl",
+        "answers": ["ein bisschen", "ein wenig", "etwas"],
+        "sentence": "Ich spreche ___ Deutsch.",
+        "en": "a little"
+      },
+      {
+        "casual": "Freilich",
+        "answers": ["Natürlich", "Klar", "Selbstverständlich"],
+        "sentence": "Kommst du mit? – ___!",
+        "en": "of course"
+      },
+      {
+        "casual": "Servus",
+        "answers": ["Hallo", "Hi", "Guten Tag"],
+        "sentence": "___, wie geht's?",
+        "en": "hello"
+      },
+      {
+        "casual": "Bua",
+        "answers": ["Junge"],
+        "sentence": "Der ___ spielt Fußball.",
+        "en": "boy"
+      },
+      {
+        "casual": "Madl",
+        "answers": ["Mädchen"],
+        "sentence": "Das ___ spielt Fußball.",
+        "en": "girl"
+      },
+      {
+        "casual": "Pfiat di",
+        "answers": ["Tschüss", "Auf Wiedersehen", "Ciao"],
+        "sentence": "___, bis morgen!",
+        "en": "bye"
+      },
+      {
+        "casual": "Obacht",
+        "answers": ["Vorsicht", "Achtung"],
+        "sentence": "___, der Boden ist nass!",
+        "en": "careful"
+      },
+      {
+        "casual": "Gaudi",
+        "answers": ["Spaß"],
+        "sentence": "Das war ein riesiger ___!",
+        "en": "fun"
+      },
+      {
+        "casual": "Brotzeit",
+        "answers": ["Imbiss", "Snack"],
+        "sentence": "Um zehn gibt es einen kleinen ___.",
+        "en": "snack"
+      }
+    ]
+  }
+}

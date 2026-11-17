@@ -3,8 +3,11 @@ import buergerbuero from './districts/buergerbuero.json'
 import maxvorstadt from './districts/maxvorstadt.json'
 import viktualienmarkt from './districts/viktualienmarkt.json'
 import englischerGarten from './districts/englischer-garten.json'
+import werksviertel from './districts/werksviertel.json'
+import theresienwiese from './districts/theresienwiese.json'
+import garching from './districts/garching.json'
 
-export const districts: District[] = [buergerbuero, maxvorstadt, viktualienmarkt, englischerGarten].map((d) => d as District)
+export const districts: District[] = [buergerbuero, maxvorstadt, viktualienmarkt, englischerGarten, werksviertel, theresienwiese, garching].map((d) => d as District)
 
 export interface MapNode {
   id: string

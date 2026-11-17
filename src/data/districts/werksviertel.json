@@ -1,0 +1,439 @@
+{
+  "id": "werksviertel",
+  "name": "Werksviertel",
+  "subtitle": "Bewerbung, Büro & Geschäftsdeutsch",
+  "line": "U5",
+  "color": "#bc7a00",
+  "requires": ["viktualienmarkt"],
+  "words": [
+    {"id": "bewerbung", "de": "Bewerbung", "article": "die", "plural": "die Bewerbungen", "en": "(job) application", "pos": "noun", "example": "Ihre Bewerbung ist bei uns eingegangen."},
+    {"id": "lebenslauf", "de": "Lebenslauf", "article": "der", "plural": "die Lebensläufe", "en": "CV, résumé", "pos": "noun", "example": "Der Lebenslauf sollte nicht länger als zwei Seiten sein."},
+    {"id": "anschreiben", "de": "Anschreiben", "article": "das", "plural": "die Anschreiben", "en": "cover letter", "pos": "noun", "example": "Im Anschreiben erklären Sie, warum Sie die Stelle wollen."},
+    {"id": "stellenanzeige", "de": "Stellenanzeige", "article": "die", "plural": "die Stellenanzeigen", "en": "job advert", "pos": "noun", "example": "Ich habe die Stellenanzeige auf LinkedIn gesehen."},
+    {"id": "voraussetzung", "de": "Voraussetzung", "article": "die", "plural": "die Voraussetzungen", "en": "requirement, prerequisite", "pos": "noun", "example": "Fließendes Deutsch ist eine Voraussetzung."},
+    {"id": "kenntnisse", "de": "Kenntnisse", "article": "die", "pluralOnly": true, "en": "knowledge, skills", "pos": "noun", "example": "Gute Python-Kenntnisse sind von Vorteil."},
+    {"id": "bewerben", "de": "bewerben", "en": "to apply (sich bewerben auf/um)", "pos": "verb", "example": "Ich möchte mich auf die Stelle bewerben."},
+    {"id": "zeugnis", "de": "Zeugnis", "article": "das", "plural": "die Zeugnisse", "en": "certificate, (job) reference", "pos": "noun", "example": "Bitte legen Sie Ihre Zeugnisse bei.", "cloze": "Zeugnisse"},
+    {"id": "arbeitsvertrag", "de": "Arbeitsvertrag", "article": "der", "plural": "die Arbeitsverträge", "en": "employment contract", "pos": "noun", "example": "Lesen Sie den Arbeitsvertrag genau durch."},
+    {"id": "probezeit", "de": "Probezeit", "article": "die", "plural": "die Probezeiten", "en": "probation period", "pos": "noun", "example": "Die Probezeit dauert sechs Monate."},
+    {"id": "gehalt", "de": "Gehalt", "article": "das", "plural": "die Gehälter", "en": "salary", "pos": "noun", "example": "Das Gehalt wird am Monatsende überwiesen."},
+    {"id": "ueberstunden", "de": "Überstunden", "article": "die", "pluralOnly": true, "en": "overtime", "pos": "noun", "example": "Überstunden können Sie mit Freizeit ausgleichen."},
+    {"id": "homeoffice", "de": "Homeoffice", "article": "das", "en": "working from home", "pos": "noun", "example": "Zwei Tage pro Woche arbeite ich im Homeoffice."},
+    {"id": "kuendigungsfrist", "de": "Kündigungsfrist", "article": "die", "plural": "die Kündigungsfristen", "en": "notice period", "pos": "noun", "example": "In der Probezeit ist die Kündigungsfrist kürzer."},
+    {"id": "urlaubstag", "de": "Urlaubstag", "article": "der", "plural": "die Urlaubstage", "en": "day of annual leave", "pos": "noun", "example": "Sie haben dreißig Urlaubstage im Jahr.", "cloze": "Urlaubstage"},
+    {"id": "gleitzeit", "de": "Gleitzeit", "article": "die", "en": "flexitime", "pos": "noun", "example": "Dank Gleitzeit kann ich auch um zehn anfangen."},
+    {"id": "besprechung", "de": "Besprechung", "article": "die", "plural": "die Besprechungen", "en": "meeting", "pos": "noun", "example": "Die Besprechung beginnt um zehn."},
+    {"id": "tagesordnung", "de": "Tagesordnung", "article": "die", "plural": "die Tagesordnungen", "en": "agenda", "pos": "noun", "example": "Was steht heute auf der Tagesordnung?"},
+    {"id": "protokoll", "de": "Protokoll", "article": "das", "plural": "die Protokolle", "en": "minutes (of a meeting)", "pos": "noun", "example": "Wer schreibt heute das Protokoll?"},
+    {"id": "rueckmeldung", "de": "Rückmeldung", "article": "die", "plural": "die Rückmeldungen", "en": "feedback, reply", "pos": "noun", "example": "Ich gebe Ihnen bis morgen eine Rückmeldung."},
+    {"id": "ansprechpartner", "de": "Ansprechpartner", "article": "der", "plural": "die Ansprechpartner", "en": "contact person", "pos": "noun", "example": "Ihr Ansprechpartner beim Kunden ist Herr Yilmaz."},
+    {"id": "abstimmen", "de": "abstimmen", "en": "to coordinate, to agree on (sich abstimmen)", "pos": "verb", "example": "Das müssen wir noch mit der IT abstimmen."},
+    {"id": "vertagen", "de": "vertagen", "en": "to adjourn, to postpone (a topic)", "pos": "verb", "example": "Den letzten Punkt müssen wir leider vertagen."},
+    {"id": "zeitplan", "de": "Zeitplan", "article": "der", "plural": "die Zeitpläne", "en": "schedule, timeline", "pos": "noun", "example": "Der Zeitplan ist sehr knapp."},
+    {"id": "angebot", "de": "Angebot", "article": "das", "plural": "die Angebote", "en": "offer, quote", "pos": "noun", "example": "Wir schicken Ihnen bis morgen ein Angebot."},
+    {"id": "rechnung", "de": "Rechnung", "article": "die", "plural": "die Rechnungen", "en": "invoice, bill", "pos": "noun", "example": "Die Rechnung kommt per E-Mail."},
+    {"id": "auftrag", "de": "Auftrag", "article": "der", "plural": "die Aufträge", "en": "order, contract (job)", "pos": "noun", "example": "Wir haben den Auftrag bekommen!"},
+    {"id": "verhandeln", "de": "verhandeln", "en": "to negotiate", "pos": "verb", "example": "Über den Preis können wir noch verhandeln."},
+    {"id": "kompromiss", "de": "Kompromiss", "article": "der", "plural": "die Kompromisse", "en": "compromise", "pos": "noun", "example": "Lassen Sie uns einen Kompromiss finden."},
+    {"id": "rabatt", "de": "Rabatt", "article": "der", "plural": "die Rabatte", "en": "discount", "pos": "noun", "example": "Bei zwei Jahren Laufzeit gibt es zehn Prozent Rabatt."},
+    {"id": "budget", "de": "Budget", "article": "das", "plural": "die Budgets", "en": "budget", "pos": "noun", "example": "Unser Budget ist leider begrenzt."},
+    {"id": "konditionen", "de": "Konditionen", "article": "die", "pluralOnly": true, "en": "terms and conditions", "pos": "noun", "example": "Die Konditionen stehen im Vertrag."},
+    {"id": "priorisieren", "de": "priorisieren", "en": "to prioritise", "pos": "verb", "example": "Wir müssen die Aufgaben besser priorisieren."},
+    {"id": "delegieren", "de": "delegieren", "en": "to delegate", "pos": "verb", "example": "Du kannst nicht alles selbst machen – lern zu delegieren."},
+    {"id": "engpass", "de": "Engpass", "article": "der", "plural": "die Engpässe", "en": "bottleneck", "pos": "noun", "example": "Der größte Engpass ist im Moment die Rechenleistung."},
+    {"id": "umsetzen", "de": "umsetzen", "en": "to implement, to put into practice", "pos": "verb", "example": "Bis wann können wir das umsetzen?"},
+    {"id": "aufwand", "de": "Aufwand", "article": "der", "en": "effort, expense", "pos": "noun", "example": "Der Aufwand lohnt sich."},
+    {"id": "kapazitaet", "de": "Kapazität", "article": "die", "plural": "die Kapazitäten", "en": "capacity", "pos": "noun", "example": "Im Moment habe ich keine Kapazität für ein neues Projekt."},
+    {"id": "erledigen", "de": "erledigen", "en": "to get done, to take care of", "pos": "verb", "example": "Kannst du das bis Mittag erledigen?"},
+    {"id": "meilenstein", "de": "Meilenstein", "article": "der", "plural": "die Meilensteine", "en": "milestone", "pos": "noun", "example": "Der nächste Meilenstein ist der Prototyp."}
+  ],
+  "stations": [
+    {
+      "id": "wv-1",
+      "name": "Die Bewerbung",
+      "character": {"name": "Frau Kraus", "role": "Karriereberatung", "emoji": "👩‍💼", "patience": 4, "kickout": "Überarbeiten Sie Ihre Unterlagen und kommen Sie nächste Woche wieder."},
+      "words": ["bewerbung", "lebenslauf", "anschreiben", "stellenanzeige", "voraussetzung", "kenntnisse", "bewerben", "zeugnis"],
+      "scene": [
+        {"who": "npc", "text": "Sie wollen sich also {bewerben|bewerben}? Zeigen Sie mal die {stellenanzeige|Stellenanzeige}."},
+        {"who": "you", "text": "Hier: Werkstudent für Simulation bei einem Start-up im Werksviertel."},
+        {"who": "npc", "text": "Lesen Sie die {voraussetzung|Voraussetzungen} genau: Python-{kenntnisse|Kenntnisse} sind Pflicht."},
+        {"who": "you", "text": "Die habe ich. Was gehört alles in die {bewerbung|Bewerbung}?"},
+        {"who": "npc", "text": "Ein kurzer {lebenslauf|Lebenslauf}, ein überzeugendes {anschreiben|Anschreiben} und Ihre {zeugnis|Zeugnisse}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["bewerbung", "lebenslauf", "anschreiben", "stellenanzeige", "voraussetzung", "zeugnis"]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["bewerben", "voraussetzung", "kenntnisse", "anschreiben", "zeugnis", "lebenslauf"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "applicant",
+              "target": "Bewerber",
+              "tiles": ["Be", "werb", "er", "ung", "Ver", "en"]
+            },
+            {
+              "en": "suitable",
+              "target": "geeignet",
+              "tiles": ["ge", "eign", "et", "un", "ung", "lich"]
+            },
+            {
+              "en": "unsuitable",
+              "target": "ungeeignet",
+              "tiles": ["un", "ge", "eign", "et", "heit", "ver"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wv-2",
+      "name": "Erster Arbeitstag",
+      "character": {"name": "Ben", "role": "dein Teamleiter", "emoji": "🧑‍💻", "patience": 4, "kickout": "Kein Stress – lies dir das Onboarding-Wiki nochmal durch."},
+      "words": ["arbeitsvertrag", "probezeit", "gehalt", "ueberstunden", "homeoffice", "kuendigungsfrist", "urlaubstag", "gleitzeit"],
+      "scene": [
+        {"who": "npc", "text": "Willkommen im Team! Hast du den {arbeitsvertrag|Arbeitsvertrag} schon unterschrieben?"},
+        {"who": "you", "text": "Ja, gestern. Die {probezeit|Probezeit} dauert sechs Monate, oder?"},
+        {"who": "npc", "text": "Genau. In der Zeit ist die {kuendigungsfrist|Kündigungsfrist} nur zwei Wochen. Das {gehalt|Gehalt} kommt immer am Monatsende."},
+        {"who": "you", "text": "Wie sieht's mit den Arbeitszeiten aus?"},
+        {"who": "npc", "text": "Wir haben {gleitzeit|Gleitzeit}, und zwei Tage pro Woche geht {homeoffice|Homeoffice}. {ueberstunden|Überstunden} kannst du abbummeln."},
+        {"who": "npc", "text": "Und du hast dreißig {urlaubstag|Urlaubstage} – die solltest du auch nehmen!"}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["arbeitsvertrag", "probezeit", "gehalt", "homeoffice", "kuendigungsfrist", "urlaubstag", "gleitzeit"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "Urlaub ___",
+              "answer": "nehmen",
+              "options": ["nehmen", "geben", "halten", "fassen"],
+              "en": "to take leave"
+            },
+            {
+              "phrase": "Überstunden ___",
+              "answer": "abbauen",
+              "options": ["abbauen", "abbrechen", "abgeben", "abnehmen"],
+              "en": "to reduce overtime"
+            },
+            {
+              "phrase": "einen Vertrag ___",
+              "answer": "kündigen",
+              "options": ["kündigen", "entlassen", "verlassen", "abschaffen"],
+              "en": "to terminate a contract"
+            },
+            {
+              "phrase": "um eine Gehaltserhöhung ___",
+              "answer": "bitten",
+              "options": ["bitten", "fragen", "betteln", "beten"],
+              "en": "to ask for a pay rise"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["probezeit", "gehalt", "ueberstunden", "kuendigungsfrist", "gleitzeit", "homeoffice"]
+        }
+      ]
+    },
+    {
+      "id": "wv-3",
+      "name": "Die Besprechung",
+      "character": {"name": "Frau Wagner", "role": "Projektleiterin", "emoji": "👩‍💼", "patience": 3, "kickout": "Wir machen hier Schluss. Bereiten Sie sich bis zum nächsten Termin besser vor."},
+      "words": ["besprechung", "tagesordnung", "protokoll", "rueckmeldung", "ansprechpartner", "abstimmen", "vertagen", "zeitplan"],
+      "scene": [
+        {"who": "npc", "text": "Guten Morgen zusammen. Auf der {tagesordnung|Tagesordnung} stehen drei Punkte. Wer schreibt das {protokoll|Protokoll}?"},
+        {"who": "you", "text": "Das kann ich übernehmen."},
+        {"who": "npc", "text": "Danke. Punkt eins: Der {zeitplan|Zeitplan} für das Kundenprojekt ist zu knapp. Wer ist dort unser {ansprechpartner|Ansprechpartner}?"},
+        {"who": "you", "text": "Herr Yilmaz. Ich kann mich mit ihm {abstimmen|abstimmen}."},
+        {"who": "npc", "text": "Gut, geben Sie mir bis Freitag eine {rueckmeldung|Rückmeldung}. Punkt drei {vertagen|vertagen} wir – die {besprechung|Besprechung} dauert schon zu lange."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["besprechung", "tagesordnung", "protokoll", "rueckmeldung", "ansprechpartner", "zeitplan"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Können Sie das bis morgen fertig haben?",
+              "task": "Say politely that it's unrealistic, and suggest Friday instead.",
+              "options": [
+                {"text": "Nein, keine Chance.", "ok": false, "why": "Zu knapp und ohne Alternative."},
+                {"text": "Bis morgen ist das leider nicht realistisch. Wäre Freitag in Ordnung?", "ok": true, "why": "Ehrlich, höflich und mit Gegenvorschlag."},
+                {"text": "Bis morgen ist das leider nicht realistisch. Würde Freitag in Ordnung?", "ok": false, "why": "Es fehlt ein Verb: „Wäre Freitag in Ordnung?“ oder „Würde Freitag passen?“"}
+              ]
+            },
+            {
+              "npc": "Gibt es dazu noch Fragen?",
+              "task": "Ask who is responsible for the budget.",
+              "options": [
+                {"text": "Wer ist eigentlich für das Budget verantwortlich für?", "ok": false, "why": "„für“ steht nur einmal: verantwortlich für das Budget."},
+                {"text": "Wem gehört eigentlich das Budget?", "ok": false, "why": "Klingt, als würde jemand das Geld besitzen. Gemeint ist: zuständig."},
+                {"text": "Wer ist eigentlich für das Budget zuständig?", "ok": true, "why": "Genau: zuständig für etwas sein."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["abstimmen", "vertagen", "rueckmeldung", "protokoll", "zeitplan", "tagesordnung"]
+        }
+      ]
+    },
+    {
+      "id": "wv-4",
+      "name": "Kundentermin",
+      "character": {"name": "Herr Yilmaz", "role": "Einkaufsleiter beim Kunden", "emoji": "🤵", "patience": 3, "kickout": "Ich glaube, wir kommen heute nicht zusammen. Schicken Sie mir ein neues Angebot."},
+      "words": ["angebot", "rechnung", "auftrag", "verhandeln", "kompromiss", "rabatt", "budget", "konditionen"],
+      "scene": [
+        {"who": "npc", "text": "Ihr {angebot|Angebot} ist interessant, aber zu teuer für unser {budget|Budget}."},
+        {"who": "you", "text": "Über den Preis können wir gern {verhandeln|verhandeln}."},
+        {"who": "npc", "text": "Was wäre bei den {konditionen|Konditionen} denn möglich? Gibt es einen {rabatt|Rabatt}?"},
+        {"who": "you", "text": "Bei zwei Jahren Laufzeit zehn Prozent. Das wäre ein fairer {kompromiss|Kompromiss}."},
+        {"who": "npc", "text": "Einverstanden. Dann bekommen Sie den {auftrag|Auftrag}. Die {rechnung|Rechnung} schicken Sie bitte an unsere Buchhaltung."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["angebot", "rechnung", "auftrag", "kompromiss", "rabatt", "budget"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "einen Kompromiss ___",
+              "answer": "schließen",
+              "options": ["schließen", "öffnen", "legen", "stellen"],
+              "en": "to reach a compromise"
+            },
+            {
+              "phrase": "ein Angebot ___",
+              "answer": "annehmen",
+              "options": ["annehmen", "aufnehmen", "übernehmen", "abnehmen"],
+              "en": "to accept an offer"
+            },
+            {
+              "phrase": "eine Rechnung ___",
+              "answer": "ausstellen",
+              "options": ["ausstellen", "aufstellen", "darstellen", "einstellen"],
+              "en": "to issue an invoice"
+            },
+            {
+              "phrase": "einen Auftrag ___",
+              "answer": "erteilen",
+              "options": ["erteilen", "verteilen", "teilen", "mitteilen"],
+              "en": "to award a contract"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["verhandeln", "kompromiss", "rabatt", "angebot", "auftrag", "konditionen"]
+        }
+      ]
+    },
+    {
+      "id": "wv-5",
+      "name": "Projektstress",
+      "character": {"name": "Ben", "role": "dein Teamleiter", "emoji": "🧑‍💻", "patience": 4, "kickout": "Okay, kurze Pause. Wir planen das morgen früh neu."},
+      "words": ["priorisieren", "delegieren", "engpass", "umsetzen", "aufwand", "kapazitaet", "erledigen", "meilenstein"],
+      "scene": [
+        {"who": "npc", "text": "Puh, das Projekt brennt. Der nächste {meilenstein|Meilenstein} ist in zwei Wochen."},
+        {"who": "you", "text": "Ich habe gerade keine {kapazitaet|Kapazität} mehr. Was soll ich zuerst machen?"},
+        {"who": "npc", "text": "Wir müssen {priorisieren|priorisieren}. Der größte {engpass|Engpass} ist die Simulation."},
+        {"who": "you", "text": "Die kann ich {umsetzen|umsetzen}, aber der {aufwand|Aufwand} ist hoch."},
+        {"who": "npc", "text": "Dann {delegieren|delegier} die Doku an den Praktikanten, und du {erledigen|erledigst} nur die Simulation."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["engpass", "aufwand", "kapazitaet", "meilenstein"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "responsible",
+              "target": "verantwortlich",
+              "tiles": ["ver", "antwort", "lich", "ung", "ent", "ig"]
+            },
+            {
+              "en": "implementation",
+              "target": "Umsetzung",
+              "tiles": ["Um", "setz", "ung", "Aus", "en", "keit"]
+            },
+            {
+              "en": "feasible, doable",
+              "target": "machbar",
+              "tiles": ["mach", "bar", "lich", "ig", "un", "er"]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["priorisieren", "delegieren", "umsetzen", "erledigen", "engpass", "aufwand"]
+        }
+      ]
+    }
+  ],
+  "boss": {
+    "name": "Vorstellungsgespräch",
+    "character": {"name": "Frau Demir", "role": "Personalleiterin", "emoji": "👩‍💼", "patience": 3, "kickout": "Vielen Dank für Ihre Zeit. Wir melden uns … vielleicht."},
+    "intro": "Glaswand, Designersessel, ein Glas Wasser. Frau Demir stellt schnelle Fragen und erwartet präzise Antworten – zögern Sie nicht zu lange.",
+    "seconds": 35,
+    "winTitle": "Eingestellt!",
+    "winText": "Frau Demir reicht Ihnen die Hand: „Willkommen an Bord.“ Das Werksviertel gehört Ihnen.",
+    "items": [
+      {
+        "npc": "Schön, dass Sie da sind. Wie sind Sie auf unsere ___ aufmerksam geworden?",
+        "you": "Über LinkedIn.",
+        "answers": ["Stellenanzeige"],
+        "wordId": "stellenanzeige",
+        "hint": "job advert"
+      },
+      {
+        "npc": "Erfüllen Sie alle ___ für die Stelle?",
+        "you": "Ja, auch die Python-Kenntnisse.",
+        "answers": ["Voraussetzungen"],
+        "wordId": "voraussetzung",
+        "hint": "requirements"
+      },
+      {
+        "npc": "In Ihrem ___ steht ein Praktikum bei Infinite Foundry.",
+        "you": "Genau, dort habe ich CFD-Simulationen gemacht.",
+        "answers": ["Lebenslauf"],
+        "wordId": "lebenslauf",
+        "hint": "CV"
+      },
+      {
+        "npc": "Was sind Ihre Gehaltsvorstellungen?",
+        "you": "Ich stelle mir ein ___ von zweitausend Euro brutto vor.",
+        "answers": ["Gehalt"],
+        "wordId": "gehalt",
+        "hint": "salary"
+      },
+      {
+        "npc": "Die ___ beträgt bei uns sechs Monate.",
+        "you": "Das ist in Ordnung.",
+        "answers": ["Probezeit"],
+        "wordId": "probezeit",
+        "hint": "probation period"
+      },
+      {
+        "npc": "Feste Arbeitszeiten gibt es bei uns nicht, sondern ___.",
+        "you": "Das passt mir sehr gut.",
+        "answers": ["Gleitzeit"],
+        "wordId": "gleitzeit",
+        "hint": "flexitime"
+      },
+      {
+        "npc": "Was machen Sie, wenn Sie zu viele Aufgaben haben?",
+        "you": "Ich ___ und delegiere, wo es möglich ist.",
+        "answers": ["priorisiere"],
+        "wordId": "priorisieren",
+        "hint": "prioritise"
+      },
+      {
+        "npc": "Wie lang ist Ihre ___ beim aktuellen Arbeitgeber?",
+        "you": "Vier Wochen zum Monatsende.",
+        "answers": ["Kündigungsfrist"],
+        "wordId": "kuendigungsfrist",
+        "hint": "notice period"
+      },
+      {
+        "npc": "Können Sie neue Ideen auch schnell ___?",
+        "you": "Ja, im Formula-Student-Team ging es ständig unter Zeitdruck.",
+        "answers": ["umsetzen"],
+        "wordId": "umsetzen",
+        "hint": "implement"
+      },
+      {
+        "npc": "Gut. Sie bekommen bis Freitag eine ___ von uns.",
+        "you": "Vielen Dank, ich freue mich darauf.",
+        "answers": ["Rückmeldung"],
+        "wordId": "rueckmeldung",
+        "hint": "reply, feedback"
+      }
+    ]
+  },
+  "challenge": {
+    "name": "Geschäftsdeutsch",
+    "intro": "Frau Demir liest Ihre E-Mails an Kunden gegen. Ersetzen Sie die Alltagswörter durch professionelles Geschäftsdeutsch – in der passenden Form.",
+    "character": {"name": "Frau Demir", "role": "liest Ihre E-Mails", "emoji": "📧", "patience": 3, "kickout": "So können wir das nicht an den Kunden schicken. Nochmal!"},
+    "winTitle": "Professionell!",
+    "winText": "Ihre E-Mails könnten jetzt aus der Chefetage kommen.",
+    "nearMissNote": "Verständlich, aber zu locker für eine Geschäftsmail.",
+    "items": [
+      {
+        "casual": "schicke",
+        "answers": ["übermittle", "sende"],
+        "sentence": "Gerne ___ ich Ihnen die Unterlagen bis morgen.",
+        "en": "to send, to transmit"
+      },
+      {
+        "casual": "helfen",
+        "answers": ["unterstützen"],
+        "sentence": "Wir ___ Sie gerne bei der Umsetzung.",
+        "en": "to support"
+      },
+      {
+        "casual": "checken",
+        "answers": ["prüfen"],
+        "sentence": "Wir ___ Ihre Anfrage und melden uns.",
+        "en": "to review, to check"
+      },
+      {
+        "casual": "schnell",
+        "answers": ["zeitnah", "umgehend"],
+        "sentence": "Wir melden uns ___ bei Ihnen.",
+        "en": "promptly"
+      },
+      {
+        "casual": "ändern",
+        "answers": ["anpassen"],
+        "sentence": "Wir können das Angebot gern an Ihr Budget ___.",
+        "en": "to adjust"
+      },
+      {
+        "casual": "fragen",
+        "answers": ["anfragen"],
+        "sentence": "Wir möchten bei Ihnen ein Angebot ___.",
+        "en": "to request"
+      },
+      {
+        "casual": "gemacht",
+        "answers": ["umgesetzt", "erledigt"],
+        "sentence": "Die Änderungen werden bis Freitag ___.",
+        "en": "implemented, done"
+      },
+      {
+        "casual": "bespreche",
+        "answers": ["stimme"],
+        "sentence": "Ich ___ das intern ab und melde mich.",
+        "en": "to coordinate (abstimmen)"
+      },
+      {
+        "casual": "Hilfe",
+        "answers": ["Verfügung"],
+        "sentence": "Für Rückfragen stehe ich Ihnen gern zur ___.",
+        "en": "at your disposal"
+      },
+      {
+        "casual": "sorry für",
+        "answers": ["bedauern"],
+        "sentence": "Wir ___ die Verzögerung.",
+        "en": "to regret"
+      }
+    ]
+  }
+}

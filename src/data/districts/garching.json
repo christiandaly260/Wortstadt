@@ -1,0 +1,459 @@
+{
+  "id": "garching",
+  "name": "Garching",
+  "subtitle": "Labor, Werkstatt, Simulation & Fachsprache",
+  "line": "U6",
+  "color": "#0065ae",
+  "requires": ["maxvorstadt"],
+  "words": [
+    {"id": "versuch", "de": "Versuch", "article": "der", "plural": "die Versuche", "en": "experiment, test", "pos": "noun", "example": "Der Versuch muss dreimal wiederholt werden."},
+    {"id": "messung", "de": "Messung", "article": "die", "plural": "die Messungen", "en": "measurement", "pos": "noun", "example": "Die Messung dauert etwa zwei Stunden."},
+    {"id": "messwert", "de": "Messwert", "article": "der", "plural": "die Messwerte", "en": "measured value, reading", "pos": "noun", "example": "Notieren Sie jeden Messwert im Laborbuch."},
+    {"id": "abweichung", "de": "Abweichung", "article": "die", "plural": "die Abweichungen", "en": "deviation", "pos": "noun", "example": "Die Abweichung liegt unter zwei Prozent."},
+    {"id": "genauigkeit", "de": "Genauigkeit", "article": "die", "en": "accuracy, precision", "pos": "noun", "example": "Die Genauigkeit des Sensors ist beeindruckend."},
+    {"id": "probe", "de": "Probe", "article": "die", "plural": "die Proben", "en": "sample, specimen", "pos": "noun", "example": "Die Probe darf nicht verunreinigt werden."},
+    {"id": "kalibrieren", "de": "kalibrieren", "en": "to calibrate", "pos": "verb", "example": "Vor jeder Messung müssen wir den Sensor kalibrieren."},
+    {"id": "schutzbrille", "de": "Schutzbrille", "article": "die", "plural": "die Schutzbrillen", "en": "safety goggles", "pos": "noun", "example": "Ohne Schutzbrille kommen Sie mir nicht ins Labor."},
+    {"id": "werkstoff", "de": "Werkstoff", "article": "der", "plural": "die Werkstoffe", "en": "(engineering) material", "pos": "noun", "example": "Aluminium ist ein leichter Werkstoff."},
+    {"id": "festigkeit", "de": "Festigkeit", "article": "die", "en": "strength (of a material)", "pos": "noun", "example": "Die Festigkeit von Kohlefaser ist enorm."},
+    {"id": "verschleiss", "de": "Verschleiß", "article": "der", "en": "wear (and tear)", "pos": "noun", "example": "Die Lager zeigen schon deutlichen Verschleiß."},
+    {"id": "belastung", "de": "Belastung", "article": "die", "plural": "die Belastungen", "en": "load, stress", "pos": "noun", "example": "Das Bauteil hält einer Belastung von zwei Tonnen stand."},
+    {"id": "verformung", "de": "Verformung", "article": "die", "plural": "die Verformungen", "en": "deformation", "pos": "noun", "example": "Unter Last ist eine leichte Verformung zu sehen."},
+    {"id": "bauteil", "de": "Bauteil", "article": "das", "plural": "die Bauteile", "en": "component, part", "pos": "noun", "example": "Jedes Bauteil wird vor dem Einbau geprüft."},
+    {"id": "bohren", "de": "bohren", "en": "to drill", "pos": "verb", "example": "Hier müssen wir noch zwei Löcher bohren."},
+    {"id": "schweissen", "de": "schweißen", "en": "to weld", "pos": "verb", "example": "Kannst du die zwei Rohre schweißen?"},
+    {"id": "rechengitter", "de": "Rechengitter", "article": "das", "plural": "die Rechengitter", "en": "computational mesh", "pos": "noun", "example": "Das Rechengitter ist an der Wand zu grob."},
+    {"id": "randbedingung", "de": "Randbedingung", "article": "die", "plural": "die Randbedingungen", "en": "boundary condition", "pos": "noun", "example": "Am Einlass setzen wir die Geschwindigkeit als Randbedingung."},
+    {"id": "konvergieren", "de": "konvergieren", "en": "to converge", "pos": "verb", "example": "Die Lösung will einfach nicht konvergieren."},
+    {"id": "rechenzeit", "de": "Rechenzeit", "article": "die", "plural": "die Rechenzeiten", "en": "computing time", "pos": "noun", "example": "Die Rechenzeit liegt bei zwölf Stunden."},
+    {"id": "aufloesung", "de": "Auflösung", "article": "die", "plural": "die Auflösungen", "en": "resolution", "pos": "noun", "example": "Für die Grenzschicht brauchen wir eine höhere Auflösung."},
+    {"id": "turbulenz", "de": "Turbulenz", "article": "die", "plural": "die Turbulenzen", "en": "turbulence", "pos": "noun", "example": "Hinter dem Flügel entsteht starke Turbulenz."},
+    {"id": "druckverteilung", "de": "Druckverteilung", "article": "die", "plural": "die Druckverteilungen", "en": "pressure distribution", "pos": "noun", "example": "Die Druckverteilung auf dem Flügel sieht plausibel aus."},
+    {"id": "auswertung", "de": "Auswertung", "article": "die", "plural": "die Auswertungen", "en": "analysis, evaluation", "pos": "noun", "example": "Die Auswertung dauert länger als die Simulation."},
+    {"id": "wirkungsgrad", "de": "Wirkungsgrad", "article": "der", "plural": "die Wirkungsgrade", "en": "efficiency (ratio)", "pos": "noun", "example": "Der Wirkungsgrad der Anlage liegt bei vierzig Prozent."},
+    {"id": "erneuerbar", "de": "erneuerbar", "en": "renewable", "pos": "adj", "example": "Bis 2040 soll der Strom nur noch aus erneuerbaren Quellen kommen.", "cloze": "erneuerbaren"},
+    {"id": "waermepumpe", "de": "Wärmepumpe", "article": "die", "plural": "die Wärmepumpen", "en": "heat pump", "pos": "noun", "example": "Die Wärmepumpe nutzt die Wärme aus dem Grundwasser."},
+    {"id": "speicher", "de": "Speicher", "article": "der", "plural": "die Speicher", "en": "(energy) storage", "pos": "noun", "example": "Ohne große Speicher funktioniert die Energiewende nicht."},
+    {"id": "verbrauch", "de": "Verbrauch", "article": "der", "en": "consumption", "pos": "noun", "example": "Der Verbrauch ist im Winter doppelt so hoch."},
+    {"id": "emission", "de": "Emission", "article": "die", "plural": "die Emissionen", "en": "emission", "pos": "noun", "example": "Die Emissionen sind seit 1990 deutlich gesunken.", "cloze": "Emissionen"},
+    {"id": "effizient", "de": "effizient", "en": "efficient", "pos": "adj", "example": "Die neue Anlage arbeitet sehr effizient."},
+    {"id": "abwaerme", "de": "Abwärme", "article": "die", "en": "waste heat", "pos": "noun", "example": "Die Abwärme des Rechenzentrums heizt das ganze Gebäude."},
+    {"id": "annahme", "de": "Annahme", "article": "die", "plural": "die Annahmen", "en": "assumption", "pos": "noun", "example": "Diese Annahme gilt nur bei kleinen Geschwindigkeiten."},
+    {"id": "vereinfachung", "de": "Vereinfachung", "article": "die", "plural": "die Vereinfachungen", "en": "simplification", "pos": "noun", "example": "Das 2D-Modell ist eine starke Vereinfachung."},
+    {"id": "ursache", "de": "Ursache", "article": "die", "plural": "die Ursachen", "en": "cause", "pos": "noun", "example": "Die Ursache für den Fehler ist noch unklar."},
+    {"id": "diagramm", "de": "Diagramm", "article": "das", "plural": "die Diagramme", "en": "chart, plot", "pos": "noun", "example": "Im Diagramm sieht man den Verlauf sehr gut."},
+    {"id": "fehlerquelle", "de": "Fehlerquelle", "article": "die", "plural": "die Fehlerquellen", "en": "source of error", "pos": "noun", "example": "Eine mögliche Fehlerquelle ist der Sensor."},
+    {"id": "plausibel", "de": "plausibel", "en": "plausible", "pos": "adj", "example": "Das Ergebnis ist physikalisch plausibel."},
+    {"id": "nachvollziehen", "de": "nachvollziehen", "en": "to follow, to understand (reasoning)", "pos": "verb", "example": "Den letzten Schritt kann ich nicht nachvollziehen."},
+    {"id": "vernachlaessigen", "de": "vernachlässigen", "en": "to neglect, to disregard", "pos": "verb", "example": "Den Luftwiderstand können wir hier vernachlässigen."}
+  ],
+  "stations": [
+    {
+      "id": "ga-1",
+      "name": "Im Labor",
+      "character": {"name": "Dr. Weiß", "role": "Laborleiterin", "emoji": "👩‍🔬", "patience": 3, "kickout": "Stopp. Lesen Sie erst die Sicherheitsunterweisung."},
+      "words": ["versuch", "messung", "messwert", "abweichung", "genauigkeit", "probe", "kalibrieren", "schutzbrille"],
+      "scene": [
+        {"who": "npc", "text": "Willkommen im Labor. Erste Regel: Ohne {schutzbrille|Schutzbrille} kommt hier niemand rein."},
+        {"who": "you", "text": "Verstanden. Was machen wir heute?"},
+        {"who": "npc", "text": "Einen {versuch|Versuch} zur Zugfestigkeit. Erst {kalibrieren|kalibrieren} Sie den Kraftsensor, dann spannen Sie die {probe|Probe} ein."},
+        {"who": "npc", "text": "Jede {messung|Messung} wird dreimal wiederholt, und jeder {messwert|Messwert} kommt ins Laborbuch."},
+        {"who": "you", "text": "Und wenn die Werte nicht zusammenpassen?"},
+        {"who": "npc", "text": "Kleine {abweichung|Abweichungen} sind normal. Aber die {genauigkeit|Genauigkeit} muss stimmen – sonst ist alles wertlos."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["versuch", "messung", "messwert", "abweichung", "genauigkeit", "probe", "schutzbrille"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "einen Versuch ___",
+              "answer": "durchführen",
+              "options": ["durchführen", "durchsetzen", "durchschauen", "durchfallen"],
+              "en": "to carry out an experiment"
+            },
+            {
+              "phrase": "eine Messung ___",
+              "answer": "wiederholen",
+              "options": ["wiederholen", "wiederfinden", "widerlegen", "wiedergeben"],
+              "en": "to repeat a measurement"
+            },
+            {
+              "phrase": "Daten ___",
+              "answer": "erheben",
+              "options": ["erheben", "erhöhen", "aufheben", "abheben"],
+              "en": "to collect data"
+            },
+            {
+              "phrase": "mit jemandem Rücksprache ___",
+              "answer": "halten",
+              "options": ["halten", "nehmen", "machen", "geben"],
+              "en": "to consult with someone"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["kalibrieren", "abweichung", "probe", "messwert", "schutzbrille", "versuch"]
+        }
+      ]
+    },
+    {
+      "id": "ga-2",
+      "name": "Werkstatt",
+      "character": {"name": "Kurt", "role": "Werkstattmeister", "emoji": "🧑‍🔧", "patience": 4, "kickout": "So nicht, Bursche. Erst zuschauen, dann anfassen."},
+      "words": ["werkstoff", "festigkeit", "verschleiss", "belastung", "verformung", "bauteil", "bohren", "schweissen"],
+      "scene": [
+        {"who": "npc", "text": "Servus! Das {bauteil|Bauteil} da ist für euren Rennwagen? Aus welchem {werkstoff|Werkstoff}?"},
+        {"who": "you", "text": "Aluminium. Es muss eine hohe {belastung|Belastung} aushalten."},
+        {"who": "npc", "text": "Alu hat eine gute {festigkeit|Festigkeit} bei wenig Gewicht. Aber schau – hier sieht man schon eine {verformung|Verformung}."},
+        {"who": "you", "text": "Und die Lager?"},
+        {"who": "npc", "text": "Die zeigen deutlichen {verschleiss|Verschleiß}, die tauschen wir aus. Ich muss noch zwei Löcher {bohren|bohren}, dann {schweissen|schweißen} wir die Halterung an."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["werkstoff", "festigkeit", "verschleiss", "belastung", "verformung", "bauteil"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Kannst du mir mal kurz helfen, das Teil festzuhalten?",
+              "task": "Say yes, and ask whether you need gloves.",
+              "options": [
+                {"text": "Klar! Brauche ich dafür Handschuhen?", "ok": false, "why": "Akkusativ Plural: die Handschuhe – ohne -n."},
+                {"text": "Klar! Brauche ich dafür Handschuhe?", "ok": true, "why": "Genau so."},
+                {"text": "Klar! Muss ich dafür Handschuhe brauchen?", "ok": false, "why": "Doppelt gemoppelt: „Brauche ich …?“ reicht."}
+              ]
+            },
+            {
+              "npc": "Das Bauteil ist beim Test gebrochen.",
+              "task": "Ask what the cause could be.",
+              "options": [
+                {"text": "Woran könnte das liegen?", "ok": true, "why": "„Woran liegt das?“ – die typische Frage nach der Ursache."},
+                {"text": "Worauf könnte das liegen?", "ok": false, "why": "Die Ursache: „Woran liegt es?“ – mit an."},
+                {"text": "Was ist der Grund dafür, warum?", "ok": false, "why": "Doppelt: entweder „Was ist der Grund dafür?“ oder „Warum?“."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["bohren", "schweissen", "verschleiss", "verformung", "belastung", "werkstoff"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "wear-resistant",
+              "target": "verschleißfest",
+              "tiles": ["ver", "schleiß", "fest", "ig", "ung", "lich"]
+            },
+            {
+              "en": "deformable",
+              "target": "verformbar",
+              "tiles": ["ver", "form", "bar", "ung", "lich", "ent"]
+            },
+            {
+              "en": "fragile, breakable",
+              "target": "zerbrechlich",
+              "tiles": ["zer", "brech", "lich", "bar", "ver", "ung"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-3",
+      "name": "Rechencluster",
+      "character": {"name": "Jonas", "role": "Doktorand", "emoji": "🧑‍💻", "patience": 4, "kickout": "Okay, ich brauch erst mal einen Kaffee. Später nochmal."},
+      "words": ["rechengitter", "randbedingung", "konvergieren", "rechenzeit", "aufloesung", "turbulenz", "druckverteilung", "auswertung"],
+      "scene": [
+        {"who": "npc", "text": "Hey! Kannst du mir helfen? Meine Lösung will einfach nicht {konvergieren|konvergieren}."},
+        {"who": "you", "text": "Zeig mal. Das {rechengitter|Rechengitter} ist an der Wand viel zu grob."},
+        {"who": "npc", "text": "Stimmt. Aber mit höherer {aufloesung|Auflösung} steigt die {rechenzeit|Rechenzeit} auf zwei Tage."},
+        {"who": "you", "text": "Und die {randbedingung|Randbedingungen} am Auslass – passen die?"},
+        {"who": "npc", "text": "Ich glaube schon. Die {turbulenz|Turbulenz} hinter dem Heckflügel ist realistisch, und die {druckverteilung|Druckverteilung} sieht plausibel aus."},
+        {"who": "you", "text": "Dann verfeinern wir das Netz. Die {auswertung|Auswertung} machen wir morgen."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["rechengitter", "randbedingung", "rechenzeit", "aufloesung", "turbulenz", "druckverteilung", "auswertung"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "das Netz ___",
+              "answer": "verfeinern",
+              "options": ["verfeinern", "verdünnen", "verfärben", "verfestigen"],
+              "en": "to refine the mesh"
+            },
+            {
+              "phrase": "eine Simulation ___",
+              "answer": "starten",
+              "options": ["starten", "gehen", "ziehen", "treten"],
+              "en": "to launch a simulation"
+            },
+            {
+              "phrase": "Ergebnisse mit Messdaten ___",
+              "answer": "vergleichen",
+              "options": ["vergleichen", "vergeben", "verlegen", "verbinden"],
+              "en": "to compare results with measured data"
+            },
+            {
+              "phrase": "eine Annahme ___",
+              "answer": "treffen",
+              "options": ["treffen", "stellen", "legen", "halten"],
+              "en": "to make an assumption"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["konvergieren", "rechengitter", "randbedingung", "aufloesung", "rechenzeit", "druckverteilung"]
+        }
+      ]
+    },
+    {
+      "id": "ga-4",
+      "name": "Energiecampus",
+      "character": {"name": "Dr. Petersen", "role": "Energiesysteme", "emoji": "🔋", "patience": 4, "kickout": "Lesen Sie sich in die Grundlagen ein und kommen Sie dann wieder."},
+      "words": ["wirkungsgrad", "erneuerbar", "waermepumpe", "speicher", "verbrauch", "emission", "effizient", "abwaerme"],
+      "scene": [
+        {"who": "npc", "text": "Unser Campus soll klimaneutral werden. Die {emission|Emissionen} müssen also runter."},
+        {"who": "you", "text": "Woher kommt der Strom heute?"},
+        {"who": "npc", "text": "Zum Teil schon aus {erneuerbar|erneuerbaren} Quellen. Aber ohne {speicher|Speicher} reicht das nachts nicht."},
+        {"who": "you", "text": "Und wie wird geheizt?"},
+        {"who": "npc", "text": "Mit einer {waermepumpe|Wärmepumpe} – und mit der {abwaerme|Abwärme} vom Rechenzentrum. Das ist sehr {effizient|effizient}."},
+        {"who": "npc", "text": "Der {wirkungsgrad|Wirkungsgrad} ist super, aber der {verbrauch|Verbrauch} muss trotzdem sinken."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["wirkungsgrad", "waermepumpe", "speicher", "verbrauch", "emission", "abwaerme"]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["erneuerbar", "effizient", "abwaerme", "verbrauch", "speicher", "wirkungsgrad"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "climate-neutral",
+              "target": "klimaneutral",
+              "tiles": ["klima", "neutral", "s", "ung", "ent", "isch"]
+            },
+            {
+              "en": "renewable",
+              "target": "erneuerbar",
+              "tiles": ["er", "neuer", "bar", "ung", "lich", "ver"]
+            },
+            {
+              "en": "consumer",
+              "target": "Verbraucher",
+              "tiles": ["Ver", "brauch", "er", "ung", "Ge", "lich"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ga-5",
+      "name": "Am Lehrstuhl",
+      "character": {"name": "Prof. Brandt", "role": "Lehrstuhl für Aerodynamik", "emoji": "👨‍🏫", "patience": 3, "kickout": "Das überzeugt mich noch nicht. Arbeiten Sie das bitte nach."},
+      "words": ["annahme", "vereinfachung", "ursache", "diagramm", "fehlerquelle", "plausibel", "nachvollziehen", "vernachlaessigen"],
+      "scene": [
+        {"who": "npc", "text": "So, zeigen Sie mal Ihre Ergebnisse. Was sehen wir in diesem {diagramm|Diagramm}?"},
+        {"who": "you", "text": "Den Auftriebsbeiwert über dem Anstellwinkel. Ab vierzehn Grad bricht er ein."},
+        {"who": "npc", "text": "Ist das {plausibel|plausibel}? Was ist die {ursache|Ursache}?"},
+        {"who": "you", "text": "Strömungsablösung. Allerdings ist das 2D-Modell eine starke {vereinfachung|Vereinfachung}."},
+        {"who": "npc", "text": "Welche {annahme|Annahmen} haben Sie getroffen? Den Schritt mit der Turbulenz kann ich nicht ganz {nachvollziehen|nachvollziehen}."},
+        {"who": "npc", "text": "Und die Wandrauigkeit dürfen Sie nicht einfach {vernachlaessigen|vernachlässigen} – das ist eine typische {fehlerquelle|Fehlerquelle}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["annahme", "vereinfachung", "ursache", "diagramm", "fehlerquelle"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Diesen Schritt kann ich nicht nachvollziehen.",
+              "task": "Offer to explain your reasoning in more detail.",
+              "options": [
+                {"text": "Das ist doch offensichtlich.", "ok": false, "why": "Klingt arrogant – und hilft dem Professor nicht weiter."},
+                {"text": "Darf ich meinen Gedankengang noch einmal genauer erläutern?", "ok": true, "why": "Höflich und präzise."},
+                {"text": "Darf ich meinen Gedankengang noch einmal genauer erläutert?", "ok": false, "why": "Nach „darf ich“ steht der Infinitiv: erläutern."}
+              ]
+            },
+            {
+              "npc": "Warum haben Sie die Rauigkeit ignoriert?",
+              "task": "Say it was a deliberate simplification, and that you'll take it into account.",
+              "options": [
+                {"text": "Das war eine bewusste Vereinfachung, aber ich werde sie berücksichtigen.", "ok": true, "why": "Ehrlich und konstruktiv."},
+                {"text": "Das war eine bewusste Vereinfachung, aber ich werde sie berücksichtigt.", "ok": false, "why": "Nach „werde“ steht der Infinitiv: berücksichtigen."},
+                {"text": "Das war ein Unfall.", "ok": false, "why": "Ein Unfall ist ein Unglück. Gemeint wäre ein Versehen – oder eben eine Vereinfachung."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["plausibel", "nachvollziehen", "vernachlaessigen", "ursache", "annahme", "fehlerquelle"]
+        }
+      ]
+    }
+  ],
+  "boss": {
+    "name": "Zwischenpräsentation",
+    "character": {"name": "Prof. Brandt", "role": "Lehrstuhl für Aerodynamik", "emoji": "👨‍🏫", "patience": 3, "kickout": "Wir vertagen das. Überarbeiten Sie Ihre Folien."},
+    "intro": "Seminarraum, Beamer, der ganze Lehrstuhl hört zu. Prof. Brandt löchert Sie mit Fachfragen – antworten Sie präzise und ohne lange Pausen.",
+    "seconds": 35,
+    "winTitle": "Sehr überzeugend!",
+    "winText": "Prof. Brandt lehnt sich zurück: „Daraus machen wir ein Paper.“ Garching gehört Ihnen – und die S7 nach Ottobrunn wartet.",
+    "items": [
+      {
+        "npc": "Beginnen Sie mit dem Aufbau: Wie haben Sie den ___ durchgeführt?",
+        "you": "Mit drei Proben pro Werkstoff.",
+        "answers": ["Versuch"],
+        "wordId": "versuch",
+        "hint": "experiment"
+      },
+      {
+        "npc": "Wie groß ist die ___ zwischen Messung und Simulation?",
+        "you": "Unter fünf Prozent.",
+        "answers": ["Abweichung"],
+        "wordId": "abweichung",
+        "hint": "deviation"
+      },
+      {
+        "npc": "Wie fein ist Ihr ___ an der Wand?",
+        "you": "Die erste Zelle liegt bei y-plus kleiner eins.",
+        "answers": ["Rechengitter"],
+        "wordId": "rechengitter",
+        "hint": "mesh"
+      },
+      {
+        "npc": "Welche ___ haben Sie am Einlass gesetzt?",
+        "you": "Eine konstante Geschwindigkeit.",
+        "answers": ["Randbedingung", "Randbedingungen"],
+        "wordId": "randbedingung",
+        "hint": "boundary condition"
+      },
+      {
+        "npc": "Hat die Lösung sauber ___?",
+        "you": "Ja, nach etwa dreitausend Iterationen.",
+        "answers": ["konvergiert"],
+        "wordId": "konvergieren",
+        "hint": "converged"
+      },
+      {
+        "npc": "Unter welcher ___ ist das Bauteil gebrochen?",
+        "you": "Bei etwa zwanzig Kilonewton.",
+        "answers": ["Belastung"],
+        "wordId": "belastung",
+        "hint": "load"
+      },
+      {
+        "npc": "Und was ist die wahrscheinlichste ___ für den Bruch?",
+        "you": "Materialermüdung an der Schweißnaht.",
+        "answers": ["Ursache"],
+        "wordId": "ursache",
+        "hint": "cause"
+      },
+      {
+        "npc": "Kann man die Wärmeverluste hier ___?",
+        "you": "Ja, sie liegen unter einem Prozent.",
+        "answers": ["vernachlässigen"],
+        "wordId": "vernachlaessigen",
+        "hint": "neglect"
+      },
+      {
+        "npc": "Wie hoch ist der ___ des neuen Antriebs?",
+        "you": "Etwa neunzig Prozent.",
+        "answers": ["Wirkungsgrad"],
+        "wordId": "wirkungsgrad",
+        "hint": "efficiency"
+      },
+      {
+        "npc": "Gut. Und ist das alles physikalisch ___?",
+        "you": "Ja, es deckt sich mit der Literatur.",
+        "answers": ["plausibel"],
+        "wordId": "plausibel",
+        "hint": "plausible"
+      }
+    ]
+  },
+  "challenge": {
+    "name": "Fachsprache",
+    "intro": "Ihr Laborbericht klingt noch nach Kaffeeküche. Ersetzen Sie die Alltagswörter durch präzise Fachsprache – in der passenden Form.",
+    "character": {"name": "Prof. Brandt", "role": "Gutachter", "emoji": "🧐", "patience": 3, "kickout": "So kann ich den Bericht nicht abzeichnen. Nochmal!"},
+    "winTitle": "Ingenieursdeutsch!",
+    "winText": "Ihr Bericht würde jede DIN-Norm bestehen.",
+    "nearMissNote": "Verständlich, aber nicht präzise genug für einen Bericht.",
+    "items": [
+      {
+        "casual": "gemacht",
+        "answers": ["durchgeführt"],
+        "sentence": "Der Versuch wurde bei Raumtemperatur ___.",
+        "en": "carried out"
+      },
+      {
+        "casual": "ausgerechnet",
+        "answers": ["berechnet", "ermittelt"],
+        "sentence": "Die Spannung wird nach Gleichung 3 ___.",
+        "en": "calculated"
+      },
+      {
+        "casual": "wird kleiner",
+        "answers": ["sinkt", "nimmt ab", "abnimmt"],
+        "sentence": "Die Festigkeit ___ mit steigender Temperatur.",
+        "en": "decreases"
+      },
+      {
+        "casual": "wird größer",
+        "answers": ["steigt", "wächst"],
+        "sentence": "Der Widerstand ___ quadratisch mit der Geschwindigkeit an.",
+        "en": "rises"
+      },
+      {
+        "casual": "ist kaputtgegangen",
+        "answers": ["versagt"],
+        "sentence": "Bei zwanzig Kilonewton hat das Bauteil ___.",
+        "en": "failed"
+      },
+      {
+        "casual": "ungefähr",
+        "answers": ["näherungsweise", "annähernd"],
+        "sentence": "Der Verlauf ist ___ linear.",
+        "en": "approximately"
+      },
+      {
+        "casual": "warm gemacht",
+        "answers": ["erwärmt", "erhitzt"],
+        "sentence": "Die Probe wird auf hundert Grad ___.",
+        "en": "heated"
+      },
+      {
+        "casual": "ausprobiert",
+        "answers": ["erprobt", "getestet"],
+        "sentence": "Der neue Werkstoff wurde unter Realbedingungen ___.",
+        "en": "tested, trialled"
+      },
+      {
+        "casual": "benutzt",
+        "answers": ["verwendet", "eingesetzt"],
+        "sentence": "Für die Simulation wurde das k-ω-SST-Modell ___.",
+        "en": "used"
+      }
+    ]
+  }
+}
