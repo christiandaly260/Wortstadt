@@ -13,6 +13,21 @@ npm test         # answer-checker tests
 
 Pushing to `main` deploys to GitHub Pages automatically (enable it once under **Settings → Pages → Source: GitHub Actions**).
 
+## The city
+
+| Line | District | Theme | Opens after |
+|---|---|---|---|
+| U1 | Bürgerbüro | Registration, forms, official German | – |
+| U2 | Maxvorstadt | University, term papers, academic language | Bürgerbüro |
+| U8 | Viktualienmarkt | Market, butcher, recipes, kitchen verbs | Bürgerbüro |
+| U3 | Englischer Garten | Tennis, Eisbach surfing, weather, mountains, nature | Bürgerbüro |
+| U6 | Garching | Lab, workshop, CFD, energy, technical writing | Maxvorstadt |
+| U5 | Werksviertel | Applications, contracts, meetings, negotiation | Viktualienmarkt |
+| U4 | Theresienwiese | Bavarian, the Wiesn, idioms | Englischer Garten |
+| S7 | Ottobrunn ✦ | Bonus line: aerospace – aerodynamics, aircraft, rockets, orbit, astronauts | Garching |
+
+A district opens once the districts it needs have at least one star (i.e. their boss is beaten).
+
 ## How a district plays
 
 1. **Scene**: a short dialogue introduces about 8 words in context. Tap a highlighted word to see its card.
@@ -42,7 +57,7 @@ All content lives in `src/data/districts/*.json`, with no code needed:
 - `boss`: timed dialogue items
 - `challenge`: casual → formal register items
 
-Then register it in `src/data/index.ts`, set `districtId` on its map node, and you're done.
+Then import it in `src/data/index.ts` and give it a node on the map (same `id`). `requires` lists the districts that must be beaten first. `npm test` checks every word, scene, puzzle, boss and challenge for mistakes.
 
 ## Structure
 

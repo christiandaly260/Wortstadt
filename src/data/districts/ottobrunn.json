@@ -1,0 +1,509 @@
+{
+  "id": "ottobrunn",
+  "name": "Ottobrunn",
+  "subtitle": "Bonuslinie: Luft- und Raumfahrt",
+  "line": "S7",
+  "color": "#7b61ff",
+  "requires": ["garching"],
+  "bonus": true,
+  "words": [
+    {"id": "auftrieb", "de": "Auftrieb", "article": "der", "en": "lift", "pos": "noun", "example": "Die Tragfläche erzeugt Auftrieb."},
+    {"id": "widerstand", "de": "Widerstand", "article": "der", "plural": "die Widerstände", "en": "drag", "pos": "noun", "example": "Ein glatter Rumpf verringert den Widerstand."},
+    {"id": "tragflaeche", "de": "Tragfläche", "article": "die", "plural": "die Tragflächen", "en": "wing", "pos": "noun", "example": "Unter der Tragfläche hängen die Triebwerke."},
+    {"id": "anstellwinkel", "de": "Anstellwinkel", "article": "der", "plural": "die Anstellwinkel", "en": "angle of attack", "pos": "noun", "example": "Mit größerem Anstellwinkel steigt der Auftrieb – bis zu einem gewissen Punkt."},
+    {"id": "stroemungsabriss", "de": "Strömungsabriss", "article": "der", "plural": "die Strömungsabrisse", "en": "stall", "pos": "noun", "example": "Bei zu hohem Anstellwinkel kommt es zum Strömungsabriss."},
+    {"id": "grenzschicht", "de": "Grenzschicht", "article": "die", "plural": "die Grenzschichten", "en": "boundary layer", "pos": "noun", "example": "In der Grenzschicht wird die Strömung abgebremst."},
+    {"id": "profil", "de": "Profil", "article": "das", "plural": "die Profile", "en": "aerofoil (profile)", "pos": "noun", "example": "Das Profil wurde im Windkanal getestet."},
+    {"id": "windkanal", "de": "Windkanal", "article": "der", "plural": "die Windkanäle", "en": "wind tunnel", "pos": "noun", "example": "Im Windkanal messen wir die Kräfte am Modell."},
+    {"id": "rumpf", "de": "Rumpf", "article": "der", "plural": "die Rümpfe", "en": "fuselage", "pos": "noun", "example": "Der Rumpf besteht größtenteils aus Kohlefaser."},
+    {"id": "triebwerk", "de": "Triebwerk", "article": "das", "plural": "die Triebwerke", "en": "(jet/rocket) engine", "pos": "noun", "example": "Das Triebwerk wird alle paar tausend Stunden überholt."},
+    {"id": "leitwerk", "de": "Leitwerk", "article": "das", "plural": "die Leitwerke", "en": "tail unit, empennage", "pos": "noun", "example": "Am Leitwerk sitzen Höhen- und Seitenruder."},
+    {"id": "fahrwerk", "de": "Fahrwerk", "article": "das", "plural": "die Fahrwerke", "en": "landing gear", "pos": "noun", "example": "Nach dem Start wird das Fahrwerk eingefahren."},
+    {"id": "querruder", "de": "Querruder", "article": "das", "plural": "die Querruder", "en": "aileron", "pos": "noun", "example": "Mit dem Querruder rollt das Flugzeug um die Längsachse."},
+    {"id": "hoehenruder", "de": "Höhenruder", "article": "das", "plural": "die Höhenruder", "en": "elevator", "pos": "noun", "example": "Mit dem Höhenruder hebt oder senkt der Pilot die Nase."},
+    {"id": "landeklappe", "de": "Landeklappe", "article": "die", "plural": "die Landeklappen", "en": "(landing) flap", "pos": "noun", "example": "Vor der Landung werden die Landeklappen ausgefahren.", "cloze": "Landeklappen"},
+    {"id": "wartung", "de": "Wartung", "article": "die", "plural": "die Wartungen", "en": "maintenance", "pos": "noun", "example": "Ohne regelmäßige Wartung darf kein Flugzeug starten."},
+    {"id": "schub", "de": "Schub", "article": "der", "en": "thrust", "pos": "noun", "example": "Das Triebwerk erzeugt zwei Meganewton Schub."},
+    {"id": "treibstoff", "de": "Treibstoff", "article": "der", "plural": "die Treibstoffe", "en": "propellant, fuel", "pos": "noun", "example": "Als Treibstoff verwenden wir Methan."},
+    {"id": "brennkammer", "de": "Brennkammer", "article": "die", "plural": "die Brennkammern", "en": "combustion chamber", "pos": "noun", "example": "In der Brennkammer herrschen über dreitausend Grad."},
+    {"id": "duese", "de": "Düse", "article": "die", "plural": "die Düsen", "en": "nozzle", "pos": "noun", "example": "Die Düse beschleunigt das Gas auf Überschall."},
+    {"id": "zuenden", "de": "zünden", "en": "to ignite, to fire (an engine)", "pos": "verb", "example": "In zehn Sekunden zünden wir das Triebwerk."},
+    {"id": "oxidator", "de": "Oxidator", "article": "der", "plural": "die Oxidatoren", "en": "oxidiser", "pos": "noun", "example": "Flüssiger Sauerstoff dient als Oxidator."},
+    {"id": "stufe", "de": "Stufe", "article": "die", "plural": "die Stufen", "en": "(rocket) stage", "pos": "noun", "example": "Die erste Stufe landet wieder auf der Erde."},
+    {"id": "brennschluss", "de": "Brennschluss", "article": "der", "en": "engine cut-off, burnout", "pos": "noun", "example": "Nach dem Brennschluss trennt sich die erste Stufe ab."},
+    {"id": "umlaufbahn", "de": "Umlaufbahn", "article": "die", "plural": "die Umlaufbahnen", "en": "orbit", "pos": "noun", "example": "Der Satellit befindet sich in einer niedrigen Umlaufbahn."},
+    {"id": "satellit", "de": "Satellit", "article": "der", "plural": "die Satelliten", "en": "satellite", "pos": "noun", "example": "Der Satellit misst den Meeresspiegel."},
+    {"id": "bodenstation", "de": "Bodenstation", "article": "die", "plural": "die Bodenstationen", "en": "ground station", "pos": "noun", "example": "Die Bodenstation empfängt die Daten zweimal am Tag."},
+    {"id": "nutzlast", "de": "Nutzlast", "article": "die", "plural": "die Nutzlasten", "en": "payload", "pos": "noun", "example": "Die Rakete kann zehn Tonnen Nutzlast transportieren."},
+    {"id": "bahnmanoever", "de": "Bahnmanöver", "article": "das", "plural": "die Bahnmanöver", "en": "orbital manoeuvre", "pos": "noun", "example": "Für das Bahnmanöver zünden wir die Triebwerke vier Sekunden lang."},
+    {"id": "lageregelung", "de": "Lageregelung", "article": "die", "en": "attitude control", "pos": "noun", "example": "Die Lageregelung hält den Satelliten stabil ausgerichtet."},
+    {"id": "weltraumschrott", "de": "Weltraumschrott", "article": "der", "en": "space debris", "pos": "noun", "example": "Weltraumschrott ist eine wachsende Gefahr."},
+    {"id": "startfenster", "de": "Startfenster", "article": "das", "plural": "die Startfenster", "en": "launch window", "pos": "noun", "example": "Das Startfenster öffnet sich um 14:32 Uhr."},
+    {"id": "schwerelosigkeit", "de": "Schwerelosigkeit", "article": "die", "en": "weightlessness", "pos": "noun", "example": "In der Schwerelosigkeit schweben alle Gegenstände."},
+    {"id": "raumanzug", "de": "Raumanzug", "article": "der", "plural": "die Raumanzüge", "en": "spacesuit", "pos": "noun", "example": "Der Raumanzug wiegt auf der Erde über hundert Kilo."},
+    {"id": "aussenbordeinsatz", "de": "Außenbordeinsatz", "article": "der", "plural": "die Außenbordeinsätze", "en": "spacewalk, EVA", "pos": "noun", "example": "Der Außenbordeinsatz dauert sechs Stunden."},
+    {"id": "andockmanoever", "de": "Andockmanöver", "article": "das", "plural": "die Andockmanöver", "en": "docking manoeuvre", "pos": "noun", "example": "Das Andockmanöver an die Raumstation verlief perfekt."},
+    {"id": "wiedereintritt", "de": "Wiedereintritt", "article": "der", "en": "re-entry", "pos": "noun", "example": "Beim Wiedereintritt wird die Kapsel extrem heiß."},
+    {"id": "hitzeschild", "de": "Hitzeschild", "article": "der", "plural": "die Hitzeschilde", "en": "heat shield", "pos": "noun", "example": "Der Hitzeschild schützt die Kapsel vor der Hitze."},
+    {"id": "raumstation", "de": "Raumstation", "article": "die", "plural": "die Raumstationen", "en": "space station", "pos": "noun", "example": "Auf der Raumstation leben sieben Astronauten."},
+    {"id": "startfreigabe", "de": "Startfreigabe", "article": "die", "plural": "die Startfreigaben", "en": "launch clearance, go for launch", "pos": "noun", "example": "Die Flugleitung erteilt die Startfreigabe."}
+  ],
+  "stations": [
+    {
+      "id": "ot-1",
+      "name": "Windkanal",
+      "character": {"name": "Dr. Kaya", "role": "Aerodynamikerin", "emoji": "👩‍🚀", "patience": 4, "kickout": "Zurück zu den Grundlagen – lesen Sie Anderson, Kapitel eins."},
+      "words": ["auftrieb", "widerstand", "tragflaeche", "anstellwinkel", "stroemungsabriss", "grenzschicht", "profil", "windkanal"],
+      "scene": [
+        {"who": "npc", "text": "Willkommen in Ottobrunn! Fangen wir bei den Grundlagen an: Wie erzeugt eine {tragflaeche|Tragfläche} {auftrieb|Auftrieb}?"},
+        {"who": "you", "text": "Durch den Druckunterschied zwischen Ober- und Unterseite des {profil|Profils}."},
+        {"who": "npc", "text": "Genau. Je größer der {anstellwinkel|Anstellwinkel}, desto mehr Auftrieb – aber auch mehr {widerstand|Widerstand}."},
+        {"who": "you", "text": "Bis die {grenzschicht|Grenzschicht} ablöst und es zum {stroemungsabriss|Strömungsabriss} kommt."},
+        {"who": "npc", "text": "Sie kennen sich aus! Das testen wir gleich im {windkanal|Windkanal}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["auftrieb", "widerstand", "tragflaeche", "anstellwinkel", "stroemungsabriss", "grenzschicht", "profil", "windkanal"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "Auftrieb ___",
+              "answer": "erzeugen",
+              "options": ["erzeugen", "erziehen", "erzählen", "ergeben"],
+              "en": "to generate lift"
+            },
+            {
+              "phrase": "den Widerstand ___",
+              "answer": "verringern",
+              "options": ["verringern", "verlieren", "verlegen", "verschieben"],
+              "en": "to reduce drag"
+            },
+            {
+              "phrase": "Die Strömung ___ ab.",
+              "answer": "löst",
+              "options": ["löst", "fällt", "geht", "nimmt"],
+              "en": "The flow separates."
+            },
+            {
+              "phrase": "ein Modell im Windkanal ___",
+              "answer": "vermessen",
+              "options": ["vermessen", "vergessen", "vermissen", "verlassen"],
+              "en": "to measure a model in the wind tunnel"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["auftrieb", "widerstand", "anstellwinkel", "stroemungsabriss", "grenzschicht", "windkanal"]
+        }
+      ]
+    },
+    {
+      "id": "ot-2",
+      "name": "Flugzeughalle",
+      "character": {"name": "Herr Lindemann", "role": "Fluggerätmechaniker", "emoji": "🧑‍✈️", "patience": 4, "kickout": "Moin … das üben wir nochmal. Ohne Checkliste fliegt hier nix."},
+      "words": ["rumpf", "triebwerk", "leitwerk", "fahrwerk", "querruder", "hoehenruder", "landeklappe", "wartung"],
+      "scene": [
+        {"who": "npc", "text": "Moin! Ich komm eigentlich aus Hamburg, aber die Maschine hier ist zur {wartung|Wartung} in Bayern."},
+        {"who": "npc", "text": "Fangen wir vorne an: Der {rumpf|Rumpf} ist aus Kohlefaser, die {triebwerk|Triebwerke} hängen unter den Flügeln."},
+        {"who": "you", "text": "Und was ist das ganz hinten?"},
+        {"who": "npc", "text": "Das {leitwerk|Leitwerk}. Dort sitzt das {hoehenruder|Höhenruder}. Das {querruder|Querruder} dagegen ist außen am Flügel."},
+        {"who": "you", "text": "Und die großen Klappen innen?"},
+        {"who": "npc", "text": "Das sind die {landeklappe|Landeklappen}. Und darunter das {fahrwerk|Fahrwerk} – das prüfen wir heute als Erstes."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["rumpf", "triebwerk", "leitwerk", "fahrwerk", "querruder", "hoehenruder", "landeklappe", "wartung"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Das Fahrwerk macht komische Geräusche.",
+              "task": "Ask whether the aircraft is still airworthy.",
+              "options": [
+                {"text": "Kann die Maschine trotzdem noch fliegen gehen?", "ok": false, "why": "„fliegen gehen“ ist umgangssprachlich – und eher für Menschen."},
+                {"text": "Ist die Maschine trotzdem noch lufttüchtig?", "ok": true, "why": "„lufttüchtig“ – genau der Fachbegriff."},
+                {"text": "Ist die Maschine trotzdem noch lufttüchtiger?", "ok": false, "why": "Kein Komparativ nötig: lufttüchtig."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["fahrwerk", "landeklappe", "wartung", "querruder", "hoehenruder", "rumpf"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "airworthy",
+              "target": "lufttüchtig",
+              "tiles": ["luft", "tüchtig", "ung", "s", "ig", "keit"]
+            },
+            {
+              "en": "aircraft",
+              "target": "Flugzeug",
+              "tiles": ["Flug", "zeug", "s", "Ab", "ung", "Ge"]
+            },
+            {
+              "en": "landing",
+              "target": "Landung",
+              "tiles": ["Land", "ung", "e", "Ab", "s", "keit"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ot-3",
+      "name": "Triebwerksprüfstand",
+      "character": {"name": "Dr. Weber", "role": "Antriebsingenieurin", "emoji": "👩‍🔧", "patience": 3, "kickout": "Test abgebrochen. Alle zurück hinter die Schutzwand!"},
+      "words": ["schub", "treibstoff", "brennkammer", "duese", "zuenden", "oxidator", "stufe", "brennschluss"],
+      "scene": [
+        {"who": "npc", "text": "Heute testen wir ein Raketentriebwerk. Als {treibstoff|Treibstoff} nehmen wir Methan, als {oxidator|Oxidator} flüssigen Sauerstoff."},
+        {"who": "you", "text": "Wo verbrennt das Gemisch?"},
+        {"who": "npc", "text": "In der {brennkammer|Brennkammer}. Die heißen Gase strömen durch die {duese|Düse} und erzeugen {schub|Schub}."},
+        {"who": "you", "text": "Wann ist {brennschluss|Brennschluss}?"},
+        {"who": "npc", "text": "Nach hundertsechzig Sekunden, dann trennt sich die erste {stufe|Stufe} ab. Alle hinter die Schutzwand – wir {zuenden|zünden} in zehn Sekunden!"}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["schub", "treibstoff", "brennkammer", "duese", "oxidator", "stufe", "brennschluss"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "das Triebwerk ___",
+              "answer": "zünden",
+              "options": ["zünden", "anzünden", "anstecken", "entflammen"],
+              "en": "to fire the engine"
+            },
+            {
+              "phrase": "die Stufen ___",
+              "answer": "trennen",
+              "options": ["trennen", "teilen", "scheiden", "spalten"],
+              "en": "to separate the stages"
+            },
+            {
+              "phrase": "einen Test ___",
+              "answer": "abbrechen",
+              "options": ["abbrechen", "abreißen", "abschneiden", "abtragen"],
+              "en": "to abort a test"
+            },
+            {
+              "phrase": "eine Umlaufbahn ___",
+              "answer": "erreichen",
+              "options": ["erreichen", "ankommen", "eintreffen", "gelangen"],
+              "en": "to reach an orbit"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["zuenden", "schub", "duese", "treibstoff", "brennkammer", "stufe"]
+        }
+      ]
+    },
+    {
+      "id": "ot-4",
+      "name": "Kontrollraum",
+      "character": {"name": "Dr. Hoffmann", "role": "Satellitenbetrieb", "emoji": "🛰️", "patience": 4, "kickout": "Wir haben den Kontakt verloren. Neuer Versuch beim nächsten Überflug."},
+      "words": ["umlaufbahn", "satellit", "bodenstation", "nutzlast", "bahnmanoever", "lageregelung", "weltraumschrott", "startfenster"],
+      "scene": [
+        {"who": "npc", "text": "Willkommen im Kontrollraum. Unser {satellit|Satellit} ist seit gestern in der {umlaufbahn|Umlaufbahn}."},
+        {"who": "you", "text": "Wie kommunizieren Sie mit ihm?"},
+        {"who": "npc", "text": "Über die {bodenstation|Bodenstation} in Weilheim. Die {nutzlast|Nutzlast} ist ein Radar zur Meeresbeobachtung."},
+        {"who": "you", "text": "Was ist die größte Gefahr da oben?"},
+        {"who": "npc", "text": "{weltraumschrott|Weltraumschrott}. Morgen weichen wir einem Trümmerteil aus – mit einem kleinen {bahnmanoever|Bahnmanöver}."},
+        {"who": "npc", "text": "Danach richtet die {lageregelung|Lageregelung} ihn wieder aus. Und nächste Woche öffnet sich das {startfenster|Startfenster} für seinen Zwilling."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["umlaufbahn", "satellit", "bodenstation", "nutzlast", "bahnmanoever", "lageregelung", "weltraumschrott", "startfenster"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Der Satellit reagiert nicht auf unsere Befehle.",
+              "task": "Ask when you last had contact with it.",
+              "options": [
+                {"text": "Wann haben wir zuletzt Kontakt mit ihm gehabt hatten?", "ok": false, "why": "Zu viele Verben: „Wann hatten wir zuletzt Kontakt?“"},
+                {"text": "Wie lange hatten wir zuletzt Kontakt?", "ok": false, "why": "Das fragt nach der Dauer, nicht nach dem Zeitpunkt."},
+                {"text": "Wann hatten wir zuletzt Kontakt mit ihm?", "ok": true, "why": "Klar und korrekt."}
+              ]
+            },
+            {
+              "npc": "Ein Trümmerteil kommt uns gefährlich nahe.",
+              "task": "Suggest flying an evasive manoeuvre.",
+              "options": [
+                {"text": "Sollten wir nicht ein Ausweichmanöver fliegen?", "ok": true, "why": "„ein Manöver fliegen“ – so sagt man in der Raumfahrt."},
+                {"text": "Sollten wir nicht dem Trümmerteil ausweichen machen?", "ok": false, "why": "„ausweichen“ braucht kein „machen“: dem Trümmerteil ausweichen."},
+                {"text": "Sollten wir nicht ein Ausweichmanöver fliegen gehen?", "ok": false, "why": "„gehen“ ist hier überflüssig."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["umlaufbahn", "bodenstation", "nutzlast", "bahnmanoever", "weltraumschrott", "startfenster"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "reusable",
+              "target": "wiederverwendbar",
+              "tiles": ["wieder", "verwend", "bar", "ung", "lich", "ent"]
+            },
+            {
+              "en": "unmanned, uncrewed",
+              "target": "unbemannt",
+              "tiles": ["un", "be", "mann", "t", "ung", "lich"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ot-5",
+      "name": "Astronautentraining",
+      "character": {"name": "Kommandantin Berg", "role": "Astronautenausbilderin", "emoji": "🧑‍🚀", "patience": 3, "kickout": "Nicht bereit für den Flug. Zurück in den Simulator!"},
+      "words": ["schwerelosigkeit", "raumanzug", "aussenbordeinsatz", "andockmanoever", "wiedereintritt", "hitzeschild", "raumstation", "startfreigabe"],
+      "scene": [
+        {"who": "npc", "text": "Sie wollen also ins All? Dann gewöhnen Sie sich erst mal an die {schwerelosigkeit|Schwerelosigkeit} – im Parabelflug."},
+        {"who": "you", "text": "Und wann bekomme ich einen {raumanzug|Raumanzug}?"},
+        {"who": "npc", "text": "Den brauchen Sie für den {aussenbordeinsatz|Außenbordeinsatz}. Den üben wir im großen Tauchbecken."},
+        {"who": "you", "text": "Wie kommen wir zur {raumstation|Raumstation}?"},
+        {"who": "npc", "text": "Mit der Kapsel. Nach dem {andockmanoever|Andockmanöver} bleiben Sie sechs Monate oben."},
+        {"who": "npc", "text": "Auf dem Rückweg kommt der {wiedereintritt|Wiedereintritt} – dann hängt alles am {hitzeschild|Hitzeschild}. Aber zuerst brauchen wir die {startfreigabe|Startfreigabe}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["schwerelosigkeit", "raumanzug", "aussenbordeinsatz", "andockmanoever", "wiedereintritt", "hitzeschild", "raumstation", "startfreigabe"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "an die Raumstation ___",
+              "answer": "andocken",
+              "options": ["andocken", "ankommen", "anhängen", "anbinden"],
+              "en": "to dock with the space station"
+            },
+            {
+              "phrase": "die Startfreigabe ___",
+              "answer": "erteilen",
+              "options": ["erteilen", "verteilen", "teilen", "mitteilen"],
+              "en": "to give the go for launch"
+            },
+            {
+              "phrase": "in die Atmosphäre ___",
+              "answer": "eintreten",
+              "options": ["eintreten", "eingehen", "einfahren", "einsteigen"],
+              "en": "to enter the atmosphere"
+            },
+            {
+              "phrase": "eine Mission ___",
+              "answer": "abschließen",
+              "options": ["abschließen", "ausschließen", "einschließen", "aufschließen"],
+              "en": "to complete a mission"
+            }
+          ]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Wie fühlen Sie sich nach dem Parabelflug?",
+              "task": "Say you feel a bit dizzy, but it was an unforgettable experience.",
+              "options": [
+                {"text": "Ich bin etwas schwindelig, aber es war ein unvergessliches Erlebnis.", "ok": false, "why": "Mit Dativ: „Mir ist schwindelig.“"},
+                {"text": "Mir ist etwas schwindelig, aber es war ein unvergessliches Erlebnis.", "ok": true, "why": "Perfekt – Dativ und Adjektivendung stimmen."},
+                {"text": "Mir ist etwas schwindelig, aber es war ein unvergesslicher Erlebnis.", "ok": false, "why": "das Erlebnis → ein unvergessliches Erlebnis."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["schwerelosigkeit", "aussenbordeinsatz", "wiedereintritt", "hitzeschild", "startfreigabe", "raumstation"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "weightlessness",
+              "target": "Schwerelosigkeit",
+              "tiles": ["Schwer", "e", "los", "ig", "keit", "ung"]
+            },
+            {
+              "en": "spaceflight",
+              "target": "Raumfahrt",
+              "tiles": ["Raum", "fahrt", "s", "Luft", "ung", "er"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "boss": {
+    "name": "Countdown",
+    "character": {"name": "Dr. Kaya", "role": "Flugleiterin", "emoji": "🎧", "patience": 3, "kickout": "Abbruch! Wir verschieben den Start auf das nächste Startfenster."},
+    "intro": "Kontrollraum, T minus sechzig Minuten. Dr. Kaya fragt jede Station ab – Go oder No-Go. Antworten Sie schnell und mit dem exakten Fachbegriff, sonst wird der Start abgebrochen.",
+    "seconds": 25,
+    "winTitle": "Im Orbit!",
+    "winText": "Applaus im Kontrollraum. Dr. Kaya nimmt das Headset ab: „Willkommen in der Raumfahrt.“ Ottobrunn gehört Ihnen.",
+    "items": [
+      {
+        "npc": "T minus sechzig. Status ___?",
+        "you": "Tanks voll, Methan und Sauerstoff auf Solltemperatur.",
+        "answers": ["Treibstoff"],
+        "wordId": "treibstoff",
+        "hint": "propellant"
+      },
+      {
+        "npc": "Öffnet das ___ pünktlich?",
+        "you": "Ja, um 14:32 Uhr.",
+        "answers": ["Startfenster"],
+        "wordId": "startfenster",
+        "hint": "launch window"
+      },
+      {
+        "npc": "Wie viel ___ haben wir an Bord?",
+        "you": "Viereinhalb Tonnen – zwei Satelliten.",
+        "answers": ["Nutzlast"],
+        "wordId": "nutzlast",
+        "hint": "payload"
+      },
+      {
+        "npc": "Wetter grün, Strecke grün, Systeme grün. Ich erteile die ___!",
+        "you": "Verstanden, wir sind bereit.",
+        "answers": ["Startfreigabe"],
+        "wordId": "startfreigabe",
+        "hint": "go for launch"
+      },
+      {
+        "npc": "Drei, zwei, eins – wir ___!",
+        "you": "Triebwerke laufen!",
+        "answers": ["zünden"],
+        "wordId": "zuenden",
+        "hint": "ignite"
+      },
+      {
+        "npc": "Steigen wir sauber? Wie ist der ___?",
+        "you": "Nominal, zwei Meganewton.",
+        "answers": ["Schub"],
+        "wordId": "schub",
+        "hint": "thrust"
+      },
+      {
+        "npc": "___ der ersten Stufe in drei, zwei, eins …",
+        "you": "Erste Stufe abgetrennt!",
+        "answers": ["Brennschluss"],
+        "wordId": "brennschluss",
+        "hint": "engine cut-off"
+      },
+      {
+        "npc": "Haben wir die geplante ___ erreicht?",
+        "you": "Ja, vierhundert Kilometer Höhe.",
+        "answers": ["Umlaufbahn"],
+        "wordId": "umlaufbahn",
+        "hint": "orbit"
+      },
+      {
+        "npc": "Hat die ___ in Weilheim Kontakt?",
+        "you": "Ja, wir empfangen Telemetrie.",
+        "answers": ["Bodenstation"],
+        "wordId": "bodenstation",
+        "hint": "ground station"
+      },
+      {
+        "npc": "Achtung, ___ auf Kollisionskurs!",
+        "you": "Wir leiten ein Ausweichmanöver ein.",
+        "answers": ["Weltraumschrott"],
+        "wordId": "weltraumschrott",
+        "hint": "space debris"
+      }
+    ]
+  },
+  "challenge": {
+    "name": "Missionsbericht",
+    "intro": "Die Pressestelle braucht Ihren Missionsbericht. Ersetzen Sie die Alltagswörter durch korrekte Raumfahrtsprache – in der passenden Form.",
+    "character": {"name": "Dr. Kaya", "role": "Flugleiterin", "emoji": "🎧", "patience": 3, "kickout": "So kann der Bericht nicht an die ESA gehen. Nochmal!"},
+    "winTitle": "Bericht freigegeben!",
+    "winText": "Ihr Missionsbericht geht genau so an die ESA.",
+    "nearMissNote": "Verständlich, aber zu umgangssprachlich für einen Missionsbericht.",
+    "items": [
+      {
+        "casual": "fliegt",
+        "answers": ["steigt"],
+        "sentence": "Nach dem Start ___ die Rakete senkrecht auf.",
+        "en": "to ascend"
+      },
+      {
+        "casual": "wird schneller",
+        "answers": ["beschleunigt"],
+        "sentence": "Die Rakete ___ auf achtundzwanzigtausend Kilometer pro Stunde.",
+        "en": "accelerates"
+      },
+      {
+        "casual": "langsamer werden",
+        "answers": ["abbremsen", "verzögern"],
+        "sentence": "Vor dem Andocken muss die Kapsel ___.",
+        "en": "to decelerate"
+      },
+      {
+        "casual": "angemacht",
+        "answers": ["gezündet"],
+        "sentence": "Das Triebwerk wird um 14:32 Uhr ___.",
+        "en": "ignited"
+      },
+      {
+        "casual": "abgemacht",
+        "answers": ["abgetrennt", "abgesprengt", "getrennt"],
+        "sentence": "Nach zwei Minuten wird die erste Stufe ___.",
+        "en": "separated, jettisoned"
+      },
+      {
+        "casual": "fliegt um",
+        "answers": ["umkreist", "umrundet"],
+        "sentence": "Die Raumstation ___ die Erde alle neunzig Minuten.",
+        "en": "orbits, circles"
+      },
+      {
+        "casual": "nachgeschaut",
+        "answers": ["überprüft", "geprüft"],
+        "sentence": "Vor dem Start werden alle Systeme ___.",
+        "en": "checked"
+      },
+      {
+        "casual": "runtergekommen",
+        "answers": ["gewassert", "gelandet"],
+        "sentence": "Die Kapsel ist sicher im Atlantik ___.",
+        "en": "splashed down"
+      },
+      {
+        "casual": "kommt",
+        "answers": ["kehrt"],
+        "sentence": "Nach sechs Monaten ___ die Crew zur Erde zurück.",
+        "en": "returns"
+      },
+      {
+        "casual": "Sprit",
+        "answers": ["Treibstoff"],
+        "sentence": "Der ___ reicht noch für zwei Bahnmanöver.",
+        "en": "propellant"
+      }
+    ]
+  }
+}

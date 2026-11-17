@@ -73,7 +73,7 @@
           "type": "schmiede",
           "items": [
             {
-              "en": "applicant",
+              "en": "job applicant",
               "target": "Bewerber",
               "tiles": ["Be", "werb", "er", "ung", "Ver", "en"]
             },

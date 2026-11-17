@@ -223,7 +223,7 @@
               "tiles": ["be", "antrag", "en", "ver", "ung", "ent"]
             },
             {
-              "en": "applicant",
+              "en": "applicant (for an official permit or form)",
               "target": "Antragsteller",
               "tiles": ["Antrag", "steller", "s", "be", "ung", "Ver"]
             }
