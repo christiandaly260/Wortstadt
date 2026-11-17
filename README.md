@@ -27,6 +27,8 @@ Pushing to `main` deploys to GitHub Pages automatically (enable it once under **
 5. **Stars**: ★ clear the boss · ★★ clear it without mistakes · ★★★ pass the Amtsdeutsch (register) challenge.
 6. **Fog**: words come back on a spaced-repetition schedule (1, 3, 7, 16, 40 days). Overdue words fog the district on the map, and a quick review clears it.
 
+7. **XP and ranks**: every correct answer earns XP (more on a combo), plus bonuses for stations, bosses and the bonus round. You climb from Tourist to Stadtlegende. A daily streak counts the days in a row you've played.
+
 Typed answers accept `ae/oe/ue/ss` for `ä/ö/ü/ß`. Small typos pass with a note. A wrong article or ending counts as a near miss, which gets you one retry.
 
 Progress is saved in your browser's localStorage.
@@ -50,5 +52,6 @@ src/
   game/            answer checking, spaced repetition/progress, sound
   components/
     CityMap, LineMap, Scene, StationRun, Gauntlet (boss/challenge/review)
+    Fx             HUD, departure board, train arrival, XP pop-ups, level-up
     encounters/    Artikel, Lueckentext, Choice (Kollokation + Gespraech), Schmiede
 ```

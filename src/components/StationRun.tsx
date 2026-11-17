@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { District, Encounter, Result, Station, Word } from '../types'
 import { wordMap } from '../data'
-import { clearStation, getState, markSeen, recordAnswer } from '../game/progress'
-import { playFanfare, playRight, playWrong } from '../game/sound'
+import { XP, addXp, answerXp, clearStation, getState, markSeen, recordAnswer } from '../game/progress'
+import { emitFx } from '../game/fx'
+import { playChime, playFanfare, playRight, playWrong } from '../game/sound'
 import { Scene } from './Scene'
-import { Dots, Patience, shuffle, useEnter } from './ui'
+import { CountUp, Dots, Patience, shuffle, useEnter } from './ui'
+import { Board } from './Fx'
 import { Artikel } from './encounters/Artikel'
 import { Lueckentext } from './encounters/Lueckentext'
 import { Gespraech, Kollokation } from './encounters/Choice'
@@ -23,6 +25,8 @@ export function StationRun({ district, station, onExit }: { district: District; 
   const [bestCombo, setBestCombo] = useState(0)
   const [stats, setStats] = useState({ right: 0, wrong: 0 })
   const [attempt, setAttempt] = useState(0)
+  const [xpGained, setXpGained] = useState(0)
+  useEffect(() => playChime(), [])
 
   // Mix a few nouns from earlier stations into the article rush, so old words keep coming back.
   const extraNouns = useMemo(() => {
@@ -38,10 +42,13 @@ export function StationRun({ district, station, onExit }: { district: District; 
       setCombo(c)
       setBestCombo((b) => Math.max(b, c))
       playRight(c)
+      addXp(answerXp(c - 1))
+      setXpGained((x) => x + answerXp(c - 1))
       setStats((s) => ({ ...s, right: s.right + 1 }))
     } else {
       setCombo(0)
       playWrong()
+      emitFx({ type: 'shake' })
       setPatience((p) => p - 1)
       setStats((s) => ({ ...s, wrong: s.wrong + 1 }))
     }
@@ -57,8 +64,12 @@ export function StationRun({ district, station, onExit }: { district: District; 
   const nextEncounter = (index: number) => {
     if (patienceRef.current <= 0) return
     if (index + 1 >= station.encounters.length) {
+      const first = !getState().stations[station.id]
       clearStation(station.id)
       playFanfare()
+      const bonus = first ? XP.station : Math.round(XP.station / 3)
+      addXp(bonus, 'Station')
+      setXpGained((x) => x + bonus)
       setPhase({ kind: 'won' })
     } else setPhase({ kind: 'enc', index: index + 1 })
   }
@@ -67,6 +78,7 @@ export function StationRun({ district, station, onExit }: { district: District; 
     setPatience(station.character.patience)
     setCombo(0)
     setStats({ right: 0, wrong: 0 })
+    setXpGained(0)
     setAttempt((a) => a + 1)
     setPhase({ kind: 'enc', index: 0 })
   }
@@ -119,7 +131,7 @@ export function StationRun({ district, station, onExit }: { district: District; 
         )}
         {phase.kind === 'enc' && <div key={`${attempt}-${phase.index}`}>{renderEncounter(station.encounters[phase.index], phase.index)}</div>}
         {phase.kind === 'lost' && <Lost station={station} onRetry={retry} onExit={onExit} />}
-        {phase.kind === 'won' && <Won station={station} words={words} stats={stats} bestCombo={bestCombo} onExit={onExit} />}
+        {phase.kind === 'won' && <Won station={station} words={words} stats={stats} bestCombo={bestCombo} xp={xpGained} onExit={onExit} />}
       </main>
     </div>
   )
@@ -147,44 +159,50 @@ function Won({
   words,
   stats,
   bestCombo,
+  xp,
   onExit,
 }: {
   station: Station
   words: Record<string, Word>
   stats: { right: number; wrong: number }
   bestCombo: number
+  xp: number
   onExit: () => void
 }) {
   useEnter(onExit)
   const total = stats.right + stats.wrong
   const pct = total ? Math.round((stats.right / total) * 100) : 100
   return (
-    <div className="endcard won appear">
-      <div className="endcard-emoji">🚇</div>
-      <h2>Station geschafft!</h2>
+    <div className="endcard won">
+      <Board text="STATION GESCHAFFT" sub={station.name} />
+      <div className="xp-total">
+        +<CountUp to={xp} /> <span>XP</span>
+      </div>
       <div className="statrow">
         <div>
-          <strong>{pct}%</strong>
+          <strong>
+            <CountUp to={pct} />%
+          </strong>
           <span>richtig</span>
         </div>
         <div>
-          <strong>{bestCombo}</strong>
+          <strong>×{bestCombo}</strong>
           <span>beste Serie</span>
         </div>
         <div>
           <strong>{station.words.length}</strong>
-          <span>Wörter</span>
+          <span>neue Wörter</span>
         </div>
       </div>
       <div className="chips">
-        {station.words.map((id) => (
-          <span key={id} className="chip static">
+        {station.words.map((id, i) => (
+          <span key={id} className="chip static pop-in" style={{ animationDelay: `${600 + i * 60}ms` }}>
             {words[id].de}
           </span>
         ))}
       </div>
       <button className="btn big" onClick={onExit}>
-        Weiterfahren ↵
+        Weiterfahren
       </button>
     </div>
   )

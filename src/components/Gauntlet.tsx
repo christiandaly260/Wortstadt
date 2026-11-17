@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import type { Character, District, Word } from '../types'
 import type { CheckOptions } from '../game/check'
-import { awardStars, getState, recordAnswer } from '../game/progress'
+import { XP, addXp, answerXp, awardStars, getState, recordAnswer } from '../game/progress'
+import { emitFx } from '../game/fx'
+import { Board } from './Fx'
 import { playFanfare, playRight, playWrong } from '../game/sound'
-import { Dots, Gap, Patience, TypedQuestion, shuffle, useEnter } from './ui'
+import { CountUp, Dots, Gap, Patience, TypedQuestion, shuffle, useEnter } from './ui'
 import { clozeOf } from './encounters/Lueckentext'
 import { wordMap } from '../data'
 
@@ -28,7 +30,8 @@ interface Props {
   seconds?: number
   winTitle: string
   winText: (mistakes: number) => ReactNode
-  onWin: (mistakes: number) => void
+  /** Called once on victory; returns the bonus XP it awarded. */
+  onWin: (mistakes: number) => number
   onExit: () => void
 }
 
@@ -42,6 +45,7 @@ function Gauntlet({ district, title, character, intro, questions, seconds, winTi
   const [mistakes, setMistakes] = useState(0)
   const [combo, setCombo] = useState(0)
   const [attempt, setAttempt] = useState(0)
+  const [xpGained, setXpGained] = useState(0)
   const q = questions[i]
 
   useEffect(() => {
@@ -56,9 +60,12 @@ function Gauntlet({ district, title, character, intro, questions, seconds, winTi
     if (ok) {
       setCombo(combo + 1)
       playRight(combo + 1)
+      addXp(answerXp(combo))
+      setXpGained((x) => x + answerXp(combo))
     } else {
       setCombo(0)
       playWrong()
+      emitFx({ type: 'shake' })
       setMistakes((m) => m + 1)
       setPatience((p) => p - 1)
     }
@@ -68,7 +75,8 @@ function Gauntlet({ district, title, character, intro, questions, seconds, winTi
     if (patienceRef.current <= 0) return
     if (i + 1 >= questions.length) {
       playFanfare()
-      onWin(mistakes)
+      const bonus = onWin(mistakes)
+      setXpGained((x) => x + bonus)
       setPhase('won')
     } else setI(i + 1)
   }
@@ -77,6 +85,7 @@ function Gauntlet({ district, title, character, intro, questions, seconds, winTi
     setI(0)
     setMistakes(0)
     setCombo(0)
+    setXpGained(0)
     setPatience(character?.patience ?? Infinity)
     setAttempt((a) => a + 1)
     setPhase('play')
@@ -134,7 +143,7 @@ function Gauntlet({ district, title, character, intro, questions, seconds, winTi
           </div>
         )}
         {phase === 'lost' && character && <Lost character={character} onRetry={restart} onExit={onExit} />}
-        {phase === 'won' && <Won title={winTitle} text={winText(mistakes)} onExit={onExit} />}
+        {phase === 'won' && <Won title={winTitle} text={winText(mistakes)} xp={xpGained} onExit={onExit} />}
       </main>
     </div>
   )
@@ -152,7 +161,7 @@ function Intro({ character, intro, onStart }: { character?: Character; intro: Re
       )}
       <div className="intro-text">{intro}</div>
       <button className="btn big" onClick={onStart}>
-        Bereit ↵
+        Bereit
       </button>
     </div>
   )
@@ -165,7 +174,7 @@ function Lost({ character, onRetry, onExit }: { character: Character; onRetry: (
       <div className="endcard-emoji">{character.emoji}</div>
       <blockquote>„{character.kickout}“</blockquote>
       <button className="btn big" onClick={onRetry}>
-        🎫 Neue Nummer ziehen ↵
+        🎫 Neue Nummer ziehen
       </button>
       <button className="btn ghost" onClick={onExit}>
         Zurück zur Linie
@@ -174,21 +183,33 @@ function Lost({ character, onRetry, onExit }: { character: Character; onRetry: (
   )
 }
 
-function Won({ title, text, onExit }: { title: string; text: ReactNode; onExit: () => void }) {
+function Won({ title, text, xp, onExit }: { title: string; text: ReactNode; xp: number; onExit: () => void }) {
   useEnter(onExit)
   return (
-    <div className="endcard won appear">
-      <div className="endcard-emoji">🏆</div>
-      <h2>{title}</h2>
+    <div className="endcard won">
+      <Board text={title.toUpperCase()} />
+      <div className="xp-total">
+        +<CountUp to={xp} /> <span>XP</span>
+      </div>
       <div className="intro-text">{text}</div>
       <button className="btn big" onClick={onExit}>
-        Zurück zur Linie ↵
+        Zurück zur Linie
       </button>
     </div>
   )
 }
 
-const stars = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
+function Stars({ n }: { n: number }) {
+  return (
+    <p className="stars-big" aria-label={`${n} von 3 Sternen`}>
+      {[0, 1, 2].map((i) => (
+        <span key={i} className={i < n ? 'star on' : 'star'} style={{ animationDelay: `${700 + i * 280}ms` }}>
+          ★
+        </span>
+      ))}
+    </p>
+  )
+}
 
 export function Boss({ district, onExit }: { district: District; onExit: () => void }) {
   const words = useMemo(() => wordMap(district), [district])
@@ -241,11 +262,17 @@ export function Boss({ district, onExit }: { district: District; onExit: () => v
       winText={(m) => (
         <>
           <p>Frau Huber stempelt Ihre Meldebescheinigung. Willkommen in München!</p>
-          <p className="stars-big">{stars(m === 0 ? 2 : 1)}</p>
+          <Stars n={m === 0 ? 2 : 1} />
           <p className="muted">{m === 0 ? 'Fehlerfrei – zwei Sterne!' : 'Für den zweiten Stern: fehlerfrei durchkommen.'} Der dritte Stern wartet in der Amtsdeutsch-Prüfung.</p>
         </>
       )}
-      onWin={(m) => awardStars(district.id, m === 0 ? 2 : 1)}
+      onWin={(m) => {
+        const first = !getState().stars[district.id]
+        awardStars(district.id, m === 0 ? 2 : 1)
+        const bonus = (first ? XP.boss : Math.round(XP.boss / 3)) + (m === 0 ? XP.bossPerfect : 0)
+        addXp(bonus, 'Boss')
+        return bonus
+      }}
       onExit={onExit}
     />
   )
@@ -293,10 +320,16 @@ export function Challenge({ district, onExit }: { district: District; onExit: ()
       winText={() => (
         <>
           <p>Sie klingen jetzt offiziell wie ein Formular. Glückwunsch.</p>
-          <p className="stars-big">{stars(3)}</p>
+          <Stars n={3} />
         </>
       )}
-      onWin={() => awardStars(district.id, 3)}
+      onWin={() => {
+        const first = (getState().stars[district.id] ?? 0) < 3
+        awardStars(district.id, 3)
+        const bonus = first ? XP.challenge : Math.round(XP.challenge / 4)
+        addXp(bonus, 'Bonus')
+        return bonus
+      }}
       onExit={onExit}
     />
   )
@@ -355,7 +388,7 @@ export function Review({ district, ids, onExit }: { district: District; ids: str
       questions={questions}
       winTitle="Nebel gelichtet!"
       winText={(m) => <p>{m === 0 ? 'Alles noch da. Stark!' : `${m} Wörter kommen bald wieder – so bleiben sie hängen.`}</p>}
-      onWin={() => {}}
+      onWin={() => 0}
       onExit={onExit}
     />
   )

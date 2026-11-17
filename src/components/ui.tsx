@@ -277,3 +277,24 @@ export function Dots({ total, current }: { total: number; current: number }) {
     </div>
   )
 }
+
+/** Number that counts up from 0 — for scores on result screens. */
+export function CountUp({ to, ms = 900 }: { to: number; ms?: number }) {
+  const [v, setV] = useState(0)
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setV(to)
+      return
+    }
+    const start = performance.now()
+    let raf = 0
+    const tick = (t: number) => {
+      const k = Math.min(1, (t - start) / ms)
+      setV(Math.round(to * (1 - Math.pow(1 - k, 3))))
+      if (k < 1) raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [to, ms])
+  return <>{v}</>
+}

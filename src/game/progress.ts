@@ -1,5 +1,6 @@
 import { useSyncExternalStore } from 'react'
 import type { District } from '../types'
+import { emitFx } from './fx'
 
 /**
  * Spaced repetition with Leitner boxes. Box 0 = never answered correctly.
@@ -24,16 +25,101 @@ export interface State {
   stars: Record<string, number>
   missed: Record<string, string[]>
   muted: boolean
+  xp: number
+  streak: { count: number; lastDay: string }
 }
 
 const KEY = 'wortstadt:v1'
 
-const empty = (): State => ({ version: 1, words: {}, seen: {}, stations: {}, stars: {}, missed: {}, muted: false })
+export const XP = {
+  answer: 10,
+  /** Extra XP per step of combo, capped. */
+  comboStep: 2,
+  comboCap: 10,
+  station: 60,
+  boss: 150,
+  bossPerfect: 100,
+  challenge: 200,
+}
+
+/** Commuter ranks: the XP needed to reach each one. */
+export const RANKS = [
+  { name: 'Tourist', xp: 0 },
+  { name: 'Neuankömmling', xp: 200 },
+  { name: 'Pendler', xp: 600 },
+  { name: 'Stammgast', xp: 1400 },
+  { name: 'Kiez-Kenner', xp: 2800 },
+  { name: 'Münchner', xp: 5000 },
+  { name: 'Ur-Münchner', xp: 8500 },
+  { name: 'Stadtlegende', xp: 14000 },
+]
+
+export function rankInfo(xp: number) {
+  let i = 0
+  while (i + 1 < RANKS.length && xp >= RANKS[i + 1].xp) i++
+  const cur = RANKS[i]
+  const next = RANKS[i + 1]
+  return {
+    level: i + 1,
+    name: cur.name,
+    next: next?.name,
+    /** 0..1 progress towards the next rank (1 at max rank). */
+    progress: next ? (xp - cur.xp) / (next.xp - cur.xp) : 1,
+    toNext: next ? next.xp - xp : 0,
+  }
+}
+
+export function answerXp(combo: number): number {
+  return XP.answer + Math.min(combo, XP.comboCap) * XP.comboStep
+}
+
+function dayKey(t = new Date()): string {
+  return `${t.getFullYear()}-${t.getMonth() + 1}-${t.getDate()}`
+}
+
+/** Days in a row with at least one answer; 0 if the chain is broken. */
+export function currentStreak(s: State = state): number {
+  const today = dayKey()
+  const y = new Date()
+  y.setDate(y.getDate() - 1)
+  return s.streak.lastDay === today || s.streak.lastDay === dayKey(y) ? s.streak.count : 0
+}
+
+export function addXp(amount: number, label?: string) {
+  if (amount <= 0) return
+  const before = rankInfo(state.xp)
+  set({ ...state, xp: state.xp + amount })
+  emitFx({ type: 'xp', amount, label })
+  const after = rankInfo(state.xp)
+  if (after.level > before.level) emitFx({ type: 'levelup', rank: after.name, level: after.level })
+}
+
+const empty = (): State => ({
+  version: 1,
+  words: {},
+  seen: {},
+  stations: {},
+  stars: {},
+  missed: {},
+  muted: false,
+  xp: 0,
+  streak: { count: 0, lastDay: '' },
+})
 
 function load(): State {
   try {
     const raw = localStorage.getItem(KEY)
-    if (raw) return { ...empty(), ...JSON.parse(raw) }
+    if (raw) {
+      const saved = JSON.parse(raw) as Partial<State>
+      const s = { ...empty(), ...saved }
+      // Saves from before XP existed: credit what was already played.
+      if (saved.xp === undefined) {
+        const right = Object.values(s.words).reduce((a, w) => a + w.right, 0)
+        const stars = Object.values(s.stars).reduce((a, b) => a + b, 0)
+        s.xp = right * 12 + Object.keys(s.stations).length * XP.station + stars * 100
+      }
+      return s
+    }
   } catch {
     /* storage unavailable or corrupt → start fresh */
   }
@@ -85,7 +171,10 @@ export function recordAnswer(wordId: string | undefined, correct: boolean, distr
     else list.add(wordId)
     missed = { ...missed, [districtId]: [...list] }
   }
-  set({ ...state, words: { ...state.words, [wordId]: next }, missed })
+  const today = dayKey()
+  let streak = state.streak
+  if (streak.lastDay !== today) streak = { count: currentStreak() + 1, lastDay: today }
+  set({ ...state, words: { ...state.words, [wordId]: next }, missed, streak })
 }
 
 export function markSeen(ids: string[]) {

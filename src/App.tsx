@@ -5,13 +5,48 @@ import { CityMap } from './components/CityMap'
 import { LineMap, type LineTarget } from './components/LineMap'
 import { StationRun } from './components/StationRun'
 import { Boss, Challenge, Review } from './components/Gauntlet'
+import { FxLayer, TrainArrival } from './components/Fx'
 
 type Screen = { kind: 'city' } | { kind: 'line'; district: string } | ({ district: string } & LineTarget)
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>({ kind: 'city' })
+  const [arriving, setArriving] = useState<{ next: Screen; dest: string } | null>(null)
   const [reviewIds, setReviewIds] = useState<string[]>([])
 
+  return (
+    <>
+      <FxLayer />
+      {arriving ? (
+        <TrainArrival
+          line={getDistrict((arriving.next as { district: string }).district).line}
+          color={getDistrict((arriving.next as { district: string }).district).color}
+          dest={arriving.dest}
+          onDone={() => {
+            setScreen(arriving.next)
+            setArriving(null)
+          }}
+        />
+      ) : (
+        <Screens screen={screen} setScreen={setScreen} setArriving={setArriving} reviewIds={reviewIds} setReviewIds={setReviewIds} />
+      )}
+    </>
+  )
+}
+
+function Screens({
+  screen,
+  setScreen,
+  setArriving,
+  reviewIds,
+  setReviewIds,
+}: {
+  screen: Screen
+  setScreen: (s: Screen) => void
+  setArriving: (a: { next: Screen; dest: string }) => void
+  reviewIds: string[]
+  setReviewIds: (ids: string[]) => void
+}) {
   if (screen.kind === 'city') return <CityMap onOpen={(id) => setScreen({ kind: 'line', district: id })} />
 
   const district = getDistrict(screen.district)
@@ -24,9 +59,16 @@ export default function App() {
           district={district}
           onBack={() => setScreen({ kind: 'city' })}
           onGo={(t) => {
-            // Freeze the review list when entering, so it doesn't shift as answers come in.
-            if (t.kind === 'review') setReviewIds(dueWords(district, getState()))
-            setScreen({ ...t, district: district.id })
+            const next = { ...t, district: district.id }
+            if (t.kind === 'review') {
+              // Freeze the review list when entering, so it doesn't shift as answers come in.
+              setReviewIds(dueWords(district, getState()))
+              setScreen(next)
+              return
+            }
+            const dest =
+              t.kind === 'station' ? district.stations.find((s) => s.id === t.id)!.name : t.kind === 'boss' ? district.boss.name : district.challenge.name
+            setArriving({ next, dest })
           }}
         />
       )

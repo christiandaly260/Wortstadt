@@ -52,3 +52,35 @@ export function playFanfare() {
 export function playTap() {
   tone(880, 0, 0.05, 'square', 0.04)
 }
+
+/** The two-tone U-Bahn door gong. */
+export function playChime() {
+  tone(784, 0, 0.5, 'sine', 0.12)
+  tone(622, 0.32, 0.7, 'sine', 0.12)
+}
+
+export function playLevelUp() {
+  ;[523, 659, 784, 1047, 1319].forEach((f, i) => tone(f, i * 0.08, 0.35, 'square', 0.05))
+  tone(1568, 0.45, 0.6, 'triangle', 0.1)
+}
+
+/** Train rushing past: filtered noise sweep. */
+export function playWhoosh() {
+  const c = audio()
+  if (!c) return
+  const len = c.sampleRate * 0.9
+  const buf = c.createBuffer(1, len, c.sampleRate)
+  const data = buf.getChannelData(0)
+  for (let i = 0; i < len; i++) data[i] = (Math.random() * 2 - 1) * Math.sin((Math.PI * i) / len)
+  const src = c.createBufferSource()
+  src.buffer = buf
+  const filter = c.createBiquadFilter()
+  filter.type = 'bandpass'
+  filter.frequency.setValueAtTime(300, c.currentTime)
+  filter.frequency.exponentialRampToValueAtTime(1800, c.currentTime + 0.45)
+  filter.frequency.exponentialRampToValueAtTime(400, c.currentTime + 0.9)
+  const gain = c.createGain()
+  gain.gain.value = 0.18
+  src.connect(filter).connect(gain).connect(c.destination)
+  src.start()
+}

@@ -3,6 +3,7 @@ import type { District, Word } from '../types'
 import { dueWords, fog, useProgress } from '../game/progress'
 import { withArticle } from '../data'
 import { WordCard } from './ui'
+import { Board, Hud } from './Fx'
 
 export type LineTarget = { kind: 'station'; id: string } | { kind: 'boss' } | { kind: 'challenge' } | { kind: 'review' }
 
@@ -24,16 +25,29 @@ export function LineMap({ district, onGo, onBack }: { district: District; onGo: 
         <button className="icon-btn" onClick={onBack} aria-label="Zur Karte">
           ←
         </button>
-        <div className="run-title">
-          <span className="line-badge">{district.line}</span> {district.name}
-        </div>
-        <div className="stars">{'★'.repeat(stars) + '☆'.repeat(3 - stars)}</div>
+        <Hud compact />
       </header>
-      <p className="muted center">{district.subtitle}</p>
+
+      <Board
+        line={district.line}
+        text={district.name.toUpperCase()}
+        sub={
+          allStations
+            ? stars > 0
+              ? `${'★'.repeat(stars)}${'☆'.repeat(3 - stars)}  ${district.subtitle}`
+              : 'Nächster Halt: Endstation'
+            : `Nächster Halt: ${district.stations[firstOpen].name}`
+        }
+      />
 
       {due.length > 0 && (
         <button className="fog-banner" onClick={() => onGo({ kind: 'review' })}>
-          🌫️ <strong>{Math.round(fogLevel * 100)}% Nebel</strong> – {due.length} Wörter fällig. Jetzt lichten →
+          <span className="fog-swirl">🌫️</span>
+          <span>
+            <strong>Nebel {Math.round(fogLevel * 100)}%</strong>
+            <br />
+            {due.length === 1 ? '1 Wort verblasst' : `${due.length} Wörter verblassen`}. Jetzt auffrischen
+          </span>
         </button>
       )}
 
@@ -45,9 +59,12 @@ export function LineMap({ district, onGo, onBack }: { district: District; onGo: 
             <li key={st.id} className={`stop ${cleared ? 'cleared' : open ? 'open' : 'locked'}`}>
               <span className="stop-dot" />
               <button className="stop-btn" disabled={!open} onClick={() => onGo({ kind: 'station', id: st.id })}>
-                <span className="stop-name">{st.name}</span>
+                <span className="stop-name">
+                  {st.name}
+                  {cleared && <span className="stop-check">✓</span>}
+                </span>
                 <span className="stop-meta">
-                  {st.character.emoji} {st.character.name} · {st.words.length} Wörter {cleared ? '· ✓' : ''}
+                  {st.character.emoji} {st.character.name}, {st.words.length} Wörter
                 </span>
               </button>
             </li>
@@ -56,17 +73,17 @@ export function LineMap({ district, onGo, onBack }: { district: District; onGo: 
         <li className={`stop boss ${stars > 0 ? 'cleared' : allStations ? 'open' : 'locked'}`}>
           <span className="stop-dot" />
           <button className="stop-btn" disabled={!allStations} onClick={() => onGo({ kind: 'boss' })}>
-            <span className="stop-name">🏛️ Endstation: {district.boss.name}</span>
+            <span className="stop-name">Endstation: {district.boss.name}</span>
             <span className="stop-meta">
-              {district.boss.character.emoji} {district.boss.character.name} · mit Zeitdruck {stars > 0 ? '· ✓' : ''}
+              {district.boss.character.emoji} {district.boss.character.name}, auf Zeit
             </span>
           </button>
         </li>
         <li className={`stop bonus ${stars >= 3 ? 'cleared' : stars > 0 ? 'open' : 'locked'}`}>
           <span className="stop-dot" />
           <button className="stop-btn" disabled={stars === 0} onClick={() => onGo({ kind: 'challenge' })}>
-            <span className="stop-name">⭐ Bonus: {district.challenge.name}</span>
-            <span className="stop-meta">C1-Register · dritter Stern {stars >= 3 ? '· ✓' : ''}</span>
+            <span className="stop-name">Bonus: {district.challenge.name}</span>
+            <span className="stop-meta">Formelles Deutsch für den dritten Stern</span>
           </button>
         </li>
       </ol>

@@ -1,6 +1,14 @@
 import { useState } from 'react'
+import { Board, Hud } from './Fx'
 import { districts, mapNodes } from '../data'
 import { fog, learnedCount, resetProgress, toggleMute, useProgress } from '../game/progress'
+
+// Fixed pseudo-random star field for the night sky.
+const STARS: [number, number, number][] = Array.from({ length: 40 }, (_, i) => [
+  (i * 97) % 400,
+  (i * 61 + 17) % 460,
+  i % 5 === 0 ? 1.4 : 0.8,
+])
 
 export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
   const s = useProgress()
@@ -20,33 +28,13 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
   return (
     <div className="city">
       <header className="city-head">
-        <div>
-          <h1>
-            <span className="u-sign">U</span> Wortstadt
-          </h1>
-          <p className="muted">München, ein Wort nach dem anderen.</p>
-        </div>
-        <button className="icon-btn" onClick={toggleMute} aria-label="Ton">
+        <Board text="WORTSTADT" sub="München, ein Wort nach dem anderen" />
+        <button className="icon-btn" onClick={toggleMute} aria-label={s.muted ? 'Ton an' : 'Ton aus'}>
           {s.muted ? '🔇' : '🔊'}
         </button>
       </header>
 
-      <div className="city-stats">
-        <div>
-          <strong>{learnedCount(s)}</strong>
-          <span>Wörter sitzen</span>
-        </div>
-        <div>
-          <strong>{totalStars}</strong>
-          <span>Sterne</span>
-        </div>
-        <div>
-          <strong>
-            {districts.filter((d) => (s.stars[d.id] ?? 0) > 0).length}/{mapNodes.length}
-          </strong>
-          <span>Viertel</span>
-        </div>
-      </div>
+      <Hud />
 
       <svg className="map" viewBox="0 0 400 460" role="img" aria-label="Karte von München">
         <defs>
@@ -54,6 +42,9 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
             <feGaussianBlur stdDeviation="6" />
           </filter>
         </defs>
+        {STARS.map(([x, y, r], i) => (
+          <circle key={i} cx={x} cy={y} r={r} className="sky-star" style={{ animationDelay: `${(i % 7) * 0.6}s` }} />
+        ))}
         {/* Isar */}
         <path d="M 250 0 C 245 70, 285 110, 270 170 S 225 250, 250 300 S 300 380, 280 460" className="isar" />
         <text x="285" y="400" className="isar-label">
@@ -61,7 +52,15 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
         </text>
         {/* Rails from the centre to every district */}
         {mapNodes.map((n) => (
-          <line key={`r-${n.id}`} x1={200} y1={235} x2={n.x} y2={n.y} className={n.districtId ? 'rail live' : 'rail'} />
+          <line
+            key={`r-${n.id}`}
+            x1={200}
+            y1={235}
+            x2={n.x}
+            y2={n.y}
+            className={n.districtId ? 'rail live' : 'rail'}
+            style={n.districtId ? { stroke: districts.find((d) => d.id === n.districtId)?.color } : undefined}
+          />
         ))}
         <circle cx={200} cy={235} r={7} className="centre" />
         <text x={200} y={222} className="centre-label">
@@ -73,13 +72,14 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
           const f = d ? fog(d, s) : 0
           return (
             <g key={n.id} className={`node ${d ? 'live' : 'locked'}`} onClick={() => tap(n.id)} style={{ cursor: 'pointer' }}>
-              <circle cx={n.x} cy={n.y} r={d ? 18 : 13} style={d ? { fill: d.color } : undefined} />
+              {d && <circle cx={n.x} cy={n.y} r={26} className="node-glow" style={{ fill: d.color }} />}
+              <circle cx={n.x} cy={n.y} r={d ? 18 : 9} className="node-dot" style={d ? { fill: d.color } : undefined} />
               <text x={n.x} y={n.y + 5} className="node-icon">
-                {d ? d.line : '🚧'}
+                {d ? d.line : ''}
               </text>
               {f > 0.2 && (
                 <>
-                  <circle cx={n.x} cy={n.y} r={28} className="fog" filter="url(#fog)" style={{ opacity: Math.min(0.9, 0.35 + f * 0.6) }} />
+                  <circle cx={n.x} cy={n.y} r={28} className="fog" filter="url(#fog)" style={{ opacity: Math.min(0.7, 0.3 + f * 0.45) }} />
                   <text x={n.x + 22} y={n.y - 14} className="fog-icon">
                     🌫️
                   </text>
@@ -98,7 +98,23 @@ export function CityMap({ onOpen }: { onOpen: (districtId: string) => void }) {
         })}
       </svg>
 
-      <p className="muted center small">Tippe auf ein Viertel. Neue Viertel kommen bald dazu.</p>
+      <div className="city-stats">
+        <div>
+          <strong>{learnedCount(s)}</strong>
+          <span>Wörter sitzen</span>
+        </div>
+        <div>
+          <strong>{totalStars}</strong>
+          <span>Sterne</span>
+        </div>
+        <div>
+          <strong>
+            {districts.filter((d) => (s.stars[d.id] ?? 0) > 0).length}/{mapNodes.length}
+          </strong>
+          <span>Viertel</span>
+        </div>
+      </div>
+      <p className="muted center small">Tippe auf ein Viertel, um einzusteigen.</p>
 
       <div className="center">
         {confirmReset ? (
