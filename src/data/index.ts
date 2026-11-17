@@ -1,8 +1,10 @@
 import type { District, Word } from '../types'
 import buergerbuero from './districts/buergerbuero.json'
 import maxvorstadt from './districts/maxvorstadt.json'
+import viktualienmarkt from './districts/viktualienmarkt.json'
+import englischerGarten from './districts/englischer-garten.json'
 
-export const districts: District[] = [buergerbuero, maxvorstadt].map((d) => d as District)
+export const districts: District[] = [buergerbuero, maxvorstadt, viktualienmarkt, englischerGarten].map((d) => d as District)
 
 export interface MapNode {
   id: string

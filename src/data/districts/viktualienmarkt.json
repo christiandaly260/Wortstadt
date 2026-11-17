@@ -1,0 +1,440 @@
+{
+  "id": "viktualienmarkt",
+  "name": "Viktualienmarkt",
+  "subtitle": "Markt, Metzger & Küchensprache",
+  "line": "U8",
+  "color": "#d4569b",
+  "requires": ["buergerbuero"],
+  "words": [
+    {"id": "stand", "de": "Stand", "article": "der", "plural": "die Stände", "en": "(market) stall", "pos": "noun", "example": "Der Stand mit dem Spargel ist ganz hinten."},
+    {"id": "regional", "de": "regional", "en": "regional, local", "pos": "adj", "example": "Wir verkaufen nur regionale Produkte.", "cloze": "regionale"},
+    {"id": "saisonal", "de": "saisonal", "en": "seasonal", "pos": "adj", "example": "Wer saisonal einkauft, isst im Winter viel Kohl."},
+    {"id": "reif", "de": "reif", "en": "ripe", "pos": "adj", "example": "Die Tomaten sind noch nicht reif."},
+    {"id": "ernte", "de": "Ernte", "article": "die", "plural": "die Ernten", "en": "harvest", "pos": "noun", "example": "Die Ernte war dieses Jahr gut."},
+    {"id": "pfund", "de": "Pfund", "article": "das", "plural": "die Pfund", "en": "pound (500 g)", "pos": "noun", "example": "Ein Pfund Kartoffeln, bitte."},
+    {"id": "abwiegen", "de": "abwiegen", "en": "to weigh (out)", "pos": "verb", "example": "Soll ich Ihnen das abwiegen?"},
+    {"id": "wechselgeld", "de": "Wechselgeld", "article": "das", "en": "change (money)", "pos": "noun", "example": "Vergessen Sie Ihr Wechselgeld nicht!"},
+    {"id": "metzgerei", "de": "Metzgerei", "article": "die", "plural": "die Metzgereien", "en": "butcher's shop", "pos": "noun", "example": "Die beste Metzgerei ist gleich am Eck."},
+    {"id": "aufschnitt", "de": "Aufschnitt", "article": "der", "en": "cold cuts", "pos": "noun", "example": "Hundert Gramm Aufschnitt, bitte."},
+    {"id": "scheibe", "de": "Scheibe", "article": "die", "plural": "die Scheiben", "en": "slice", "pos": "noun", "example": "Darf's eine Scheibe mehr sein?"},
+    {"id": "hackfleisch", "de": "Hackfleisch", "article": "das", "en": "mince(d meat)", "pos": "noun", "example": "Für die Bolognese brauche ich ein Pfund Hackfleisch."},
+    {"id": "mager", "de": "mager", "en": "lean (meat)", "pos": "adj", "example": "Das Fleisch ist schön mager."},
+    {"id": "weisswurst", "de": "Weißwurst", "article": "die", "plural": "die Weißwürste", "en": "Bavarian white sausage", "pos": "noun", "example": "Eine Weißwurst isst man traditionell vor zwölf Uhr."},
+    {"id": "theke", "de": "Theke", "article": "die", "plural": "die Theken", "en": "counter", "pos": "noun", "example": "Bitte warten Sie an der Theke."},
+    {"id": "portion", "de": "Portion", "article": "die", "plural": "die Portionen", "en": "portion, serving", "pos": "noun", "example": "Eine Portion reicht mir völlig."},
+    {"id": "zutat", "de": "Zutat", "article": "die", "plural": "die Zutaten", "en": "ingredient", "pos": "noun", "example": "Haben wir alle Zutaten im Haus?", "cloze": "Zutaten"},
+    {"id": "rezept", "de": "Rezept", "article": "das", "plural": "die Rezepte", "en": "recipe", "pos": "noun", "example": "Das Rezept ist von meiner Oma."},
+    {"id": "prise", "de": "Prise", "article": "die", "plural": "die Prisen", "en": "pinch", "pos": "noun", "example": "Gib noch eine Prise Salz dazu."},
+    {"id": "essloeffel", "de": "Esslöffel", "article": "der", "plural": "die Esslöffel", "en": "tablespoon", "pos": "noun", "example": "Man braucht zwei Esslöffel Zucker."},
+    {"id": "teig", "de": "Teig", "article": "der", "plural": "die Teige", "en": "dough, batter", "pos": "noun", "example": "Der Teig muss eine Stunde ruhen."},
+    {"id": "kneten", "de": "kneten", "en": "to knead", "pos": "verb", "example": "Du musst den Brotteig mindestens zehn Minuten kneten."},
+    {"id": "wuerzen", "de": "würzen", "en": "to season", "pos": "verb", "example": "Vergiss nicht, die Soße zu würzen."},
+    {"id": "schneebesen", "de": "Schneebesen", "article": "der", "plural": "die Schneebesen", "en": "whisk", "pos": "noun", "example": "Schlag die Eier mit dem Schneebesen."},
+    {"id": "anbraten", "de": "anbraten", "en": "to sear, to brown", "pos": "verb", "example": "Zuerst die Zwiebeln kurz anbraten."},
+    {"id": "koecheln", "de": "köcheln", "en": "to simmer", "pos": "verb", "example": "Die Soße soll zwanzig Minuten köcheln."},
+    {"id": "abschmecken", "de": "abschmecken", "en": "to season to taste", "pos": "verb", "example": "Zum Schluss mit Salz und Pfeffer abschmecken."},
+    {"id": "schaelen", "de": "schälen", "en": "to peel", "pos": "verb", "example": "Kannst du die Kartoffeln schälen?"},
+    {"id": "hacken", "de": "hacken", "en": "to chop (finely)", "pos": "verb", "example": "Die Petersilie bitte fein hacken."},
+    {"id": "pfanne", "de": "Pfanne", "article": "die", "plural": "die Pfannen", "en": "pan", "pos": "noun", "example": "Die Pfanne muss richtig heiß sein."},
+    {"id": "topf", "de": "Topf", "article": "der", "plural": "die Töpfe", "en": "pot", "pos": "noun", "example": "Stell den großen Topf auf den Herd."},
+    {"id": "gar", "de": "gar", "en": "cooked through, done", "pos": "adj", "example": "Die Kartoffeln sind noch nicht gar."},
+    {"id": "mindesthaltbarkeitsdatum", "de": "Mindesthaltbarkeitsdatum", "article": "das", "plural": "die Mindesthaltbarkeitsdaten", "en": "best-before date", "pos": "noun", "example": "Das Mindesthaltbarkeitsdatum ist schon abgelaufen."},
+    {"id": "haltbar", "de": "haltbar", "en": "keeps (for), long-life", "pos": "adj", "example": "Der Käse ist noch zwei Wochen haltbar."},
+    {"id": "verderblich", "de": "verderblich", "en": "perishable", "pos": "adj", "example": "Fisch ist leicht verderblich."},
+    {"id": "inhaltsstoff", "de": "Inhaltsstoff", "article": "der", "plural": "die Inhaltsstoffe", "en": "ingredient (on a label)", "pos": "noun", "example": "Welche Inhaltsstoffe stehen auf der Packung?", "cloze": "Inhaltsstoffe"},
+    {"id": "zusatzstoff", "de": "Zusatzstoff", "article": "der", "plural": "die Zusatzstoffe", "en": "additive", "pos": "noun", "example": "Dieser Senf kommt ohne Zusatzstoffe aus.", "cloze": "Zusatzstoffe"},
+    {"id": "herkunft", "de": "Herkunft", "article": "die", "en": "origin, provenance", "pos": "noun", "example": "Die Herkunft steht auf dem Etikett."},
+    {"id": "naehrwert", "de": "Nährwert", "article": "der", "plural": "die Nährwerte", "en": "nutritional value", "pos": "noun", "example": "Der Nährwert pro hundert Gramm steht auf der Rückseite."},
+    {"id": "verpackung", "de": "Verpackung", "article": "die", "plural": "die Verpackungen", "en": "packaging", "pos": "noun", "example": "Die Verpackung ist aus Papier."}
+  ],
+  "stations": [
+    {
+      "id": "vm-1",
+      "name": "Gemüsestand",
+      "character": {"name": "Frau Moser", "role": "Marktfrau", "emoji": "👵", "patience": 4, "kickout": "Mei, Kind, schau dich erst mal in Ruhe um."},
+      "words": ["stand", "regional", "saisonal", "reif", "ernte", "pfund", "abwiegen", "wechselgeld"],
+      "scene": [
+        {"who": "npc", "text": "Grüß Gott! Was darf's sein? Heut ist alles frisch von der {ernte|Ernte}."},
+        {"who": "you", "text": "Ein {pfund|Pfund} Tomaten, bitte. Sind die schon {reif|reif}?"},
+        {"who": "npc", "text": "Freilich! Bei mir am {stand|Stand} gibt's nur {regional|regionale} Ware, nix aus Spanien."},
+        {"who": "you", "text": "Und Spargel? Den hätte ich gern für heute Abend."},
+        {"who": "npc", "text": "Spargel gibt's erst im April – ich verkauf nur {saisonal|saisonal}. Moment, ich {abwiegen|wieg} Ihnen die Tomaten {abwiegen|ab}."},
+        {"who": "npc", "text": "Macht drei Euro zwanzig. Und hier ist Ihr {wechselgeld|Wechselgeld}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["stand", "ernte", "pfund", "wechselgeld"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "Was ___ es sein?",
+              "answer": "darf",
+              "options": ["darf", "kann", "muss", "soll"],
+              "en": "What would you like?"
+            },
+            {
+              "phrase": "Das ___ drei Euro zwanzig.",
+              "answer": "macht",
+              "options": ["macht", "gibt", "hat", "ist"],
+              "en": "That comes to €3.20."
+            },
+            {
+              "phrase": "Spargel hat gerade ___.",
+              "answer": "Saison",
+              "options": ["Saison", "Ernte", "Frische", "Reife"],
+              "en": "Asparagus is in season."
+            },
+            {
+              "phrase": "Wechselgeld ___",
+              "answer": "herausgeben",
+              "options": ["herausgeben", "ausgeben", "aufgeben", "abgeben"],
+              "en": "to give change"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["regional", "saisonal", "reif", "abwiegen", "ernte", "pfund"]
+        }
+      ]
+    },
+    {
+      "id": "vm-2",
+      "name": "Metzgerei",
+      "character": {"name": "Wastl", "role": "Metzger", "emoji": "🧑‍🍳", "patience": 4, "kickout": "Der Nächste, bitte! Überleg's dir in Ruhe."},
+      "words": ["metzgerei", "aufschnitt", "scheibe", "hackfleisch", "mager", "weisswurst", "theke", "portion"],
+      "scene": [
+        {"who": "npc", "text": "Servus! Heute ganz frisch an der {theke|Theke}: {weisswurst|Weißwürste} und hausgemachter {aufschnitt|Aufschnitt}."},
+        {"who": "you", "text": "Ich bräuchte fünfhundert Gramm {hackfleisch|Hackfleisch}, möglichst {mager|mager}."},
+        {"who": "npc", "text": "Freilich. Und vom Schinken? Wie viele {scheibe|Scheiben}?"},
+        {"who": "you", "text": "Sechs, bitte. Das reicht für zwei {portion|Portionen}."},
+        {"who": "npc", "text": "„Darf's ein bisserl mehr sein?“ – das fragt man in jeder {metzgerei|Metzgerei}. Und die Antwort ist immer ja!"}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["metzgerei", "aufschnitt", "scheibe", "hackfleisch", "weisswurst", "theke", "portion"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Darf's ein bisserl mehr sein?",
+              "task": "Politely say no – exactly 200 grams, please.",
+              "options": [
+                {"text": "Nein danke, genau zweihundert Gramm, bitte.", "ok": true, "why": "Klar und höflich."},
+                {"text": "Nein danke, genau zweihundert Gramms, bitte.", "ok": false, "why": "Maßeinheiten bleiben im Singular: zweihundert Gramm."},
+                {"text": "Nein, das will ich nicht.", "ok": false, "why": "Grammatisch richtig, klingt aber ziemlich unfreundlich."}
+              ]
+            },
+            {
+              "npc": "Sonst noch was?",
+              "task": "Say that's everything and ask whether you can pay by card.",
+              "options": [
+                {"text": "Fertig. Karte?", "ok": false, "why": "Zu knapp – das wirkt unhöflich."},
+                {"text": "Das war's. Kann ich mit Karte gezahlt?", "ok": false, "why": "Nach „kann“ steht der Infinitiv: zahlen."},
+                {"text": "Das wär's, danke. Kann ich mit Karte zahlen?", "ok": true, "why": "Natürlich und höflich."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["scheibe", "mager", "hackfleisch", "aufschnitt", "weisswurst", "portion"]
+        }
+      ]
+    },
+    {
+      "id": "vm-3",
+      "name": "Omas Rezept",
+      "character": {"name": "Lena", "role": "deine Mitbewohnerin", "emoji": "👩‍🎤", "patience": 5, "kickout": "Okay, wir bestellen heute Pizza. Morgen nochmal!"},
+      "words": ["zutat", "rezept", "prise", "essloeffel", "teig", "kneten", "wuerzen", "schneebesen"],
+      "scene": [
+        {"who": "npc", "text": "Ich hab das {rezept|Rezept} von meiner Oma gefunden: Kaiserschmarrn! Haben wir alle {zutat|Zutaten}?"},
+        {"who": "you", "text": "Mehl, Eier, Milch … und wie viel Zucker?"},
+        {"who": "npc", "text": "Zwei {essloeffel|Esslöffel} Zucker und eine {prise|Prise} Salz. Schlag die Eier mit dem {schneebesen|Schneebesen} schaumig."},
+        {"who": "you", "text": "Muss ich den {teig|Teig} {kneten|kneten}?"},
+        {"who": "npc", "text": "Nein, Schmarrnteig wird nur verrührt – kneten musst du nur Brotteig. Und {wuerzen|würzen} brauchst du hier nichts, nur Puderzucker drüber!"}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["zutat", "rezept", "prise", "essloeffel", "teig", "schneebesen"]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["zutat", "kneten", "wuerzen", "prise", "teig", "schneebesen"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "spice, seasoning",
+              "target": "Gewürz",
+              "tiles": ["Ge", "würz", "en", "ung", "Be", "e"]
+            },
+            {
+              "en": "edible",
+              "target": "essbar",
+              "tiles": ["ess", "bar", "lich", "un", "ig", "en"]
+            },
+            {
+              "en": "inedible, unpalatable",
+              "target": "ungenießbar",
+              "tiles": ["un", "genieß", "bar", "lich", "ig", "ver"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vm-4",
+      "name": "Wirtshausküche",
+      "character": {"name": "Toni", "role": "Küchenchef", "emoji": "👨‍🍳", "patience": 3, "kickout": "Raus aus meiner Küche! Morgen um sechs bist du wieder da."},
+      "words": ["anbraten", "koecheln", "abschmecken", "schaelen", "hacken", "pfanne", "topf", "gar"],
+      "scene": [
+        {"who": "npc", "text": "So, Neuer. Heute gibt's Gulasch. Erst die Zwiebeln {schaelen|schälen} und fein {hacken|hacken}."},
+        {"who": "you", "text": "Erledigt! Und jetzt?"},
+        {"who": "npc", "text": "Fleisch in der {pfanne|Pfanne} scharf {anbraten|anbraten}, dann ab in den großen {topf|Topf}."},
+        {"who": "you", "text": "Wie lange muss das kochen?"},
+        {"who": "npc", "text": "Nicht kochen – {koecheln|köcheln}! Zwei Stunden, bis das Fleisch {gar|gar} ist. Zum Schluss {abschmecken|abschmecken}, und dann raus damit."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["pfanne", "topf"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "das Wasser zum ___ bringen",
+              "answer": "Kochen",
+              "options": ["Kochen", "Köcheln", "Braten", "Backen"],
+              "en": "to bring water to the boil"
+            },
+            {
+              "phrase": "den Backofen ___",
+              "answer": "vorheizen",
+              "options": ["vorheizen", "vorkochen", "vorbraten", "vorlegen"],
+              "en": "to preheat the oven"
+            },
+            {
+              "phrase": "den Tisch ___",
+              "answer": "decken",
+              "options": ["decken", "stellen", "legen", "machen"],
+              "en": "to set the table"
+            },
+            {
+              "phrase": "Sahne steif ___",
+              "answer": "schlagen",
+              "options": ["schlagen", "rühren", "kochen", "ziehen"],
+              "en": "to whip cream until stiff"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["anbraten", "koecheln", "abschmecken", "schaelen", "hacken", "gar"]
+        }
+      ]
+    },
+    {
+      "id": "vm-5",
+      "name": "Feinkostladen",
+      "character": {"name": "Frau Lindner", "role": "Feinkosthändlerin", "emoji": "👩‍💼", "patience": 4, "kickout": "Lesen Sie in Ruhe die Etiketten und kommen Sie wieder."},
+      "words": ["mindesthaltbarkeitsdatum", "haltbar", "verderblich", "inhaltsstoff", "zusatzstoff", "herkunft", "naehrwert", "verpackung"],
+      "scene": [
+        {"who": "you", "text": "Entschuldigung, wie lange ist dieser Käse {haltbar|haltbar}?"},
+        {"who": "npc", "text": "Schauen Sie aufs {mindesthaltbarkeitsdatum|Mindesthaltbarkeitsdatum}: noch drei Wochen. Fisch dagegen ist leicht {verderblich|verderblich}."},
+        {"who": "you", "text": "Und woher kommt der Honig?"},
+        {"who": "npc", "text": "Die {herkunft|Herkunft} steht auf dem Etikett: aus dem Allgäu. Ganz ohne {zusatzstoff|Zusatzstoffe}."},
+        {"who": "you", "text": "Wo finde ich die {inhaltsstoff|Inhaltsstoffe} und den {naehrwert|Nährwert}?"},
+        {"who": "npc", "text": "Auf der Rückseite der {verpackung|Verpackung}. Die ist übrigens aus Papier, nicht aus Plastik."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["mindesthaltbarkeitsdatum", "inhaltsstoff", "zusatzstoff", "herkunft", "naehrwert", "verpackung"]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["haltbar", "verderblich", "herkunft", "zusatzstoff", "verpackung", "mindesthaltbarkeitsdatum"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "shelf life",
+              "target": "Haltbarkeit",
+              "tiles": ["Halt", "bar", "keit", "ung", "un", "er"]
+            },
+            {
+              "en": "spoiled, gone off",
+              "target": "verdorben",
+              "tiles": ["ver", "dorb", "en", "ent", "ung", "be"]
+            },
+            {
+              "en": "origin, provenance",
+              "target": "Herkunft",
+              "tiles": ["Her", "kunft", "Ab", "Zu", "ung", "s"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "boss": {
+    "name": "Rush Hour in der Küche",
+    "character": {"name": "Toni", "role": "Küchenchef", "emoji": "👨‍🍳", "patience": 3, "kickout": "Raus aus meiner Küche! Morgen um sechs bist du wieder da."},
+    "intro": "Samstagabend, das Wirtshaus ist voll, die Bons laufen. Toni brüllt die Kommandos – reagieren Sie schnell und mit dem richtigen Küchenwort.",
+    "seconds": 30,
+    "winTitle": "Service!",
+    "winText": "Alle Teller gehen raus, Toni grinst: „Ned schlecht, Neuer.“ Der Viktualienmarkt gehört Ihnen.",
+    "items": [
+      {
+        "npc": "Tisch drei! Die Zwiebeln – erst ___, dann fein hacken!",
+        "you": "Bin dabei, Chef!",
+        "answers": ["schälen"],
+        "wordId": "schaelen",
+        "hint": "peel"
+      },
+      {
+        "npc": "Die ___ muss richtig heiß sein, bevor das Fleisch reinkommt.",
+        "you": "Ist sie, Chef!",
+        "answers": ["Pfanne"],
+        "wordId": "pfanne",
+        "hint": "pan"
+      },
+      {
+        "npc": "Das Fleisch scharf ___!",
+        "you": "Brutzelt schon.",
+        "answers": ["anbraten"],
+        "wordId": "anbraten",
+        "hint": "sear"
+      },
+      {
+        "npc": "Die Soße nicht kochen lassen, nur ___!",
+        "you": "Hab die Hitze runtergedreht.",
+        "answers": ["köcheln"],
+        "wordId": "koecheln",
+        "hint": "simmer"
+      },
+      {
+        "npc": "Sind die Knödel schon ___?",
+        "you": "Noch zwei Minuten.",
+        "answers": ["gar"],
+        "wordId": "gar",
+        "hint": "cooked through"
+      },
+      {
+        "npc": "Zum Schluss alles mit Salz und Pfeffer ___.",
+        "you": "Schmeckt perfekt!",
+        "answers": ["abschmecken"],
+        "wordId": "abschmecken",
+        "hint": "season to taste"
+      },
+      {
+        "npc": "Der Fisch riecht komisch? Ab in den Müll – Fisch ist leicht ___.",
+        "you": "Weg damit.",
+        "answers": ["verderblich"],
+        "wordId": "verderblich",
+        "hint": "perishable"
+      },
+      {
+        "npc": "Wie viele ___ Schinken kommen auf die Brotzeitplatte?",
+        "you": "Zwölf, wie immer.",
+        "answers": ["Scheiben"],
+        "wordId": "scheibe",
+        "hint": "slices"
+      },
+      {
+        "npc": "Und für den Kaiserschmarrn: eine ___ Salz in den Teig!",
+        "you": "Schon drin.",
+        "answers": ["Prise"],
+        "wordId": "prise",
+        "hint": "pinch"
+      },
+      {
+        "npc": "Tisch fünf fragt nach der ___ vom Fleisch.",
+        "you": "Vom Hof im Chiemgau, Chef.",
+        "answers": ["Herkunft"],
+        "wordId": "herkunft",
+        "hint": "origin"
+      }
+    ]
+  },
+  "challenge": {
+    "name": "Küchensprache",
+    "intro": "In Tonis Kochkurs zählt jedes Wort. Ersetzen Sie die vagen Alltagswörter durch präzise Küchensprache.",
+    "character": {"name": "Toni", "role": "Kochlehrer", "emoji": "👨‍🍳", "patience": 3, "kickout": "So redet man bei mir ned. Nochmal!"},
+    "winTitle": "Küchenprofi!",
+    "winText": "Sie reden jetzt wie in einer Sterneküche.",
+    "nearMissNote": "Verständlich, aber zu vage – Toni will das genaue Wort.",
+    "items": [
+      {
+        "casual": "kleinmachen",
+        "answers": ["hacken", "würfeln"],
+        "sentence": "Die Zwiebeln fein ___.",
+        "en": "to chop finely, to dice"
+      },
+      {
+        "casual": "heiß machen",
+        "answers": ["erhitzen"],
+        "sentence": "Das Öl in der Pfanne ___.",
+        "en": "to heat"
+      },
+      {
+        "casual": "dazutun",
+        "answers": ["hinzufügen", "hinzugeben", "zugeben", "dazugeben"],
+        "sentence": "Dann die Sahne ___.",
+        "en": "to add"
+      },
+      {
+        "casual": "probieren",
+        "answers": ["abschmecken"],
+        "sentence": "Die Suppe mit Salz ___.",
+        "en": "to season to taste"
+      },
+      {
+        "casual": "leise kochen",
+        "answers": ["köcheln"],
+        "sentence": "Den Eintopf eine Stunde ___ lassen.",
+        "en": "to simmer"
+      },
+      {
+        "casual": "umrühren",
+        "answers": ["unterheben"],
+        "sentence": "Den Eischnee vorsichtig ___.",
+        "en": "to fold in"
+      },
+      {
+        "casual": "Schale abmachen",
+        "answers": ["schälen"],
+        "sentence": "Die Kartoffeln ___.",
+        "en": "to peel"
+      },
+      {
+        "casual": "braun machen",
+        "answers": ["anbraten", "anbräunen"],
+        "sentence": "Das Fleisch rundherum ___.",
+        "en": "to sear, to brown"
+      },
+      {
+        "casual": "weich machen",
+        "answers": ["garen", "dämpfen", "dünsten"],
+        "sentence": "Das Gemüse über Dampf ___.",
+        "en": "to steam, to cook gently"
+      },
+      {
+        "casual": "ausleeren",
+        "answers": ["abgießen"],
+        "sentence": "Die Nudeln in einem Sieb ___.",
+        "en": "to drain"
+      }
+    ]
+  }
+}

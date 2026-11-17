@@ -1,0 +1,456 @@
+{
+  "id": "englischer-garten",
+  "name": "Englischer Garten",
+  "subtitle": "Sport, Berge, Wetter & Natur",
+  "line": "U3",
+  "color": "#ec6726",
+  "requires": ["buergerbuero"],
+  "words": [
+    {"id": "aufschlag", "de": "Aufschlag", "article": "der", "plural": "die Aufschläge", "en": "serve (tennis)", "pos": "noun", "example": "Dein Aufschlag ist heute richtig stark."},
+    {"id": "satz", "de": "Satz", "article": "der", "plural": "die Sätze", "en": "set (tennis)", "pos": "noun", "example": "Den ersten Satz hast du knapp verloren."},
+    {"id": "netz", "de": "Netz", "article": "das", "plural": "die Netze", "en": "net", "pos": "noun", "example": "Der Ball ist schon wieder im Netz gelandet."},
+    {"id": "spielstand", "de": "Spielstand", "article": "der", "plural": "die Spielstände", "en": "score", "pos": "noun", "example": "Wie ist der Spielstand?"},
+    {"id": "doppel", "de": "Doppel", "article": "das", "plural": "die Doppel", "en": "doubles", "pos": "noun", "example": "Spielen wir heute Einzel oder Doppel?"},
+    {"id": "schlaeger", "de": "Schläger", "article": "der", "plural": "die Schläger", "en": "racket", "pos": "noun", "example": "Ich muss meinen Schläger neu bespannen lassen."},
+    {"id": "aufwaermen", "de": "aufwärmen", "en": "to warm up (sich aufwärmen)", "pos": "verb", "example": "Vor dem Spiel sollte man sich gut aufwärmen."},
+    {"id": "muskelkater", "de": "Muskelkater", "article": "der", "en": "sore muscles (after exercise)", "pos": "noun", "example": "Morgen habe ich bestimmt Muskelkater."},
+    {"id": "welle", "de": "Welle", "article": "die", "plural": "die Wellen", "en": "wave", "pos": "noun", "example": "Die Welle im Eisbach kann man das ganze Jahr surfen."},
+    {"id": "stroemung", "de": "Strömung", "article": "die", "plural": "die Strömungen", "en": "current (water)", "pos": "noun", "example": "Die Strömung im Eisbach ist sehr stark."},
+    {"id": "brett", "de": "Brett", "article": "das", "plural": "die Bretter", "en": "board", "pos": "noun", "example": "Halt dein Brett gut fest!"},
+    {"id": "neoprenanzug", "de": "Neoprenanzug", "article": "der", "plural": "die Neoprenanzüge", "en": "wetsuit", "pos": "noun", "example": "Im Winter brauchst du einen dicken Neoprenanzug."},
+    {"id": "anfaenger", "de": "Anfänger", "article": "der", "plural": "die Anfänger", "en": "beginner", "pos": "noun", "example": "Die Eisbachwelle ist nichts für Anfänger."},
+    {"id": "gefaehrlich", "de": "gefährlich", "en": "dangerous", "pos": "adj", "example": "Ohne Erfahrung ist das ziemlich gefährlich."},
+    {"id": "zuschauer", "de": "Zuschauer", "article": "der", "plural": "die Zuschauer", "en": "spectator", "pos": "noun", "example": "Auf der Brücke stehen immer viele Zuschauer."},
+    {"id": "abwechseln", "de": "abwechseln", "en": "to take turns (sich abwechseln)", "pos": "verb", "example": "An der Welle muss man sich mit den anderen abwechseln."},
+    {"id": "niederschlag", "de": "Niederschlag", "article": "der", "plural": "die Niederschläge", "en": "precipitation", "pos": "noun", "example": "Am Nachmittag ist mit Niederschlag zu rechnen."},
+    {"id": "bewoelkt", "de": "bewölkt", "en": "cloudy", "pos": "adj", "example": "Morgen bleibt es den ganzen Tag bewölkt."},
+    {"id": "gewitter", "de": "Gewitter", "article": "das", "plural": "die Gewitter", "en": "thunderstorm", "pos": "noun", "example": "Am Abend zieht ein Gewitter auf."},
+    {"id": "boee", "de": "Böe", "article": "die", "plural": "die Böen", "en": "gust (of wind)", "pos": "noun", "example": "Einzelne Böen erreichen achtzig Stundenkilometer.", "cloze": "Böen"},
+    {"id": "glaette", "de": "Glätte", "article": "die", "en": "slippery (icy) conditions", "pos": "noun", "example": "Am Morgen droht auf den Straßen Glätte."},
+    {"id": "hitzewelle", "de": "Hitzewelle", "article": "die", "plural": "die Hitzewellen", "en": "heatwave", "pos": "noun", "example": "Die Hitzewelle dauert noch bis Sonntag."},
+    {"id": "vorhersage", "de": "Vorhersage", "article": "die", "plural": "die Vorhersagen", "en": "forecast", "pos": "noun", "example": "Laut Vorhersage wird es morgen sonnig."},
+    {"id": "temperatursturz", "de": "Temperatursturz", "article": "der", "plural": "die Temperaturstürze", "en": "sudden drop in temperature", "pos": "noun", "example": "Nach dem Gewitter kommt ein Temperatursturz."},
+    {"id": "gipfel", "de": "Gipfel", "article": "der", "plural": "die Gipfel", "en": "summit, peak", "pos": "noun", "example": "Vom Gipfel sieht man bis zur Zugspitze."},
+    {"id": "wanderweg", "de": "Wanderweg", "article": "der", "plural": "die Wanderwege", "en": "hiking trail", "pos": "noun", "example": "Der Wanderweg ist gut markiert."},
+    {"id": "huette", "de": "Hütte", "article": "die", "plural": "die Hütten", "en": "mountain hut", "pos": "noun", "example": "Auf der Hütte gibt es Kaiserschmarrn."},
+    {"id": "ausruestung", "de": "Ausrüstung", "article": "die", "plural": "die Ausrüstungen", "en": "equipment, gear", "pos": "noun", "example": "Ohne richtige Ausrüstung gehe ich nicht los."},
+    {"id": "schwindelfrei", "de": "schwindelfrei", "en": "not afraid of heights, sure-footed", "pos": "adj", "example": "Für diesen Steig muss man schwindelfrei sein."},
+    {"id": "steigung", "de": "Steigung", "article": "die", "plural": "die Steigungen", "en": "incline, gradient", "pos": "noun", "example": "Die Steigung am Anfang ist brutal."},
+    {"id": "hoehenmeter", "de": "Höhenmeter", "article": "der", "plural": "die Höhenmeter", "en": "metre of elevation gain", "pos": "noun", "example": "Heute sind es achthundert Höhenmeter."},
+    {"id": "umkehren", "de": "umkehren", "en": "to turn back", "pos": "verb", "example": "Wenn das Wetter schlechter wird, müssen wir umkehren."},
+    {"id": "artenvielfalt", "de": "Artenvielfalt", "article": "die", "en": "biodiversity", "pos": "noun", "example": "Die Artenvielfalt im Park ist erstaunlich."},
+    {"id": "naturschutzgebiet", "de": "Naturschutzgebiet", "article": "das", "plural": "die Naturschutzgebiete", "en": "nature reserve", "pos": "noun", "example": "Hinter der Brücke beginnt das Naturschutzgebiet."},
+    {"id": "nachhaltig", "de": "nachhaltig", "en": "sustainable, sustainably", "pos": "adj", "example": "Wir wollen die Wiesen nachhaltig pflegen."},
+    {"id": "umweltbewusst", "de": "umweltbewusst", "en": "environmentally conscious", "pos": "adj", "example": "Viele Münchner leben sehr umweltbewusst."},
+    {"id": "lebensraum", "de": "Lebensraum", "article": "der", "plural": "die Lebensräume", "en": "habitat", "pos": "noun", "example": "Totholz ist ein wichtiger Lebensraum für Insekten."},
+    {"id": "aussterben", "de": "aussterben", "en": "to die out, to become extinct", "pos": "verb", "example": "Ohne Wildwiesen würden viele Bienenarten aussterben."},
+    {"id": "gefaehrden", "de": "gefährden", "en": "to endanger", "pos": "verb", "example": "Müll im Wasser gefährdet die Enten.", "cloze": "gefährdet"},
+    {"id": "schuetzen", "de": "schützen", "en": "to protect", "pos": "verb", "example": "Wir müssen die alten Bäume schützen."}
+  ],
+  "stations": [
+    {
+      "id": "eg-1",
+      "name": "Tennisplatz",
+      "character": {"name": "Felix", "role": "dein Tennispartner", "emoji": "🎾", "patience": 5, "kickout": "Okay, Seitenwechsel und Wasserpause. Dann nochmal!"},
+      "words": ["aufschlag", "satz", "netz", "spielstand", "doppel", "schlaeger", "aufwaermen", "muskelkater"],
+      "scene": [
+        {"who": "npc", "text": "Servus! Bevor wir spielen, lass uns kurz {aufwaermen|aufwärmen}. Hast du deinen {schlaeger|Schläger} dabei?"},
+        {"who": "you", "text": "Klar. Spielen wir Einzel oder {doppel|Doppel}?"},
+        {"who": "npc", "text": "Einzel. Wer zuerst zwei {satz|Sätze} holt, gewinnt. Du hast den ersten {aufschlag|Aufschlag}."},
+        {"who": "you", "text": "Mist, schon wieder im {netz|Netz}! Wie ist der {spielstand|Spielstand}?"},
+        {"who": "npc", "text": "Fünf zu zwei für mich. Morgen hast du bestimmt {muskelkater|Muskelkater}!"}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["aufschlag", "satz", "netz", "spielstand", "doppel", "schlaeger", "muskelkater"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "einen Satz ___",
+              "answer": "gewinnen",
+              "options": ["gewinnen", "verdienen", "bestehen", "treffen"],
+              "en": "to win a set"
+            },
+            {
+              "phrase": "den Ball ___",
+              "answer": "schlagen",
+              "options": ["schlagen", "werfen", "treten", "ziehen"],
+              "en": "to hit the ball"
+            },
+            {
+              "phrase": "ein Match ___",
+              "answer": "verlieren",
+              "options": ["verlieren", "vergessen", "verpassen", "verfehlen"],
+              "en": "to lose a match"
+            },
+            {
+              "phrase": "Sport ___",
+              "answer": "treiben",
+              "options": ["treiben", "führen", "halten", "spielen"],
+              "en": "to do sport"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["aufwaermen", "muskelkater", "aufschlag", "satz", "schlaeger", "spielstand"]
+        }
+      ]
+    },
+    {
+      "id": "eg-2",
+      "name": "Eisbachwelle",
+      "character": {"name": "Kiki", "role": "Surferin", "emoji": "🏄‍♀️", "patience": 4, "kickout": "Komm, erst mal zuschauen und lernen. Später nochmal!"},
+      "words": ["welle", "stroemung", "brett", "neoprenanzug", "anfaenger", "gefaehrlich", "zuschauer", "abwechseln"],
+      "scene": [
+        {"who": "npc", "text": "Na, auch Lust auf die {welle|Welle}? Ganz schön viele {zuschauer|Zuschauer} heute auf der Brücke."},
+        {"who": "you", "text": "Ja, aber ich bin noch {anfaenger|Anfänger}."},
+        {"who": "npc", "text": "Dann Vorsicht: Die {stroemung|Strömung} ist stark, und für Anfänger ist das echt {gefaehrlich|gefährlich}."},
+        {"who": "you", "text": "Brauche ich im Herbst einen {neoprenanzug|Neoprenanzug}?"},
+        {"who": "npc", "text": "Unbedingt, das Wasser hat zwölf Grad. Halt dein {brett|Brett} gut fest. Wir stehen in einer Reihe und {abwechseln|wechseln} uns {abwechseln|ab}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["welle", "stroemung", "brett", "neoprenanzug", "anfaenger", "zuschauer"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Du bist dran – oder willst du lieber erst zuschauen?",
+              "task": "Say you'd rather watch first because you're still a beginner.",
+              "options": [
+                {"text": "Ich schaue lieber erst mal zu, ich bin noch Anfänger.", "ok": true, "why": "Genau – „zuschauen“ ist trennbar: ich schaue zu."},
+                {"text": "Ich schaue lieber erst mal zu, ich bin noch Anfang.", "ok": false, "why": "„Anfang“ ist der Beginn. Eine Person ist ein Anfänger."},
+                {"text": "Ich gucke lieber erst mal an.", "ok": false, "why": "„angucken“ braucht ein Objekt. Ohne Objekt: zuschauen oder zugucken."}
+              ]
+            },
+            {
+              "npc": "Pass auf, die Strömung ist heute brutal.",
+              "task": "Thank them for the warning and say you'll be careful.",
+              "options": [
+                {"text": "Danke für die Warnung, ich passe mich auf.", "ok": false, "why": "„aufpassen“ ist nicht reflexiv: Ich passe auf."},
+                {"text": "Danke für die Warnung, ich passe auf.", "ok": true, "why": "Kurz und richtig."},
+                {"text": "Danke für die Warnung, ich bin vorsichtig auf.", "ok": false, "why": "Zwei Ausdrücke vermischt: „ich bin vorsichtig“ oder „ich passe auf“."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["stroemung", "gefaehrlich", "abwechseln", "neoprenanzug", "anfaenger", "welle"]
+        }
+      ]
+    },
+    {
+      "id": "eg-3",
+      "name": "Wetterbericht",
+      "character": {"name": "Herr Becker", "role": "Meteorologe im Fernsehen", "emoji": "🌦️", "patience": 4, "kickout": "Wir schalten zurück ins Studio. Bis morgen!"},
+      "words": ["niederschlag", "bewoelkt", "gewitter", "boee", "glaette", "hitzewelle", "vorhersage", "temperatursturz"],
+      "scene": [
+        {"who": "npc", "text": "Guten Abend, hier ist die {vorhersage|Vorhersage} für München und das Oberland."},
+        {"who": "npc", "text": "Nach der {hitzewelle|Hitzewelle} wird es morgen {bewoelkt|bewölkt}, am Nachmittag zieht ein {gewitter|Gewitter} auf."},
+        {"who": "npc", "text": "Dabei sind kräftige {boee|Böen} und ergiebiger {niederschlag|Niederschlag} möglich."},
+        {"who": "you", "text": "Na toll. Und ich wollte morgen in die Berge …"},
+        {"who": "npc", "text": "Danach folgt ein {temperatursturz|Temperatursturz} um fünfzehn Grad. In den Alpen droht nachts sogar {glaette|Glätte}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["niederschlag", "gewitter", "boee", "glaette", "hitzewelle", "vorhersage", "temperatursturz"]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["bewoelkt", "vorhersage", "gewitter", "glaette", "hitzewelle", "boee"]
+        },
+        {
+          "type": "schmiede",
+          "items": [
+            {
+              "en": "cloudless",
+              "target": "wolkenlos",
+              "tiles": ["wolken", "los", "ig", "be", "lich", "un"]
+            },
+            {
+              "en": "rainy",
+              "target": "regnerisch",
+              "tiles": ["regn", "er", "isch", "ig", "lich", "ver"]
+            },
+            {
+              "en": "stormy",
+              "target": "stürmisch",
+              "tiles": ["stürm", "isch", "ig", "lich", "er", "be"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eg-4",
+      "name": "Bergtour",
+      "character": {"name": "Sepp", "role": "Bergführer", "emoji": "🧗", "patience": 3, "kickout": "So gehst mir ned auf den Berg. Morgen probieren wir's nochmal."},
+      "words": ["gipfel", "wanderweg", "huette", "ausruestung", "schwindelfrei", "steigung", "hoehenmeter", "umkehren"],
+      "scene": [
+        {"who": "npc", "text": "Griaß di! Heute geht's auf den {gipfel|Gipfel} vom Herzogstand. Hast du die richtige {ausruestung|Ausrüstung}?"},
+        {"who": "you", "text": "Wanderschuhe, Regenjacke, Wasser – passt. Wie weit ist es?"},
+        {"who": "npc", "text": "Achthundert {hoehenmeter|Höhenmeter}. Der {wanderweg|Wanderweg} ist gut markiert, aber die {steigung|Steigung} am Anfang ist brutal."},
+        {"who": "you", "text": "Muss man {schwindelfrei|schwindelfrei} sein?"},
+        {"who": "npc", "text": "Für den Grat schon. Mittag machen wir auf der {huette|Hütte}. Und wenn ein Gewitter kommt, {umkehren|kehren} wir sofort {umkehren|um}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["gipfel", "wanderweg", "huette", "ausruestung", "steigung", "hoehenmeter"]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "eine Pause ___",
+              "answer": "einlegen",
+              "options": ["einlegen", "anlegen", "auflegen", "hinlegen"],
+              "en": "to take a break"
+            },
+            {
+              "phrase": "den Gipfel ___",
+              "answer": "erreichen",
+              "options": ["erreichen", "ankommen", "gelangen", "treffen"],
+              "en": "to reach the summit"
+            },
+            {
+              "phrase": "eine Bergtour ___",
+              "answer": "unternehmen",
+              "options": ["unternehmen", "übernehmen", "vornehmen", "abnehmen"],
+              "en": "to go on a mountain tour"
+            },
+            {
+              "phrase": "ein Risiko ___",
+              "answer": "eingehen",
+              "options": ["eingehen", "angehen", "ausgehen", "umgehen"],
+              "en": "to take a risk"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["umkehren", "schwindelfrei", "steigung", "ausruestung", "huette", "gipfel"]
+        }
+      ]
+    },
+    {
+      "id": "eg-5",
+      "name": "Wildwiese",
+      "character": {"name": "Frau Ott", "role": "Parkrangerin", "emoji": "🦉", "patience": 4, "kickout": "Lesen Sie bitte erst die Infotafel am Eingang."},
+      "words": ["artenvielfalt", "naturschutzgebiet", "nachhaltig", "umweltbewusst", "lebensraum", "aussterben", "gefaehrden", "schuetzen"],
+      "scene": [
+        {"who": "npc", "text": "Wussten Sie, dass dieser Teil des Parks ein {naturschutzgebiet|Naturschutzgebiet} ist?"},
+        {"who": "you", "text": "Nein! Was wird hier denn geschützt?"},
+        {"who": "npc", "text": "Die {artenvielfalt|Artenvielfalt}. Die Wildwiesen sind ein wichtiger {lebensraum|Lebensraum} für Bienen. Ohne sie würden viele Arten {aussterben|aussterben}."},
+        {"who": "you", "text": "Und was kann ich tun?"},
+        {"who": "npc", "text": "{umweltbewusst|Umweltbewusst} handeln: Müll mitnehmen, auf den Wegen bleiben. Freilaufende Hunde {gefaehrden|gefährden} die Bodenbrüter."},
+        {"who": "npc", "text": "Wir pflegen die Wiesen {nachhaltig|nachhaltig} – nur so können wir die Natur langfristig {schuetzen|schützen}."}
+      ],
+      "encounters": [
+        {
+          "type": "artikel",
+          "words": ["artenvielfalt", "naturschutzgebiet", "lebensraum"]
+        },
+        {
+          "type": "gespraech",
+          "items": [
+            {
+              "npc": "Bitte lassen Sie Ihren Hund hier nicht frei laufen.",
+              "task": "Apologise and say you weren't aware it was a nature reserve.",
+              "options": [
+                {"text": "Oh, Entschuldigung – ich war nicht bewusst, dass das ein Naturschutzgebiet ist.", "ok": false, "why": "Es heißt „mir war nicht bewusst“ (Dativ), nicht „ich war“."},
+                {"text": "Ist doch egal, der tut nichts.", "ok": false, "why": "Respektlos – und gefährdet trotzdem die Vögel."},
+                {"text": "Oh, Entschuldigung – mir war nicht bewusst, dass das ein Naturschutzgebiet ist.", "ok": true, "why": "„Mir war nicht bewusst“ – elegant und höflich."}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "kollokation",
+          "items": [
+            {
+              "phrase": "vom Aussterben ___ sein",
+              "answer": "bedroht",
+              "options": ["bedroht", "gefährlich", "betroffen", "gestorben"],
+              "en": "to be threatened with extinction"
+            },
+            {
+              "phrase": "Müll ___",
+              "answer": "trennen",
+              "options": ["trennen", "teilen", "scheiden", "spalten"],
+              "en": "to separate rubbish for recycling"
+            },
+            {
+              "phrase": "Rücksicht auf die Natur ___",
+              "answer": "nehmen",
+              "options": ["nehmen", "geben", "machen", "haben"],
+              "en": "to show consideration for nature"
+            },
+            {
+              "phrase": "einen Beitrag zum Klimaschutz ___",
+              "answer": "leisten",
+              "options": ["leisten", "machen", "tun", "bringen"],
+              "en": "to contribute to climate protection"
+            }
+          ]
+        },
+        {
+          "type": "lueckentext",
+          "words": ["nachhaltig", "umweltbewusst", "aussterben", "gefaehrden", "schuetzen", "lebensraum"]
+        }
+      ]
+    }
+  ],
+  "boss": {
+    "name": "Gewitter am Grat",
+    "character": {"name": "Sepp", "role": "Bergführer", "emoji": "🧗", "patience": 3, "kickout": "Zu gefährlich. Wir brechen ab und probieren's ein andermal."},
+    "intro": "Kurz unterm Gipfel ziehen schwarze Wolken auf. Sepp braucht schnelle, klare Antworten – am Berg zählt jede Sekunde.",
+    "seconds": 30,
+    "winTitle": "Sicher im Tal!",
+    "winText": "Sepp klopft Ihnen auf die Schulter: „Guade Entscheidung.“ Der Englische Garten gehört Ihnen.",
+    "items": [
+      {
+        "npc": "Schau, da hinten wird's schwarz. Laut ___ kommt am Nachmittag ein Gewitter.",
+        "you": "Dann sollten wir uns beeilen.",
+        "answers": ["Vorhersage"],
+        "wordId": "vorhersage",
+        "hint": "forecast"
+      },
+      {
+        "npc": "Wie viele ___ fehlen noch bis zum Gipfel?",
+        "you": "Noch zweihundert.",
+        "answers": ["Höhenmeter"],
+        "wordId": "hoehenmeter",
+        "hint": "metres of ascent"
+      },
+      {
+        "npc": "Das Risiko ist zu groß. Wir müssen ___.",
+        "you": "Okay, du bist der Bergführer.",
+        "answers": ["umkehren"],
+        "wordId": "umkehren",
+        "hint": "turn back"
+      },
+      {
+        "npc": "Hast du deine ___ dabei? Regenjacke, Stirnlampe?",
+        "you": "Alles im Rucksack.",
+        "answers": ["Ausrüstung"],
+        "wordId": "ausruestung",
+        "hint": "gear"
+      },
+      {
+        "npc": "Der Weg ist nass und es geht steil runter. Bist du ___?",
+        "you": "Zum Glück, ja.",
+        "answers": ["schwindelfrei"],
+        "wordId": "schwindelfrei",
+        "hint": "not afraid of heights"
+      },
+      {
+        "npc": "Spürst du den Wind? Die ___ werden immer stärker.",
+        "you": "Ich halte mich am Seil fest.",
+        "answers": ["Böen"],
+        "wordId": "boee",
+        "hint": "gusts"
+      },
+      {
+        "npc": "Wo stellen wir uns unter, wenn's losgeht?",
+        "you": "Auf der ___, zehn Minuten weiter unten.",
+        "answers": ["Hütte"],
+        "wordId": "huette",
+        "hint": "mountain hut"
+      },
+      {
+        "npc": "Nach dem Gewitter kommt ein ___ – zieh dich warm an.",
+        "you": "Gut, dass ich eine Mütze dabeihabe.",
+        "answers": ["Temperatursturz"],
+        "wordId": "temperatursturz",
+        "hint": "sudden drop in temperature"
+      },
+      {
+        "npc": "Morgen früh kann es auf dem Weg ___ geben.",
+        "you": "Dann nehmen wir lieber die Seilbahn.",
+        "answers": ["Glätte"],
+        "wordId": "glaette",
+        "hint": "icy conditions"
+      },
+      {
+        "npc": "Na, wie fühlen sich die Beine an?",
+        "you": "Morgen habe ich bestimmt ___.",
+        "answers": ["Muskelkater"],
+        "wordId": "muskelkater",
+        "hint": "sore muscles"
+      }
+    ]
+  },
+  "challenge": {
+    "name": "Wetterdeutsch",
+    "intro": "Sie moderieren heute den Wetterbericht im Fernsehen. Ersetzen Sie die Alltagswörter durch die Sprache der Meteorologen – in der passenden Form.",
+    "character": {"name": "Herr Becker", "role": "Chefmeteorologe", "emoji": "🌦️", "patience": 3, "kickout": "Das war mir zu umgangssprachlich. Nochmal von vorn!"},
+    "winTitle": "Auf Sendung!",
+    "winText": "Ihr Wetterbericht klingt wie aus der Tagesschau.",
+    "nearMissNote": "Verständlich, aber so spricht kein Meteorologe im Fernsehen.",
+    "items": [
+      {
+        "casual": "fängt",
+        "answers": ["setzt"],
+        "sentence": "Am Nachmittag ___ Regen ein.",
+        "en": "(rain) sets in"
+      },
+      {
+        "casual": "aufhören",
+        "answers": ["nachlassen", "abflauen"],
+        "sentence": "Der Wind wird gegen Abend ___.",
+        "en": "to ease off, to die down"
+      },
+      {
+        "casual": "wird kälter",
+        "answers": ["kühlt"],
+        "sentence": "In der Nacht ___ es deutlich ab.",
+        "en": "to cool down"
+      },
+      {
+        "casual": "werden wärmer",
+        "answers": ["steigen", "klettern"],
+        "sentence": "Die Temperaturen ___ auf bis zu dreißig Grad.",
+        "en": "to rise"
+      },
+      {
+        "casual": "viel",
+        "answers": ["ergiebigen", "kräftigen", "starken"],
+        "sentence": "Im Süden ist mit ___ Niederschlägen zu rechnen.",
+        "en": "heavy (rain)"
+      },
+      {
+        "casual": "Wolken",
+        "answers": ["Bewölkung"],
+        "sentence": "Im Tagesverlauf nimmt die ___ zu.",
+        "en": "cloud cover"
+      },
+      {
+        "casual": "kommt die Sonne raus",
+        "answers": ["lockert", "klart"],
+        "sentence": "Am Nachmittag ___ es von Westen her auf.",
+        "en": "(it) clears up"
+      },
+      {
+        "casual": "stark",
+        "answers": ["böig", "stürmisch"],
+        "sentence": "Der Wind weht mäßig bis ___.",
+        "en": "gusty"
+      },
+      {
+        "casual": "es ist glatt",
+        "answers": ["Glättegefahr", "Glatteisgefahr"],
+        "sentence": "Auf den Straßen besteht ___.",
+        "en": "risk of ice"
+      }
+    ]
+  }
+}
